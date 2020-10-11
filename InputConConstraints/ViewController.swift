@@ -9,16 +9,27 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var mainBox: UIView!
+    
+    @IBOutlet weak var passwordTxtBox: UITextField!
+    @IBOutlet weak var usernameTxtBox: UITextField!
+    
+    @IBOutlet weak var submitBtnButton: UIButton!
     @IBOutlet weak var constraintBottomScroll: NSLayoutConstraint!
     //@IBOutlet weak var //constraintBottomScroll: //NSLayoutConstraint!
     @IBAction func clickCloseKeyboard(_ sender: Any) {
-        print("CERRAR TECLADO ACCION")
-        self.view.endEditing(true)
+               self.view.endEditing(true)
     }
     
     override func viewDidLoad() {
+        mainBox.layer.cornerRadius = 20
+        passwordTxtBox.layer.cornerRadius = 10
+        usernameTxtBox.layer.cornerRadius = 10
+        submitBtnButton.layer.cornerRadius = 20
         super.viewDidLoad()
+       
 	
     }
     override func viewWillAppear(_ animated: Bool) {
