@@ -10,14 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var constraintCenterYContent: NSLayoutConstraint!
-    @IBOutlet weak var viewContent: UIView!
-    
-    
+    @IBOutlet weak var constraintBottomScroll: NSLayoutConstraint!
+    //@IBOutlet weak var //constraintBottomScroll: //NSLayoutConstraint!
     @IBAction func clickCloseKeyboard(_ sender: Any) {
+        print("CERRAR TECLADO ACCION")
         self.view.endEditing(true)
     }
-
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+	
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -33,7 +36,6 @@ class ViewController: UIViewController {
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        
         super.viewDidDisappear(animated)
         NotificationCenter.default.removeObserver(self)
     }
@@ -42,32 +44,23 @@ class ViewController: UIViewController {
         
         let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect ?? .zero
         let animationDuration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double ?? 0
-        
-        let finalPosyContent = self.viewContent.frame.origin.y + self.viewContent.frame.height
-        let originKeyboardY = keyboardFrame.origin.y
-        var delta: CGFloat = 0
-        let spaceKeyboarToViewContent: CGFloat = 20
-        
-        if originKeyboardY < finalPosyContent {
-            delta = originKeyboardY - finalPosyContent - spaceKeyboarToViewContent
-        }
-        
-        UIView.animate(withDuration: animationDuration) {
-            
-            self.constraintCenterYContent.constant = delta
+        	
+        UIView.animate(withDuration: animationDuration){ self.constraintBottomScroll.constant=keyboardFrame.size.height
             self.view.layoutIfNeeded()
+ 
         }
     }
     
     @objc func keyboardWillHide(_ notification: Notification) {
         
+    
         let animationDuration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double ?? 0
-        
-        UIView.animate(withDuration: animationDuration) {
             
-            self.constraintCenterYContent.constant = 0
+        UIView.animate(withDuration: animationDuration){ self.constraintBottomScroll.constant=0
             self.view.layoutIfNeeded()
+        
         }
+
     }
 
 }
