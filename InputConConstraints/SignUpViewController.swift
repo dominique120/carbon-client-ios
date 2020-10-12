@@ -24,17 +24,15 @@ class SignUpViewController: UIViewController {
          self.view.endEditing(true)
     }
     
-    
-    
-    
     override func viewDidLoad() {
-        txtFirstName.layer.cornerRadius = 15
-        txtPassword.layer.cornerRadius = 15
-        txtPasswordConfirm.layer.cornerRadius = 15
-        txtLastName.layer.cornerRadius = 15
-        txtUser.layer.cornerRadius = 15
         btnCreateAccount.layer.cornerRadius = 20
         mainBox.layer.cornerRadius = 20
+        
+        self.updateBorderSelect(false, toTextField: self.txtFirstName)
+        self.updateBorderSelect(false, toTextField: self.txtPassword)
+        self.updateBorderSelect(false, toTextField: self.txtUser)
+        self.updateBorderSelect(false, toTextField: self.txtPasswordConfirm)
+        self.updateBorderSelect(false, toTextField: self.txtLastName)
         super.viewDidLoad()
     }
     
@@ -70,4 +68,28 @@ class SignUpViewController: UIViewController {
             view.frame.origin.y = 0
        }
     
+    func updateBorderSelect(_ isSelect: Bool, toTextField textField: UITextField) {
+        
+        textField.layer.cornerRadius = 15
+        textField.layer.borderWidth = 1
+        textField.layer.borderColor = isSelect ? UIColor(displayP3Red: 0.1, green: 0.1, blue: 1, alpha: 0.7).cgColor : UIColor.lightGray.cgColor
+        textField.layer.shadowColor = UIColor.black.cgColor
+        textField.layer.shadowOffset = CGSize(width: 0, height: 0)
+        textField.layer.shadowRadius = 5
+        textField.layer.shadowOpacity = 0.1
+    }
+    
+}
+
+extension SignUpViewController: UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+        self.updateBorderSelect(true, toTextField: textField)
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        self.updateBorderSelect(false, toTextField: textField)
+    }
 }
