@@ -52,24 +52,18 @@ class LogInViewController: UIViewController {
        }
        
        @objc func keyboardWillShow(_ notification: Notification) {
-           
            let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect ?? .zero
+        	
            let animationDuration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double ?? 0
-               
            UIView.animate(withDuration: animationDuration){ self.contratraintBottom.constant=keyboardFrame.size.height
                self.view.layoutIfNeeded()
-    
            }
        }
        
        @objc func keyboardWillHide(_ notification: Notification) {
-           
-       
            let animationDuration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double ?? 0
-               
            UIView.animate(withDuration: animationDuration){ self.contratraintBottom.constant=0
                self.view.layoutIfNeeded()
-           
            }
 
        }

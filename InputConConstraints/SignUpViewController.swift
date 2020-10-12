@@ -67,7 +67,7 @@ class SignUpViewController: UIViewController {
            let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect ?? .zero
            let animationDuration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double ?? 0
                
-           UIView.animate(withDuration: animationDuration){ self.constraintBottom.constant=keyboardFrame.size.height
+           UIView.animate(withDuration: animationDuration){ self.constraintBottom.constant=keyboardFrame.size.height + 15
                self.view.layoutIfNeeded()
     
            }

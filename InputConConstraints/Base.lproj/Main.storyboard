@@ -409,7 +409,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2050.4000000000001" y="130.88455772113943"/>
+            <point key="canvasLocation" x="2097" y="-296"/>
         </scene>
         <!--Recover Pasword View Controller-->
         <scene sceneID="Mad-lF-fdY">
