@@ -11,19 +11,17 @@ import UIKit
 
 class LogInViewController: UIViewController {
     
-    
+    /* LogIn Actions */
     @IBAction func clickCloseKeyboard(_ sender: Any) {
         self.view.endEditing(true)
     }
+    
+    /* LogIn Outlets */
     @IBOutlet weak var txtFirstName: UITextField!
     @IBOutlet weak var btnSubmit: UIButton!
     @IBOutlet weak var txtPssword: UITextField!
     @IBOutlet weak var mainBox: UIView!
-    
-    @IBOutlet weak var contratraintBottom: NSLayoutConstraint!
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         txtPssword.layer.cornerRadius = 15
@@ -53,19 +51,11 @@ class LogInViewController: UIViewController {
        
        @objc func keyboardWillShow(_ notification: Notification) {
            let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect ?? .zero
-        	
-           let animationDuration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double ?? 0
-           UIView.animate(withDuration: animationDuration){ self.contratraintBottom.constant=keyboardFrame.size.height
-               self.view.layoutIfNeeded()
-           }
+        	view.frame.origin.y = -keyboardFrame.size.height + 120
        }
        
        @objc func keyboardWillHide(_ notification: Notification) {
-           let animationDuration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double ?? 0
-           UIView.animate(withDuration: animationDuration){ self.contratraintBottom.constant=0
-               self.view.layoutIfNeeded()
-           }
-
+            view.frame.origin.y = 0
        }
     
 }

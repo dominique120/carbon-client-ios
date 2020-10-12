@@ -19,13 +19,12 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var txtLastName: UITextField!
     @IBOutlet weak var mainBox: UIView!
     
-    @IBOutlet weak var constraintBottom: NSLayoutConstraint!
-    
-    
     /* SignUp Actions */
-    @IBAction func closeKeyboardTap(_ sender: Any) {
-        self.view.endEditing(true)
+    @IBAction func editingHasEnded(_ sender: Any) {
+         self.view.endEditing(true)
     }
+    
+    
     
     
     override func viewDidLoad() {
@@ -63,25 +62,12 @@ class SignUpViewController: UIViewController {
     
     
        @objc func keyboardWillShow(_ notification: Notification) {
-           
            let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect ?? .zero
-           let animationDuration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double ?? 0
-               
-           UIView.animate(withDuration: animationDuration){ self.constraintBottom.constant=keyboardFrame.size.height + 15
-               self.view.layoutIfNeeded()
-    
-           }
+            view.frame.origin.y = -keyboardFrame.size.height + 120
        }
-    
-    @objc func keyboardWillHide(_ notification: Notification) {
-    
-        let animationDuration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double ?? 0
-            
-        UIView.animate(withDuration: animationDuration){ self.constraintBottom.constant=0
-            self.view.layoutIfNeeded()
-        
-        }
-
-    }
+       
+       @objc func keyboardWillHide(_ notification: Notification) {
+            view.frame.origin.y = 0
+       }
     
 }

@@ -5,24 +5,22 @@
 //  Created by Dominique Verellen on 10/11/20.
 //  Copyright © 2020 Kenyi Rodriguez. All rights reserved.
 //
-
-import Foundation
 import UIKit
 
 
 class RecoverPaswordViewController: UIViewController {
     
-    
+    /* Recovery Outlets */
     @IBOutlet weak var mainBox: UIView!
     @IBOutlet weak var btnSend: UIButton!
     @IBOutlet weak var userOrEmail: UITextField!
 
 
-    @IBAction func endEditing(_ sender: Any) {
-        self.view.endEditing(true)
+    /* Recovery Actions */
+    @IBAction func editingHasEnded(_ sender: Any) {
+         self.view.endEditing(true)
     }
     
-    @IBOutlet weak var constraintBottom: NSLayoutConstraint!
     
     override func viewDidLoad() {
         
@@ -54,30 +52,14 @@ class RecoverPaswordViewController: UIViewController {
                                                object: nil)
     }
     
-    
-    
        @objc func keyboardWillShow(_ notification: Notification) {
-           
            let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect ?? .zero
-           let animationDuration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double ?? 0
-               
-           UIView.animate(withDuration: animationDuration){ self.constraintBottom.constant=keyboardFrame.size.height
-               self.view.layoutIfNeeded()
-    
-           }
+            view.frame.origin.y = -keyboardFrame.size.height + 120
        }
-    
-    @objc func keyboardWillHide(_ notification: Notification) {
-    
-        let animationDuration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double ?? 0
-            
-        UIView.animate(withDuration: animationDuration){ self.constraintBottom.constant=0
-            self.view.layoutIfNeeded()
-        
-        }
+       
+       @objc func keyboardWillHide(_ notification: Notification) {
+            view.frame.origin.y = 0
+       }
 
     }
-    
-    
-    
-}
+
