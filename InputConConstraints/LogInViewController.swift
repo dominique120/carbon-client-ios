@@ -24,10 +24,6 @@ class LogInViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        txtPssword.layer.cornerRadius = 15
-        txtFirstName.layer.cornerRadius = 15
-        btnSubmit.layer.cornerRadius = 20
-        mainBox.layer.cornerRadius = 20
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -23,10 +23,6 @@ class RecoverPaswordViewController: UIViewController {
     
     
     override func viewDidLoad() {
-        
-        mainBox.layer.cornerRadius = 20
-        userOrEmail.layer.cornerRadius = 15
-        btnSend.frame = CGRect(x: 0, y: 0 , width: 50, height: 50)
         super.viewDidLoad()
     }
     
