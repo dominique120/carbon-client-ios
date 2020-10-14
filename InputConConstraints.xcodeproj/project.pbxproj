@@ -27,7 +27,7 @@
 		4E8D72B925366E3E00573733 /* TFUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFUIView.swift; sourceTree = "<group>"; };
 		4E8D72BC2536716C00573733 /* BTUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTUIView.swift; sourceTree = "<group>"; };
 		4E8D72BF2536756E00573733 /* VUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VUIView.swift; sourceTree = "<group>"; };
-		FBD3D1972526260F0010A094 /* InputConConstraints.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InputConConstraints.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBD3D1972526260F0010A094 /* IsilInsta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IsilInsta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBD3D19A2526260F0010A094 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBD3D19C2526260F0010A094 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FBD3D1A12526260F0010A094 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 		FBD3D1982526260F0010A094 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FBD3D1972526260F0010A094 /* InputConConstraints.app */,
+				FBD3D1972526260F0010A094 /* IsilInsta.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,7 +99,7 @@
 			);
 			name = InputConConstraints;
 			productName = InputConConstraints;
-			productReference = FBD3D1972526260F0010A094 /* InputConConstraints.app */;
+			productReference = FBD3D1972526260F0010A094 /* IsilInsta.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -311,8 +311,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.solera.InputConConstraints;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vs.isilinsta;
+				PRODUCT_NAME = IsilInsta;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -329,8 +330,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.solera.InputConConstraints;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vs.isilinsta;
+				PRODUCT_NAME = IsilInsta;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

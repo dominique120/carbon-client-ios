@@ -26,6 +26,17 @@ class LogInViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    
+    @IBAction func onSignIn(_ sender: Any) {
+        if txtFirstName.text == "Username" && txtPssword.text == "Password"{
+        showMessage(controller: self, message: "Usuario y clave validada, bienvenid@!", seconds: 5.0)
+        } else if txtFirstName.text == "Username" && txtPssword.text != "Password"{
+            showMessage(controller: self, message: "Clave incorrecta, intente nuevamente.", seconds: 5.0)
+        } else {
+                        showMessage(controller: self, message: "Ese usuario no existe.", seconds: 5.0)
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
            super.viewWillAppear(animated)
            
@@ -53,6 +64,19 @@ class LogInViewController: UIViewController {
        @objc func keyboardWillHide(_ notification: Notification) {
             view.frame.origin.y = 0
        }
+    
+    func showMessage(controller: UIViewController, message : String, seconds: Double) {
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        alert.view.backgroundColor = UIColor.black
+        alert.view.alpha = 0.6
+        alert.view.layer.cornerRadius = 15
+
+        controller.present(alert, animated: true)
+
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds) {
+            alert.dismiss(animated: true)
+        }
+    }
 }
 
 
