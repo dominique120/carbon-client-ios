@@ -10,6 +10,9 @@
 		150B41E92533D6E7007292DB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150B41E82533D6E7007292DB /* SignUpViewController.swift */; };
 		150B41EB2533E76E007292DB /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150B41EA2533E76E007292DB /* LogInViewController.swift */; };
 		150B41ED2533F38D007292DB /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150B41EC2533F38D007292DB /* RecoverPasswordViewController.swift */; };
+		4E8D72BA25366E3E00573733 /* TFUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8D72B925366E3E00573733 /* TFUIView.swift */; };
+		4E8D72BD2536716C00573733 /* BTUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8D72BC2536716C00573733 /* BTUIView.swift */; };
+		4E8D72C02536756E00573733 /* VUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8D72BF2536756E00573733 /* VUIView.swift */; };
 		FBD3D19B2526260F0010A094 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD3D19A2526260F0010A094 /* AppDelegate.swift */; };
 		FBD3D19D2526260F0010A094 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD3D19C2526260F0010A094 /* SceneDelegate.swift */; };
 		FBD3D1A22526260F0010A094 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBD3D1A02526260F0010A094 /* Main.storyboard */; };
@@ -21,6 +24,9 @@
 		150B41E82533D6E7007292DB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		150B41EA2533E76E007292DB /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		150B41EC2533F38D007292DB /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
+		4E8D72B925366E3E00573733 /* TFUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFUIView.swift; sourceTree = "<group>"; };
+		4E8D72BC2536716C00573733 /* BTUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTUIView.swift; sourceTree = "<group>"; };
+		4E8D72BF2536756E00573733 /* VUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VUIView.swift; sourceTree = "<group>"; };
 		FBD3D1972526260F0010A094 /* InputConConstraints.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InputConConstraints.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBD3D19A2526260F0010A094 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBD3D19C2526260F0010A094 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +75,9 @@
 				FBD3D1A5252626110010A094 /* LaunchScreen.storyboard */,
 				FBD3D1A8252626110010A094 /* Info.plist */,
 				150B41EA2533E76E007292DB /* LogInViewController.swift */,
+				4E8D72B925366E3E00573733 /* TFUIView.swift */,
+				4E8D72BC2536716C00573733 /* BTUIView.swift */,
+				4E8D72BF2536756E00573733 /* VUIView.swift */,
 			);
 			path = InputConConstraints;
 			sourceTree = "<group>";
@@ -144,11 +153,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E8D72BA25366E3E00573733 /* TFUIView.swift in Sources */,
 				FBD3D19B2526260F0010A094 /* AppDelegate.swift in Sources */,
 				150B41E92533D6E7007292DB /* SignUpViewController.swift in Sources */,
 				150B41EB2533E76E007292DB /* LogInViewController.swift in Sources */,
 				150B41ED2533F38D007292DB /* RecoverPasswordViewController.swift in Sources */,
 				FBD3D19D2526260F0010A094 /* SceneDelegate.swift in Sources */,
+				4E8D72BD2536716C00573733 /* BTUIView.swift in Sources */,
+				4E8D72C02536756E00573733 /* VUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
