@@ -24,10 +24,6 @@ class LogInViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        txtPssword.layer.cornerRadius = 15
-        txtFirstName.layer.cornerRadius = 15
-        btnSubmit.layer.cornerRadius = 20
-        mainBox.layer.cornerRadius = 20
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,11 +47,12 @@ class LogInViewController: UIViewController {
        
        @objc func keyboardWillShow(_ notification: Notification) {
            let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect ?? .zero
-        	view.frame.origin.y = -keyboardFrame.size.height + 120
+        	view.frame.origin.y = -keyboardFrame.size.height + 205
        }
        
        @objc func keyboardWillHide(_ notification: Notification) {
             view.frame.origin.y = 0
        }
-    
 }
+
+

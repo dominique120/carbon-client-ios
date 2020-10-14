@@ -28,13 +28,6 @@ class SignUpViewController: UIViewController {
     
     
     override func viewDidLoad() {
-        txtFirstName.layer.cornerRadius = 15
-        txtPassword.layer.cornerRadius = 15
-        txtPasswordConfirm.layer.cornerRadius = 15
-        txtLastName.layer.cornerRadius = 15
-        txtUser.layer.cornerRadius = 15
-        btnCreateAccount.layer.cornerRadius = 20
-        mainBox.layer.cornerRadius = 20
         super.viewDidLoad()
     }
     
@@ -63,7 +56,8 @@ class SignUpViewController: UIViewController {
     
        @objc func keyboardWillShow(_ notification: Notification) {
            let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect ?? .zero
-            view.frame.origin.y = -keyboardFrame.size.height + 120
+            view.frame.origin.y = -keyboardFrame.size.height + 140
+        
        }
        
        @objc func keyboardWillHide(_ notification: Notification) {

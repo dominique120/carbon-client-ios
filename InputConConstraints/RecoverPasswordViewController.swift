@@ -23,10 +23,6 @@ class RecoverPaswordViewController: UIViewController {
     
     
     override func viewDidLoad() {
-        
-        mainBox.layer.cornerRadius = 20
-        userOrEmail.layer.cornerRadius = 15
-        btnSend.frame = CGRect(x: 0, y: 0 , width: 50, height: 50)
         super.viewDidLoad()
     }
     
@@ -54,7 +50,7 @@ class RecoverPaswordViewController: UIViewController {
     
        @objc func keyboardWillShow(_ notification: Notification) {
            let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect ?? .zero
-            view.frame.origin.y = -keyboardFrame.size.height + 120
+            view.frame.origin.y = -keyboardFrame.size.height + 140
        }
        
        @objc func keyboardWillHide(_ notification: Notification) {
