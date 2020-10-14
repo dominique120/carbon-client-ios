@@ -59,7 +59,7 @@ class RecoverPaswordViewController: UIViewController {
     
        @objc func keyboardWillShow(_ notification: Notification) {
            let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect ?? .zero
-            view.frame.origin.y = -keyboardFrame.size.height + 140
+            view.frame.origin.y = -keyboardFrame.size.height + 180
        }
        
        @objc func keyboardWillHide(_ notification: Notification) {

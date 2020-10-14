@@ -58,7 +58,7 @@ class LogInViewController: UIViewController {
        
        @objc func keyboardWillShow(_ notification: Notification) {
            let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect ?? .zero
-        	view.frame.origin.y = -keyboardFrame.size.height + 205
+        	view.frame.origin.y = -keyboardFrame.size.height + 220
        }
        
        @objc func keyboardWillHide(_ notification: Notification) {

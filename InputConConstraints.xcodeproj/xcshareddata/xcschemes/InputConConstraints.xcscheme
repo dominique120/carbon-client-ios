@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FBD3D1962526260F0010A094"
-               BuildableName = "InputConConstraints.app"
+               BuildableName = "IsilInsta.app"
                BlueprintName = "InputConConstraints"
                ReferencedContainer = "container:InputConConstraints.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FBD3D1962526260F0010A094"
-            BuildableName = "InputConConstraints.app"
+            BuildableName = "IsilInsta.app"
             BlueprintName = "InputConConstraints"
             ReferencedContainer = "container:InputConConstraints.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FBD3D1962526260F0010A094"
-            BuildableName = "InputConConstraints.app"
+            BuildableName = "IsilInsta.app"
             BlueprintName = "InputConConstraints"
             ReferencedContainer = "container:InputConConstraints.xcodeproj">
          </BuildableReference>
