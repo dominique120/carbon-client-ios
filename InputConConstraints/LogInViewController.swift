@@ -23,18 +23,66 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var mainBox: UIView!
 
     override func viewDidLoad() {
+        self.setNeedsStatusBarAppearanceUpdate()
+
         super.viewDidLoad()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .darkContent
     }
     
     
     @IBAction func onSignIn(_ sender: Any) {
-        if txtFirstName.text == "Username" && txtPssword.text == "Password"{
-        showMessage(controller: self, message: "Usuario y clave validada, bienvenid@!", seconds: 5.0)
-        } else if txtFirstName.text == "Username" && txtPssword.text != "Password"{
-            showMessage(controller: self, message: "Clave incorrecta, intente nuevamente.", seconds: 5.0)
-        } else {
-                        showMessage(controller: self, message: "Ese usuario no existe.", seconds: 5.0)
-        }
+        let usr: String = txtFirstName.text!
+        let pwd: String = txtPssword.text!
+        
+        
+        let params = ["username":usr, "password":pwd] as Dictionary<String, String>
+        
+        var request = URLRequest(url: URL(string: Constants.api_base_url + "/auth")!)
+        request.httpMethod = "POST"
+        request.httpBody = try? JSONSerialization.data(withJSONObject: params, options: [])
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+
+        let session = URLSession.shared
+        let task = session.dataTask(with: request, completionHandler: { data, response, error -> Void in
+            //print(response!)
+            
+                if let httpResponse = response as? HTTPURLResponse {
+                //print(httpResponse.statusCode)
+                //let string = String(data: data!, encoding: .utf8)
+                //print(string!)
+                    
+                    if (httpResponse.statusCode == 200) {
+                        // Not working
+                        // Thread violation
+                        // UI cant be managed in background thread
+                        /*
+                        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+
+                        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "HomeScreen") as UIViewController
+                        self.present(nextViewController, animated:true, completion:nil)
+                        */
+                    } else if (httpResponse.statusCode == 403) {
+                        self.showMessage(controller: self, message: "Credenciales invalidas!", seconds: 5.0)
+                    } else {
+                        self.showMessage(controller: self, message: "Ocurrio un error!", seconds: 5.0)
+                    }
+            }
+            
+               /*
+            do {
+                let json = try JSONSerialization.jsonObject(with: data!) as! Dictionary<String, AnyObject>
+                print(json)
+            } catch {
+                print("error")
+            }
+ */
+        })
+
+        task.resume()
     }
     
     override func viewWillAppear(_ animated: Bool) {

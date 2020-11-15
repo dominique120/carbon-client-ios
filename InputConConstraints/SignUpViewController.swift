@@ -36,6 +36,19 @@ class SignUpViewController: UIViewController {
         }
     }
     
+    @IBAction func swipeRecognizer(_ sender: UISwipeGestureRecognizer) {
+        if (sender.direction == .right) {
+            print("Swiped right")
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    
+    @IBAction func signUpButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
