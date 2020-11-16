@@ -38,51 +38,78 @@ class LogInViewController: UIViewController {
         let pwd: String = txtPssword.text!
         
         
-        let params = ["username":usr, "password":pwd] as Dictionary<String, String>
+        let status: Int = self.sendAuthRequest(username: usr, password: pwd)
         
-        var request = URLRequest(url: URL(string: Constants.api_base_url + "/auth")!)
-        request.httpMethod = "POST"
-        request.httpBody = try? JSONSerialization.data(withJSONObject: params, options: [])
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        if (status == 200) {
+            self.sendToHomeScren()
+        } else if (status == 403) {
+            self.showMessage(controller: self, message: "Credenciales invalidas!", seconds: 5.0)
+        } else {
+            self.showMessage(controller: self, message: "Ocurrio un error!", seconds: 5.0)
+        }
         
 
-        let session = URLSession.shared
-        let task = session.dataTask(with: request, completionHandler: { data, response, error -> Void in
-            //print(response!)
-            
-                if let httpResponse = response as? HTTPURLResponse {
-                //print(httpResponse.statusCode)
-                //let string = String(data: data!, encoding: .utf8)
-                //print(string!)
-                    
-                    if (httpResponse.statusCode == 200) {
-                        // Not working
-                        // Thread violation
-                        // UI cant be managed in background thread
-                        /*
-                        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        
+    }
+    
+    func sendAuthRequest(username: String, password: String) -> Int {
+        
+        let sem = DispatchSemaphore(value: 0)
+        var authStatus: Int = 0
+        
+        
+               let params = ["username":username, "password":password] as Dictionary<String, String>
+               
+               var request = URLRequest(url: URL(string: Constants.api_base_url + "/auth/validateuser")!)
+               request.httpMethod = "POST"
+               request.httpBody = try? JSONSerialization.data(withJSONObject: params, options: [])
+               request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+               
 
-                        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "HomeScreen") as UIViewController
-                        self.present(nextViewController, animated:true, completion:nil)
-                        */
-                    } else if (httpResponse.statusCode == 403) {
-                        self.showMessage(controller: self, message: "Credenciales invalidas!", seconds: 5.0)
-                    } else {
-                        self.showMessage(controller: self, message: "Ocurrio un error!", seconds: 5.0)
-                    }
-            }
-            
-               /*
-            do {
-                let json = try JSONSerialization.jsonObject(with: data!) as! Dictionary<String, AnyObject>
-                print(json)
-            } catch {
-                print("error")
-            }
- */
-        })
+               let session = URLSession.shared
+               let task = session.dataTask(with: request, completionHandler: { data, response, error -> Void in
+                   //print(response!)
+                  
+                   
+                let string = String(data: request.httpBody!, encoding: .utf8)
+                print(string!)
+                
+                       if let httpResponse = response as? HTTPURLResponse {
+                      print(httpResponse.statusCode)
+                      //  let string = String(data: data!, encoding: .utf8)
+                      // print(string!)
+                           
+                           
+                           if (httpResponse.statusCode == 200) {
+                               authStatus = 200
+                           } else if (httpResponse.statusCode == 403) {
+                               authStatus = 403
+                           } else {
+                               authStatus = -1
+                           }
+                   }
+                   
+                      /*
+                   do {
+                       let json = try JSONSerialization.jsonObject(with: data!) as! Dictionary<String, AnyObject>
+                       print(json)
+                   } catch {
+                       print("error")
+                   }
+        */
+               })
 
-        task.resume()
+               task.resume()
+        sem.wait()
+        return authStatus        
+    }
+    
+    func sendToHomeScren() -> Void {
+        print("isAuthenticated")
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+
+         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "HomeScreen") as UIViewController
+         self.present(nextViewController, animated:true, completion:nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
