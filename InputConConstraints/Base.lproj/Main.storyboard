@@ -630,21 +630,6 @@
             </objects>
             <point key="canvasLocation" x="3235" y="-274"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="oUs-SU-QYV">
-            <objects>
-                <viewController storyboardIdentifier="HomeScreen" id="8pJ-G5-qrS" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="sDi-7k-vQR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="oM5-0H-wn1"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="m9e-1p-BQU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4009" y="135"/>
-        </scene>
         <!--Recover Pasword View Controller-->
         <scene sceneID="Mad-lF-fdY">
             <objects>
