@@ -106,9 +106,9 @@ class LogInViewController: UIViewController {
     
     func sendToHomeScren() -> Void {
         print("isAuthenticated")
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let storyBoard : UIStoryboard = UIStoryboard(name: "User", bundle:nil)
         
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "HomeScreen") as UIViewController
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Home") as UIViewController
         nextViewController.modalPresentationStyle = .fullScreen
         self.present(nextViewController, animated:true, completion:nil)
     }
