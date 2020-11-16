@@ -88,7 +88,7 @@ class LogInViewController: UIViewController {
                     authStatus = -1
                 }
             }
-            
+            sem.signal()
             /*
              do {
              let json = try JSONSerialization.jsonObject(with: data!) as! Dictionary<String, AnyObject>
@@ -109,6 +109,7 @@ class LogInViewController: UIViewController {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "HomeScreen") as UIViewController
+        nextViewController.modalPresentationStyle = .fullScreen
         self.present(nextViewController, animated:true, completion:nil)
     }
     
