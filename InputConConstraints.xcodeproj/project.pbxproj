@@ -10,6 +10,7 @@
 		150B41E92533D6E7007292DB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150B41E82533D6E7007292DB /* SignUpViewController.swift */; };
 		150B41EB2533E76E007292DB /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150B41EA2533E76E007292DB /* LogInViewController.swift */; };
 		150B41ED2533F38D007292DB /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150B41EC2533F38D007292DB /* RecoverPasswordViewController.swift */; };
+		15D1085D256197A600CC6255 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D1085C256197A600CC6255 /* Constants.swift */; };
 		4E8D72BA25366E3E00573733 /* TFUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8D72B925366E3E00573733 /* TFUIView.swift */; };
 		4E8D72BD2536716C00573733 /* BTUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8D72BC2536716C00573733 /* BTUIView.swift */; };
 		4E8D72C02536756E00573733 /* VUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8D72BF2536756E00573733 /* VUIView.swift */; };
@@ -24,6 +25,7 @@
 		150B41E82533D6E7007292DB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		150B41EA2533E76E007292DB /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		150B41EC2533F38D007292DB /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
+		15D1085C256197A600CC6255 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4E8D72B925366E3E00573733 /* TFUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFUIView.swift; sourceTree = "<group>"; };
 		4E8D72BC2536716C00573733 /* BTUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTUIView.swift; sourceTree = "<group>"; };
 		4E8D72BF2536756E00573733 /* VUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VUIView.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				4E8D72B925366E3E00573733 /* TFUIView.swift */,
 				4E8D72BC2536716C00573733 /* BTUIView.swift */,
 				4E8D72BF2536756E00573733 /* VUIView.swift */,
+				15D1085C256197A600CC6255 /* Constants.swift */,
 			);
 			path = InputConConstraints;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 				FBD3D19D2526260F0010A094 /* SceneDelegate.swift in Sources */,
 				4E8D72BD2536716C00573733 /* BTUIView.swift in Sources */,
 				4E8D72C02536756E00573733 /* VUIView.swift in Sources */,
+				15D1085D256197A600CC6255 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

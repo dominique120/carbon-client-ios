@@ -32,9 +32,18 @@ class RecoverPaswordViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
     }
+
     
+    @IBAction func swipeRecognizer(_ sender: UISwipeGestureRecognizer) {
+        if (sender.direction == .right) {
+            print("Swiped right")
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
     
     
     override func viewDidDisappear(_ animated: Bool) {
