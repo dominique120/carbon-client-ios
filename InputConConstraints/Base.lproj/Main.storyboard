@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1QC-KX-mBq">
-                                <rect key="frame" x="0.0" y="34" width="414" height="828"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NbB-WL-Ubk" customClass="VUIView" customModule="IsilInsta" customModuleProvider="target">
                                         <rect key="frame" x="47" y="191" width="320" height="446"/>
@@ -126,7 +126,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="HBS-F1-wnk" kind="show" id="KZJ-Sm-pzx"/>
+                                                    <segue destination="HBS-F1-wnk" kind="modal" modalPresentationStyle="fullScreen" id="KZJ-Sm-pzx"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMW-Oe-Lim">
@@ -136,7 +136,7 @@
                                                     <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="Lxz-6d-1Ui" kind="show" id="0mo-wp-PRN"/>
+                                                    <segue destination="Lxz-6d-1Ui" kind="modal" modalPresentationStyle="fullScreen" id="0mo-wp-PRN"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXI-vc-X5t" customClass="BTUView" customModule="IsilInsta" customModuleProvider="target">
@@ -231,7 +231,7 @@
                                 <color key="backgroundColor" red="0.17094343349999999" green="0.17263594269999999" blue="0.17263594269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="NbB-WL-Ubk" firstAttribute="centerX" secondItem="1QC-KX-mBq" secondAttribute="centerX" id="LPJ-DS-CqT"/>
-                                    <constraint firstItem="NbB-WL-Ubk" firstAttribute="centerY" secondItem="1QC-KX-mBq" secondAttribute="centerY" id="W9r-fW-iv6"/>
+                                    <constraint firstItem="NbB-WL-Ubk" firstAttribute="centerY" secondItem="1QC-KX-mBq" secondAttribute="centerY" constant="-34" id="W9r-fW-iv6"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -243,7 +243,7 @@
                             <constraint firstItem="1QC-KX-mBq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Pg9-ak-QOw"/>
                             <constraint firstItem="1QC-KX-mBq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Vgk-EK-p1B"/>
                             <constraint firstItem="1QC-KX-mBq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lNr-Bd-huA"/>
-                            <constraint firstItem="1QC-KX-mBq" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="uul-UD-yTX"/>
+                            <constraint firstItem="1QC-KX-mBq" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="uul-UD-yTX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <variation key="default">
@@ -281,10 +281,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="npG-lR-mVU">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pWW-cW-Ci1" customClass="VUIView" customModule="IsilInsta" customModuleProvider="target">
-                                        <rect key="frame" x="47" y="164" width="320" height="446"/>
+                                        <rect key="frame" x="47" y="186" width="320" height="446"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="First Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eeS-u5-sg7" customClass="TFUIView" customModule="IsilInsta" customModuleProvider="target">
                                                 <rect key="frame" x="35" y="147" width="250" height="34"/>
@@ -523,7 +523,7 @@
                                                     <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="BYZ-38-t0r" kind="show" id="EYe-V4-kYQ"/>
+                                                    <action selector="signUpButton:" destination="Lxz-6d-1Ui" eventType="touchUpInside" id="Qx8-u4-OP2"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -577,22 +577,24 @@
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.17094343349999999" green="0.17263594269999999" blue="0.17263594269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstItem="pWW-cW-Ci1" firstAttribute="centerY" secondItem="npG-lR-mVU" secondAttribute="centerY" id="bZY-fH-PJN"/>
+                                    <constraint firstItem="pWW-cW-Ci1" firstAttribute="centerY" secondItem="npG-lR-mVU" secondAttribute="centerY" constant="-39" id="bZY-fH-PJN"/>
                                     <constraint firstItem="pWW-cW-Ci1" firstAttribute="centerX" secondItem="npG-lR-mVU" secondAttribute="centerX" id="ot2-Am-nhI"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="5b3-Q6-A0k" appends="YES" id="I6b-5Z-8bj"/>
+                                    <outletCollection property="gestureRecognizers" destination="qOG-2h-7kY" appends="YES" id="2wm-6c-uZ4"/>
                                 </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="npG-lR-mVU" firstAttribute="top" secondItem="irI-Yz-DRK" secondAttribute="top" id="6eG-75-PgG"/>
+                            <constraint firstItem="npG-lR-mVU" firstAttribute="top" secondItem="irI-Yz-DRK" secondAttribute="top" constant="-44" id="6eG-75-PgG"/>
                             <constraint firstItem="npG-lR-mVU" firstAttribute="leading" secondItem="irI-Yz-DRK" secondAttribute="leading" id="A8H-QK-TaM"/>
                             <constraint firstItem="npG-lR-mVU" firstAttribute="trailing" secondItem="irI-Yz-DRK" secondAttribute="trailing" id="D5l-ou-4AQ"/>
                             <constraint firstItem="npG-lR-mVU" firstAttribute="centerX" secondItem="B33-Lw-zUm" secondAttribute="centerX" id="mUd-7m-a7U"/>
-                            <constraint firstItem="npG-lR-mVU" firstAttribute="bottom" secondItem="irI-Yz-DRK" secondAttribute="bottom" id="of7-jW-jCm"/>
+                            <constraint firstItem="npG-lR-mVU" firstAttribute="bottom" secondItem="irI-Yz-DRK" secondAttribute="bottom" constant="34" id="of7-jW-jCm"/>
                             <constraint firstItem="npG-lR-mVU" firstAttribute="centerY" secondItem="B33-Lw-zUm" secondAttribute="centerY" id="qMd-mM-VST"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="irI-Yz-DRK"/>
@@ -620,8 +622,28 @@
                         <outlet property="delegate" destination="npG-lR-mVU" id="a2V-Re-mfk"/>
                     </connections>
                 </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="qOG-2h-7kY">
+                    <connections>
+                        <action selector="swipeRecognizer:" destination="Lxz-6d-1Ui" id="XX1-1n-5gn"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3129" y="-500"/>
+            <point key="canvasLocation" x="3235" y="-274"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="oUs-SU-QYV">
+            <objects>
+                <viewController storyboardIdentifier="HomeScreen" id="8pJ-G5-qrS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sDi-7k-vQR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="oM5-0H-wn1"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m9e-1p-BQU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4009" y="135"/>
         </scene>
         <!--Recover Pasword View Controller-->
         <scene sceneID="Mad-lF-fdY">
@@ -632,10 +654,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="po9-fk-aam">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4p5-7w-K8l" customClass="VUIView" customModule="IsilInsta" customModuleProvider="target">
-                                        <rect key="frame" x="47" y="247.66666666666669" width="320" height="279.00000000000006"/>
+                                        <rect key="frame" x="47" y="269.66666666666669" width="320" height="279.00000000000006"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KgS-RY-13G">
                                                 <rect key="frame" x="41.666666666666686" y="81" width="237" height="106"/>
@@ -649,7 +671,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="neL-bE-9VV" customClass="TFUIView" customModule="IsilInsta" customModuleProvider="target">
-                                                <rect key="frame" x="53.666666666666686" y="204.99999999999994" width="213" height="34"/>
+                                                <rect key="frame" x="53.666666666666686" y="205" width="213" height="34"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -684,7 +706,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9b-Gq-Lrw">
-                                                <rect key="frame" x="274" y="204.99999999999994" width="30" height="30"/>
+                                                <rect key="frame" x="274" y="205" width="30" height="30"/>
                                                 <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="wkQ-PF-nbm"/>
@@ -752,20 +774,22 @@
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.17094343349999999" green="0.17263594269999999" blue="0.17263594269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstItem="4p5-7w-K8l" firstAttribute="centerY" secondItem="po9-fk-aam" secondAttribute="centerY" id="heh-6C-M1E"/>
+                                    <constraint firstItem="4p5-7w-K8l" firstAttribute="centerY" secondItem="po9-fk-aam" secondAttribute="centerY" constant="-38.833333333333258" id="heh-6C-M1E"/>
                                     <constraint firstItem="4p5-7w-K8l" firstAttribute="centerX" secondItem="po9-fk-aam" secondAttribute="centerX" id="r2J-tr-O9d"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="pRg-y9-0Za" appends="YES" id="3IP-KF-5fe"/>
+                                    <outletCollection property="gestureRecognizers" destination="mc6-iY-5d4" appends="YES" id="Q4V-Vn-4en"/>
                                 </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="po9-fk-aam" firstAttribute="bottom" secondItem="Nbp-IO-NJz" secondAttribute="bottom" id="3AL-It-uiR"/>
+                            <constraint firstItem="po9-fk-aam" firstAttribute="bottom" secondItem="Nbp-IO-NJz" secondAttribute="bottom" constant="34" id="3AL-It-uiR"/>
                             <constraint firstItem="po9-fk-aam" firstAttribute="centerY" secondItem="Qdo-Ea-tY3" secondAttribute="centerY" id="7PN-uA-KlD"/>
-                            <constraint firstItem="po9-fk-aam" firstAttribute="top" secondItem="Nbp-IO-NJz" secondAttribute="top" id="BmE-st-bEg"/>
+                            <constraint firstItem="po9-fk-aam" firstAttribute="top" secondItem="Nbp-IO-NJz" secondAttribute="top" constant="-44" id="BmE-st-bEg"/>
                             <constraint firstItem="po9-fk-aam" firstAttribute="leading" secondItem="Nbp-IO-NJz" secondAttribute="leading" id="ZPT-mf-Vou"/>
                             <constraint firstItem="po9-fk-aam" firstAttribute="centerX" secondItem="Qdo-Ea-tY3" secondAttribute="centerX" id="jfh-gh-k0M"/>
                             <constraint firstItem="po9-fk-aam" firstAttribute="trailing" secondItem="Nbp-IO-NJz" secondAttribute="trailing" id="w4M-KM-pF3"/>
@@ -790,31 +814,15 @@
                         <action selector="editingHasEnded:" destination="HBS-F1-wnk" id="C2q-8I-QW7"/>
                     </connections>
                 </tapGestureRecognizer>
-            </objects>
-            <point key="canvasLocation" x="3194" y="181"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Xtd-cg-WrG">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rgP-Op-AbK" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lW7-N4-hCw">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
+                <swipeGestureRecognizer direction="right" id="mc6-iY-5d4">
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="5eS-aU-XHh"/>
+                        <action selector="swipeRecognizer:" destination="HBS-F1-wnk" id="vci-OI-CYh"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uyb-ju-sNh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1365.217391304348" y="131.25"/>
+            <point key="canvasLocation" x="2969.5652173913045" y="875.89285714285711"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="5eS-aU-XHh"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="envelope.circle.fill" catalog="system" width="128" height="121"/>
     </resources>
