@@ -871,6 +871,7 @@
                                     <constraint firstItem="eOi-nv-1b3" firstAttribute="leading" secondItem="GZg-Ix-6w9" secondAttribute="leading" id="hdS-t2-jaI"/>
                                     <constraint firstAttribute="trailing" secondItem="eOi-nv-1b3" secondAttribute="trailing" id="jr4-Vz-ItX"/>
                                     <constraint firstItem="blh-a0-bkx" firstAttribute="top" secondItem="GZg-Ix-6w9" secondAttribute="top" constant="16" id="l4z-2E-kiQ"/>
+                                    <constraint firstItem="s3K-ZI-w6o" firstAttribute="top" secondItem="6Am-T3-sF6" secondAttribute="bottom" constant="12" id="n67-Xp-oFz"/>
                                     <constraint firstItem="6Am-T3-sF6" firstAttribute="top" secondItem="yt5-98-qtC" secondAttribute="bottom" constant="12" id="wtI-P7-tlH"/>
                                 </constraints>
                             </view>
