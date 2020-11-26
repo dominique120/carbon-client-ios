@@ -10,6 +10,9 @@
 		150B41E92533D6E7007292DB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150B41E82533D6E7007292DB /* SignUpViewController.swift */; };
 		150B41EB2533E76E007292DB /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150B41EA2533E76E007292DB /* LogInViewController.swift */; };
 		150B41ED2533F38D007292DB /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150B41EC2533F38D007292DB /* RecoverPasswordViewController.swift */; };
+		157365D3256F362B0081E7E3 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157365D2256F362B0081E7E3 /* ImageDownloader.swift */; };
+		157365D5256F37F10081E7E3 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157365D4256F37F10081E7E3 /* AlertManager.swift */; };
+		157365D7256F39A60081E7E3 /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157365D6256F39A60081E7E3 /* Entities.swift */; };
 		15774F0B2562367D00BE6B4B /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15774F0A2562367D00BE6B4B /* User.storyboard */; };
 		15D1085D256197A600CC6255 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D1085C256197A600CC6255 /* Constants.swift */; };
 		4E8D72BA25366E3E00573733 /* TFUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8D72B925366E3E00573733 /* TFUIView.swift */; };
@@ -26,6 +29,9 @@
 		150B41E82533D6E7007292DB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		150B41EA2533E76E007292DB /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		150B41EC2533F38D007292DB /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
+		157365D2256F362B0081E7E3 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		157365D4256F37F10081E7E3 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		157365D6256F39A60081E7E3 /* Entities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
 		15774F0A2562367D00BE6B4B /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		15D1085C256197A600CC6255 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4E8D72B925366E3E00573733 /* TFUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFUIView.swift; sourceTree = "<group>"; };
@@ -84,6 +90,9 @@
 				4E8D72BF2536756E00573733 /* VUIView.swift */,
 				15D1085C256197A600CC6255 /* Constants.swift */,
 				15774F0A2562367D00BE6B4B /* User.storyboard */,
+				157365D2256F362B0081E7E3 /* ImageDownloader.swift */,
+				157365D4256F37F10081E7E3 /* AlertManager.swift */,
+				157365D6256F39A60081E7E3 /* Entities.swift */,
 			);
 			path = InputConConstraints;
 			sourceTree = "<group>";
@@ -161,11 +170,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E8D72BA25366E3E00573733 /* TFUIView.swift in Sources */,
+				157365D5256F37F10081E7E3 /* AlertManager.swift in Sources */,
 				FBD3D19B2526260F0010A094 /* AppDelegate.swift in Sources */,
 				150B41E92533D6E7007292DB /* SignUpViewController.swift in Sources */,
 				150B41EB2533E76E007292DB /* LogInViewController.swift in Sources */,
 				150B41ED2533F38D007292DB /* RecoverPasswordViewController.swift in Sources */,
+				157365D7256F39A60081E7E3 /* Entities.swift in Sources */,
 				FBD3D19D2526260F0010A094 /* SceneDelegate.swift in Sources */,
+				157365D3256F362B0081E7E3 /* ImageDownloader.swift in Sources */,
 				4E8D72BD2536716C00573733 /* BTUIView.swift in Sources */,
 				4E8D72C02536756E00573733 /* VUIView.swift in Sources */,
 				15D1085D256197A600CC6255 /* Constants.swift in Sources */,
