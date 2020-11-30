@@ -10,5 +10,7 @@ import Foundation
 import UIKit
 
 class MainNewPost: UIViewController{
-    
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return.lightContent
+    }
 }
