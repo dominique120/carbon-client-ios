@@ -18,6 +18,14 @@
 		4E8D72BA25366E3E00573733 /* TFUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8D72B925366E3E00573733 /* TFUIView.swift */; };
 		4E8D72BD2536716C00573733 /* BTUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8D72BC2536716C00573733 /* BTUIView.swift */; };
 		4E8D72C02536756E00573733 /* VUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8D72BF2536756E00573733 /* VUIView.swift */; };
+		88A0555D25753C08009D35CB /* TabBarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88A0555C25753C08009D35CB /* TabBarViewController.storyboard */; };
+		88A0556025753CF8009D35CB /* PostViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88A0555F25753CF8009D35CB /* PostViewController.storyboard */; };
+		88A0556325753D0A009D35CB /* NewPostViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88A0556225753D0A009D35CB /* NewPostViewController.storyboard */; };
+		88A0556625753D19009D35CB /* ProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88A0556525753D19009D35CB /* ProfileViewController.storyboard */; };
+		88A0556925753D9C009D35CB /* MainPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A0556825753D9C009D35CB /* MainPost.swift */; };
+		88A0556F25753F05009D35CB /* MainNewPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A0556E25753F05009D35CB /* MainNewPost.swift */; };
+		88A0557725753F58009D35CB /* MainProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A0557625753F58009D35CB /* MainProfile.swift */; };
+		88A0558125753FBA009D35CB /* MainComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A0558025753FBA009D35CB /* MainComment.swift */; };
 		FBD3D19B2526260F0010A094 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD3D19A2526260F0010A094 /* AppDelegate.swift */; };
 		FBD3D19D2526260F0010A094 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD3D19C2526260F0010A094 /* SceneDelegate.swift */; };
 		FBD3D1A22526260F0010A094 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBD3D1A02526260F0010A094 /* Main.storyboard */; };
@@ -37,6 +45,14 @@
 		4E8D72B925366E3E00573733 /* TFUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFUIView.swift; sourceTree = "<group>"; };
 		4E8D72BC2536716C00573733 /* BTUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTUIView.swift; sourceTree = "<group>"; };
 		4E8D72BF2536756E00573733 /* VUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VUIView.swift; sourceTree = "<group>"; };
+		88A0555C25753C08009D35CB /* TabBarViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarViewController.storyboard; sourceTree = "<group>"; };
+		88A0555F25753CF8009D35CB /* PostViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostViewController.storyboard; sourceTree = "<group>"; };
+		88A0556225753D0A009D35CB /* NewPostViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewPostViewController.storyboard; sourceTree = "<group>"; };
+		88A0556525753D19009D35CB /* ProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileViewController.storyboard; sourceTree = "<group>"; };
+		88A0556825753D9C009D35CB /* MainPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPost.swift; sourceTree = "<group>"; };
+		88A0556E25753F05009D35CB /* MainNewPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNewPost.swift; sourceTree = "<group>"; };
+		88A0557625753F58009D35CB /* MainProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProfile.swift; sourceTree = "<group>"; };
+		88A0558025753FBA009D35CB /* MainComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainComment.swift; sourceTree = "<group>"; };
 		FBD3D1972526260F0010A094 /* IsilInsta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IsilInsta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBD3D19A2526260F0010A094 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBD3D19C2526260F0010A094 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +73,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		88A0555A25753B05009D35CB /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				88A0556825753D9C009D35CB /* MainPost.swift */,
+				88A0556E25753F05009D35CB /* MainNewPost.swift */,
+				88A0557625753F58009D35CB /* MainProfile.swift */,
+				88A0558025753FBA009D35CB /* MainComment.swift */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		88A0555B25753B18009D35CB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				88A0555C25753C08009D35CB /* TabBarViewController.storyboard */,
+				88A0555F25753CF8009D35CB /* PostViewController.storyboard */,
+				88A0556225753D0A009D35CB /* NewPostViewController.storyboard */,
+				88A0556525753D19009D35CB /* ProfileViewController.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		FBD3D18E2526260F0010A094 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +114,8 @@
 		FBD3D1992526260F0010A094 /* InputConConstraints */ = {
 			isa = PBXGroup;
 			children = (
+				88A0555B25753B18009D35CB /* Views */,
+				88A0555A25753B05009D35CB /* Class */,
 				FBD3D19A2526260F0010A094 /* AppDelegate.swift */,
 				FBD3D19C2526260F0010A094 /* SceneDelegate.swift */,
 				FBD3D1A02526260F0010A094 /* Main.storyboard */,
@@ -155,9 +195,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88A0556325753D0A009D35CB /* NewPostViewController.storyboard in Resources */,
 				FBD3D1A7252626110010A094 /* LaunchScreen.storyboard in Resources */,
+				88A0556025753CF8009D35CB /* PostViewController.storyboard in Resources */,
 				15774F0B2562367D00BE6B4B /* User.storyboard in Resources */,
 				FBD3D1A4252626110010A094 /* Assets.xcassets in Resources */,
+				88A0555D25753C08009D35CB /* TabBarViewController.storyboard in Resources */,
+				88A0556625753D19009D35CB /* ProfileViewController.storyboard in Resources */,
 				FBD3D1A22526260F0010A094 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,14 +215,18 @@
 			files = (
 				4E8D72BA25366E3E00573733 /* TFUIView.swift in Sources */,
 				157365D5256F37F10081E7E3 /* AlertManager.swift in Sources */,
+				88A0557725753F58009D35CB /* MainProfile.swift in Sources */,
 				FBD3D19B2526260F0010A094 /* AppDelegate.swift in Sources */,
+				88A0558125753FBA009D35CB /* MainComment.swift in Sources */,
 				150B41E92533D6E7007292DB /* SignUpViewController.swift in Sources */,
 				150B41EB2533E76E007292DB /* LogInViewController.swift in Sources */,
 				150B41ED2533F38D007292DB /* RecoverPasswordViewController.swift in Sources */,
 				157365D7256F39A60081E7E3 /* Entities.swift in Sources */,
 				FBD3D19D2526260F0010A094 /* SceneDelegate.swift in Sources */,
 				157365D3256F362B0081E7E3 /* ImageDownloader.swift in Sources */,
+				88A0556F25753F05009D35CB /* MainNewPost.swift in Sources */,
 				4E8D72BD2536716C00573733 /* BTUIView.swift in Sources */,
+				88A0556925753D9C009D35CB /* MainPost.swift in Sources */,
 				4E8D72C02536756E00573733 /* VUIView.swift in Sources */,
 				15D1085D256197A600CC6255 /* Constants.swift in Sources */,
 			);
