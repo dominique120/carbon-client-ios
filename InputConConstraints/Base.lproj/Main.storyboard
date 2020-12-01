@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ii1-BF-Uba">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -291,7 +290,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mus-sA-YkL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3573" y="-281"/>
+            <point key="canvasLocation" x="3582" y="-281"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="hPx-Zr-unz">
@@ -649,7 +648,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="4144.927536231884" y="-274.55357142857139"/>
+            <point key="canvasLocation" x="4090" y="-19"/>
         </scene>
         <!--Recover Pasword View Controller-->
         <scene sceneID="Mad-lF-fdY">
@@ -826,7 +825,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2969.5652173913045" y="875.89285714285711"/>
+            <point key="canvasLocation" x="4091" y="611"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Tlv-hg-xEa">
