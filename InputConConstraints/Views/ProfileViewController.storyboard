@@ -18,39 +18,87 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Perfil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsA-fV-Sp8">
-                                <rect key="frame" x="167" y="207" width="76" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRs-kU-8hN">
-                                <rect key="frame" x="137" y="430" width="177" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <state key="normal" title="Cerrar sesion"/>
-                                <connections>
-                                    <action selector="clickBtnCerrarrSesion:" destination="3fN-Bc-pE8" eventType="touchUpInside" id="rYF-f0-hCK"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sm7-EL-2IQ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRs-kU-8hN">
+                                        <rect key="frame" x="118" y="423" width="177" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                        <state key="normal" title="Cerrar sesion"/>
+                                        <connections>
+                                            <action selector="clickBtnCerrarrSesion:" destination="3fN-Bc-pE8" eventType="touchUpInside" id="rYF-f0-hCK"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Perfil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsA-fV-Sp8">
+                                        <rect key="frame" x="129" y="255" width="76" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9lX-gI-hhM">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="1IV-Gu-vu3"/>
+                                        </constraints>
+                                    </containerView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DTP-Yr-O18">
+                                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYb-CK-ce0">
+                                                <rect key="frame" x="179" y="11.5" width="56.5" height="21"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="9eD-1z-bRP"/>
+                                            <constraint firstItem="gYb-CK-ce0" firstAttribute="centerX" secondItem="DTP-Yr-O18" secondAttribute="centerX" id="dyi-Sz-QiS"/>
+                                            <constraint firstAttribute="width" constant="414" id="fC3-pY-vn6"/>
+                                            <constraint firstItem="gYb-CK-ce0" firstAttribute="centerY" secondItem="DTP-Yr-O18" secondAttribute="centerY" id="tu5-wM-GXQ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="DTP-Yr-O18" secondAttribute="trailing" id="2ge-wm-E33"/>
+                                    <constraint firstAttribute="trailing" secondItem="9lX-gI-hhM" secondAttribute="trailing" id="4up-Gm-5sq"/>
+                                    <constraint firstItem="9lX-gI-hhM" firstAttribute="top" secondItem="sm7-EL-2IQ" secondAttribute="top" id="GX2-Zt-yIk"/>
+                                    <constraint firstItem="DTP-Yr-O18" firstAttribute="top" secondItem="9lX-gI-hhM" secondAttribute="bottom" id="WTn-q9-bOp"/>
+                                    <constraint firstItem="9lX-gI-hhM" firstAttribute="leading" secondItem="sm7-EL-2IQ" secondAttribute="leading" id="ZOs-Wj-7fm"/>
+                                    <constraint firstItem="DTP-Yr-O18" firstAttribute="leading" secondItem="sm7-EL-2IQ" secondAttribute="leading" id="kw6-lH-vrM"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LBt-ji-geu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="sm7-EL-2IQ" secondAttribute="bottom" id="HSk-AE-wLc"/>
+                            <constraint firstItem="sm7-EL-2IQ" firstAttribute="top" secondItem="g2d-WO-Dnj" secondAttribute="top" id="PBl-RG-W45"/>
+                            <constraint firstItem="sm7-EL-2IQ" firstAttribute="trailing" secondItem="LBt-ji-geu" secondAttribute="trailing" id="bxd-T3-aZ6"/>
+                            <constraint firstItem="sm7-EL-2IQ" firstAttribute="leading" secondItem="LBt-ji-geu" secondAttribute="leading" id="hxL-Zy-lby"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="ejn-rQ-3D8">
-                        <imageReference key="image" image="person.circle" catalog="system" symbolScale="large"/>
+                        <imageReference key="image" image="person.circle.fill" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vgh-5V-RSz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="203" y="88"/>
+            <point key="canvasLocation" x="202.89855072463769" y="87.723214285714278"/>
         </scene>
     </scenes>
     <resources>
-        <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

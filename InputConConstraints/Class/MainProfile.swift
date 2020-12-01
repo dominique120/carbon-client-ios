@@ -13,4 +13,7 @@ class MainProfile: UIViewController{
     @IBAction func clickBtnCerrarrSesion(_ sender: Any){
         self.tabBarController?.navigationController?.popToRootViewController(animated: true)
     }
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return.lightContent
+    }
 }
