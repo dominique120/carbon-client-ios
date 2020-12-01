@@ -8,5 +8,5 @@
 
 
 struct Constants {
-    static let api_base_url = "http://192.168.1.72:800/vts/api/v1"
+    static let api_base_url = "http://190.238.243.95:80/isilinsta"
 }

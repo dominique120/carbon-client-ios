@@ -60,7 +60,7 @@ class LogInViewController: UIViewController {
         
         let params = ["username":username, "password":password] as Dictionary<String, String>
         
-        var request = URLRequest(url: URL(string: Constants.api_base_url + "/auth/validateuser")!)
+        var request = URLRequest(url: URL(string: Constants.api_base_url + "/validate_user")!)
         request.httpMethod = "POST"
         request.httpBody = try? JSONSerialization.data(withJSONObject: params, options: [])
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -76,8 +76,8 @@ class LogInViewController: UIViewController {
             
             if let httpResponse = response as? HTTPURLResponse {
                 print(httpResponse.statusCode)
-                //  let string = String(data: data!, encoding: .utf8)
-                // print(string!)
+                  let string = String(data: data!, encoding: .utf8)
+                 print(string!)
                 
                 
                 if (httpResponse.statusCode == 200) {

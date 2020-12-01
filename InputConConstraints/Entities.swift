@@ -13,16 +13,23 @@ class Post {
     var personId: String = "";
     var mainContent: String = "";
     var pictureURL: String = "";
+    
+    // extra types
+    var timesLiked: Int = 0;
+    var timesCommented: Int = 0;
 }
 
 
 class User {
+    var userId: String = "";
     var userName: String = "";
     var password: String = "";
 }
 
 class Person {
     var personId: String = "";
+    var userId: String = "";
+    var profileId: String = "";
     var displayName: String = "";
     var email: String = "";
     var firstName: String = "";
@@ -30,12 +37,15 @@ class Person {
     var profilePictureURL: String = "";
 }
 
-class Profile: Person  {
+class Profile {
     var profileId: String = "";
     var profileSummary: String = "";
     var studyField: String = "";
     var district: String = "";
     var birthDate: String = "";
+    
+    // extra types
+    var followersCount: Int = 0;
 }
 
 class Comment {
