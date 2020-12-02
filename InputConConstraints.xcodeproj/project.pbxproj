@@ -15,6 +15,7 @@
 		157365D7256F39A60081E7E3 /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157365D6256F39A60081E7E3 /* Entities.swift */; };
 		15774F0B2562367D00BE6B4B /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15774F0A2562367D00BE6B4B /* User.storyboard */; };
 		15D1085D256197A600CC6255 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D1085C256197A600CC6255 /* Constants.swift */; };
+		15F1DD4525775943000E9B58 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F1DD4425775943000E9B58 /* WebService.swift */; };
 		4E8D72BA25366E3E00573733 /* TFUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8D72B925366E3E00573733 /* TFUIView.swift */; };
 		4E8D72BD2536716C00573733 /* BTUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8D72BC2536716C00573733 /* BTUIView.swift */; };
 		4E8D72C02536756E00573733 /* VUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8D72BF2536756E00573733 /* VUIView.swift */; };
@@ -42,6 +43,7 @@
 		157365D6256F39A60081E7E3 /* Entities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
 		15774F0A2562367D00BE6B4B /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		15D1085C256197A600CC6255 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		15F1DD4425775943000E9B58 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		4E8D72B925366E3E00573733 /* TFUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFUIView.swift; sourceTree = "<group>"; };
 		4E8D72BC2536716C00573733 /* BTUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTUIView.swift; sourceTree = "<group>"; };
 		4E8D72BF2536756E00573733 /* VUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VUIView.swift; sourceTree = "<group>"; };
@@ -73,6 +75,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		153542A72577086B006E1BF3 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
 		88A0555A25753B05009D35CB /* Class */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,25 +123,27 @@
 		FBD3D1992526260F0010A094 /* InputConConstraints */ = {
 			isa = PBXGroup;
 			children = (
+				153542A72577086B006E1BF3 /* Data */,
 				88A0555B25753B18009D35CB /* Views */,
 				88A0555A25753B05009D35CB /* Class */,
 				FBD3D19A2526260F0010A094 /* AppDelegate.swift */,
+				157365D6256F39A60081E7E3 /* Entities.swift */,
+				15D1085C256197A600CC6255 /* Constants.swift */,
+				150B41EA2533E76E007292DB /* LogInViewController.swift */,
 				FBD3D19C2526260F0010A094 /* SceneDelegate.swift */,
 				FBD3D1A02526260F0010A094 /* Main.storyboard */,
 				150B41E82533D6E7007292DB /* SignUpViewController.swift */,
 				FBD3D1A3252626110010A094 /* Assets.xcassets */,
 				FBD3D1A5252626110010A094 /* LaunchScreen.storyboard */,
 				FBD3D1A8252626110010A094 /* Info.plist */,
-				150B41EA2533E76E007292DB /* LogInViewController.swift */,
 				150B41EC2533F38D007292DB /* RecoverPasswordViewController.swift */,
 				4E8D72B925366E3E00573733 /* TFUIView.swift */,
 				4E8D72BC2536716C00573733 /* BTUIView.swift */,
 				4E8D72BF2536756E00573733 /* VUIView.swift */,
-				15D1085C256197A600CC6255 /* Constants.swift */,
 				15774F0A2562367D00BE6B4B /* User.storyboard */,
 				157365D2256F362B0081E7E3 /* ImageDownloader.swift */,
 				157365D4256F37F10081E7E3 /* AlertManager.swift */,
-				157365D6256F39A60081E7E3 /* Entities.swift */,
+				15F1DD4425775943000E9B58 /* WebService.swift */,
 			);
 			path = InputConConstraints;
 			sourceTree = "<group>";
@@ -217,6 +228,7 @@
 				157365D5256F37F10081E7E3 /* AlertManager.swift in Sources */,
 				88A0557725753F58009D35CB /* MainProfile.swift in Sources */,
 				FBD3D19B2526260F0010A094 /* AppDelegate.swift in Sources */,
+				15F1DD4525775943000E9B58 /* WebService.swift in Sources */,
 				88A0558125753FBA009D35CB /* MainComment.swift in Sources */,
 				150B41E92533D6E7007292DB /* SignUpViewController.swift in Sources */,
 				150B41EB2533E76E007292DB /* LogInViewController.swift in Sources */,
