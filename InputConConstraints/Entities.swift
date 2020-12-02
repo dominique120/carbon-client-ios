@@ -8,6 +8,8 @@
 
 import Foundation
 
+typealias JSON = [String: Any]
+
 class Post {
     var postId: String = "";
     var personId: String = "";
@@ -18,14 +20,13 @@ class Post {
     var timesLiked: Int = 0;
     var timesCommented: Int = 0;
     
-    
-    init(dictionary: [String: Any]) {
-        self.postId             = dictionary["postId"]            as? String ?? ""
-        self.personId           = dictionary["personId"]          as? String ?? ""
-        self.mainContent        = dictionary["mainContent"]       as? String ?? ""
-        self.pictureURL         = dictionary["pictureURL"]        as? String ?? ""
-        self.timesLiked         = Int(dictionary["timesLiked"]        as? String ?? "") ?? 0
-        self.timesCommented     = Int(dictionary["timesCommented"]    as? String ?? "") ?? 0
+    init(json: JSON) {
+        self.postId             = json["postId"]            as? String ?? ""
+        self.personId           = json["personId"]          as? String ?? ""
+        self.mainContent        = json["mainContent"]       as? String ?? ""
+        self.pictureURL         = json["pictureURL"]        as? String ?? ""
+        self.timesLiked         = Int(json["timesLiked"]        as? String ?? "") ?? 0
+        self.timesCommented     = Int(json["timesCommented"]    as? String ?? "") ?? 0
     }
 }
 
@@ -36,10 +37,10 @@ class User {
     var password: String = "";
     
     
-    init(dictionary: [String: Any]) {
-        self.userId             = dictionary["userId"]            as? String ?? ""
-        self.userName           = dictionary["userName"]          as? String ?? ""
-        self.password           = dictionary["password"]          as? String ?? ""
+    init(json: JSON) {
+        self.userId             = json["userId"]            as? String ?? ""
+        self.userName           = json["userName"]          as? String ?? ""
+        self.password           = json["password"]          as? String ?? ""
     }
 }
 
@@ -53,15 +54,15 @@ class Person {
     var lastName: String = "";
     var profilePictureURL: String = "";
     
-    init(dictionary: [String: Any]) {
-        self.personId             = dictionary["personId"]           as? String ?? ""
-        self.userId               = dictionary["userId"]             as? String ?? ""
-        self.profileId            = dictionary["profileId"]          as? String ?? ""
-        self.displayName          = dictionary["displayName"]        as? String ?? ""
-        self.email                = dictionary["email"]              as? String ?? ""
-        self.firstName            = dictionary["firstName"]          as? String ?? ""
-        self.lastName             = dictionary["lastName"]           as? String ?? ""
-        self.profilePictureURL    = dictionary["profilePictureURL"]  as? String ?? ""
+    init(json: JSON) {
+        self.personId             = json["personId"]           as? String ?? ""
+        self.userId               = json["userId"]             as? String ?? ""
+        self.profileId            = json["profileId"]          as? String ?? ""
+        self.displayName          = json["displayName"]        as? String ?? ""
+        self.email                = json["email"]              as? String ?? ""
+        self.firstName            = json["firstName"]          as? String ?? ""
+        self.lastName             = json["lastName"]           as? String ?? ""
+        self.profilePictureURL    = json["profilePictureURL"]  as? String ?? ""
     }
 }
 
@@ -76,13 +77,13 @@ class Profile {
     var followersCount: Int = 0;
     
     
-    init(dictionary: [String: Any]) {
-        self.profileId          = dictionary["profileId"]            as? String ?? ""
-        self.profileSummary     = dictionary["profileSummary"]       as? String ?? ""
-        self.studyField         = dictionary["studyField"]           as? String ?? ""
-        self.district           = dictionary["district"]             as? String ?? ""
-        self.birthDate          = dictionary["birthDate"]            as? String ?? ""
-        self.followersCount     = Int(dictionary["followersCount"]   as? String ?? "") ?? 0
+    init(json: JSON) {
+        self.profileId          = json["profileId"]            as? String ?? ""
+        self.profileSummary     = json["profileSummary"]       as? String ?? ""
+        self.studyField         = json["studyField"]           as? String ?? ""
+        self.district           = json["district"]             as? String ?? ""
+        self.birthDate          = json["birthDate"]            as? String ?? ""
+        self.followersCount     = Int(json["followersCount"]   as? String ?? "") ?? 0
     }
 }
 
@@ -92,11 +93,11 @@ class Comment {
     var personId: String = "";
     var commentText: String = "";
     
-    init(dictionary: [String: Any]) {
-        self.commentId        = dictionary["commentId"]      as? String ?? ""
-        self.postId           = dictionary["postId"]         as? String ?? ""
-        self.personId         = dictionary["personId"]       as? String ?? ""
-        self.commentText      = dictionary["commentText"]    as? String ?? ""
+    init(json: JSON) {
+        self.commentId        = json["commentId"]      as? String ?? ""
+        self.postId           = json["postId"]         as? String ?? ""
+        self.personId         = json["personId"]       as? String ?? ""
+        self.commentText      = json["commentText"]    as? String ?? ""
     }
 }
 
@@ -105,10 +106,10 @@ class Like {
     var postId: String = "";
     var personId: String = "";
     
-    init(dictionary: [String: Any]) {
-        self.likeId           = dictionary["likeId"]      as? String ?? ""
-        self.postId           = dictionary["postId"]      as? String ?? ""
-        self.personId         = dictionary["personId"]    as? String ?? ""
+    init(json: JSON) {
+        self.likeId           = json["likeId"]      as? String ?? ""
+        self.postId           = json["postId"]      as? String ?? ""
+        self.personId         = json["personId"]    as? String ?? ""
     }
 }
 
@@ -117,9 +118,9 @@ class Follower {
     var followerId: String = "";
     var followedId: String = "";
     
-    init(dictionary: [String: Any]) {
-        self.followId         = dictionary["followId"]      as? String ?? ""
-        self.followerId       = dictionary["followerId"]    as? String ?? ""
-        self.followedId       = dictionary["followedId"]    as? String ?? ""
+    init(json: JSON) {
+        self.followId         = json["followId"]      as? String ?? ""
+        self.followerId       = json["followerId"]    as? String ?? ""
+        self.followedId       = json["followedId"]    as? String ?? ""
     }
 }

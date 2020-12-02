@@ -59,7 +59,7 @@
                                         <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="430" id="lcv-PY-85D">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaceTableViewCell" rowHeight="430" id="lcv-PY-85D" customClass="PlaceTableViewCell" customModule="IsilInsta" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="414" height="430"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lcv-PY-85D" id="OLw-Q9-YEk">
@@ -109,6 +109,13 @@
                                                         <constraint firstItem="hMd-8T-geu" firstAttribute="top" secondItem="OLw-Q9-YEk" secondAttribute="topMargin" constant="20" id="s4a-YJ-ZpH"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="commentOnPost" destination="P65-2i-z28" id="GV2-oy-nzT"/>
+                                                    <outlet property="imgPost" destination="6a6-oK-GhS" id="7oj-lc-Rdz"/>
+                                                    <outlet property="likePost" destination="9nN-Bm-aDc" id="DnD-vg-irn"/>
+                                                    <outlet property="personName" destination="Tue-eN-9DF" id="BaU-i5-vZ7"/>
+                                                    <outlet property="viewComments" destination="hMd-8T-geu" id="VEO-45-k3S"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                         <connections>
@@ -145,6 +152,9 @@
                         <imageReference key="image" image="globe" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableVirePosts" destination="zIl-eC-Ucj" id="oXl-eH-ve6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lqp-cG-fCb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

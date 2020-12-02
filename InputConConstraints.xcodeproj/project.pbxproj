@@ -10,6 +10,10 @@
 		150B41E92533D6E7007292DB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150B41E82533D6E7007292DB /* SignUpViewController.swift */; };
 		150B41EB2533E76E007292DB /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150B41EA2533E76E007292DB /* LogInViewController.swift */; };
 		150B41ED2533F38D007292DB /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150B41EC2533F38D007292DB /* RecoverPasswordViewController.swift */; };
+		15419A9F25780C8800F7CA1F /* WebServicesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15419A9E25780C8800F7CA1F /* WebServicesManager.swift */; };
+		15419AA525780FFC00F7CA1F /* PostWS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15419AA425780FFC00F7CA1F /* PostWS.swift */; };
+		15419AA9257812E400F7CA1F /* PostBL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15419AA8257812E400F7CA1F /* PostBL.swift */; };
+		15542EC32577E19100252F6F /* MainPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15542EC22577E19100252F6F /* MainPostCell.swift */; };
 		157365D3256F362B0081E7E3 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157365D2256F362B0081E7E3 /* ImageDownloader.swift */; };
 		157365D5256F37F10081E7E3 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157365D4256F37F10081E7E3 /* AlertManager.swift */; };
 		157365D7256F39A60081E7E3 /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157365D6256F39A60081E7E3 /* Entities.swift */; };
@@ -38,6 +42,10 @@
 		150B41E82533D6E7007292DB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		150B41EA2533E76E007292DB /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		150B41EC2533F38D007292DB /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
+		15419A9E25780C8800F7CA1F /* WebServicesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServicesManager.swift; sourceTree = "<group>"; };
+		15419AA425780FFC00F7CA1F /* PostWS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostWS.swift; sourceTree = "<group>"; };
+		15419AA8257812E400F7CA1F /* PostBL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostBL.swift; sourceTree = "<group>"; };
+		15542EC22577E19100252F6F /* MainPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPostCell.swift; sourceTree = "<group>"; };
 		157365D2256F362B0081E7E3 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		157365D4256F37F10081E7E3 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		157365D6256F39A60081E7E3 /* Entities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
@@ -75,11 +83,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		153542A72577086B006E1BF3 /* Data */ = {
+		15419A9C25780C6000F7CA1F /* General */ = {
 			isa = PBXGroup;
 			children = (
+				15419A9D25780C6F00F7CA1F /* Core */,
 			);
-			name = Data;
+			name = General;
+			sourceTree = "<group>";
+		};
+		15419A9D25780C6F00F7CA1F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				157365D2256F362B0081E7E3 /* ImageDownloader.swift */,
+				15419A9E25780C8800F7CA1F /* WebServicesManager.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		15419AA225780CB200F7CA1F /* BE */ = {
+			isa = PBXGroup;
+			children = (
+				157365D6256F39A60081E7E3 /* Entities.swift */,
+			);
+			name = BE;
+			sourceTree = "<group>";
+		};
+		15419AA325780F9000F7CA1F /* WS */ = {
+			isa = PBXGroup;
+			children = (
+				15419AA425780FFC00F7CA1F /* PostWS.swift */,
+			);
+			name = WS;
+			sourceTree = "<group>";
+		};
+		15419AA7257812D100F7CA1F /* BL */ = {
+			isa = PBXGroup;
+			children = (
+				15419AA8257812E400F7CA1F /* PostBL.swift */,
+			);
+			name = BL;
 			sourceTree = "<group>";
 		};
 		88A0555A25753B05009D35CB /* Class */ = {
@@ -89,6 +131,7 @@
 				88A0556E25753F05009D35CB /* MainNewPost.swift */,
 				88A0557625753F58009D35CB /* MainProfile.swift */,
 				88A0558025753FBA009D35CB /* MainComment.swift */,
+				15542EC22577E19100252F6F /* MainPostCell.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -123,11 +166,13 @@
 		FBD3D1992526260F0010A094 /* InputConConstraints */ = {
 			isa = PBXGroup;
 			children = (
-				153542A72577086B006E1BF3 /* Data */,
+				15419AA7257812D100F7CA1F /* BL */,
+				15419AA325780F9000F7CA1F /* WS */,
+				15419AA225780CB200F7CA1F /* BE */,
+				15419A9C25780C6000F7CA1F /* General */,
 				88A0555B25753B18009D35CB /* Views */,
 				88A0555A25753B05009D35CB /* Class */,
 				FBD3D19A2526260F0010A094 /* AppDelegate.swift */,
-				157365D6256F39A60081E7E3 /* Entities.swift */,
 				15D1085C256197A600CC6255 /* Constants.swift */,
 				150B41EA2533E76E007292DB /* LogInViewController.swift */,
 				FBD3D19C2526260F0010A094 /* SceneDelegate.swift */,
@@ -141,7 +186,6 @@
 				4E8D72BC2536716C00573733 /* BTUIView.swift */,
 				4E8D72BF2536756E00573733 /* VUIView.swift */,
 				15774F0A2562367D00BE6B4B /* User.storyboard */,
-				157365D2256F362B0081E7E3 /* ImageDownloader.swift */,
 				157365D4256F37F10081E7E3 /* AlertManager.swift */,
 				15F1DD4425775943000E9B58 /* WebService.swift */,
 			);
@@ -227,6 +271,7 @@
 				4E8D72BA25366E3E00573733 /* TFUIView.swift in Sources */,
 				157365D5256F37F10081E7E3 /* AlertManager.swift in Sources */,
 				88A0557725753F58009D35CB /* MainProfile.swift in Sources */,
+				15419A9F25780C8800F7CA1F /* WebServicesManager.swift in Sources */,
 				FBD3D19B2526260F0010A094 /* AppDelegate.swift in Sources */,
 				15F1DD4525775943000E9B58 /* WebService.swift in Sources */,
 				88A0558125753FBA009D35CB /* MainComment.swift in Sources */,
@@ -234,13 +279,16 @@
 				150B41EB2533E76E007292DB /* LogInViewController.swift in Sources */,
 				150B41ED2533F38D007292DB /* RecoverPasswordViewController.swift in Sources */,
 				157365D7256F39A60081E7E3 /* Entities.swift in Sources */,
+				15542EC32577E19100252F6F /* MainPostCell.swift in Sources */,
 				FBD3D19D2526260F0010A094 /* SceneDelegate.swift in Sources */,
 				157365D3256F362B0081E7E3 /* ImageDownloader.swift in Sources */,
+				15419AA9257812E400F7CA1F /* PostBL.swift in Sources */,
 				88A0556F25753F05009D35CB /* MainNewPost.swift in Sources */,
 				4E8D72BD2536716C00573733 /* BTUIView.swift in Sources */,
 				88A0556925753D9C009D35CB /* MainPost.swift in Sources */,
 				4E8D72C02536756E00573733 /* VUIView.swift in Sources */,
 				15D1085D256197A600CC6255 /* Constants.swift in Sources */,
+				15419AA525780FFC00F7CA1F /* PostWS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

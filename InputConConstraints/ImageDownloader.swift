@@ -1,37 +1,42 @@
 //
-//  ImageDownloader.swift
-//  InputConConstraints
+//  DownloadImage.swift
+//  DescargaDeImagenes
 //
-//  Created by Dominique Verellen on 11/25/20.
+//  Created by Kenyi Rodriguez on 11/6/20.
 //  Copyright © 2020 Kenyi Rodriguez. All rights reserved.
 //
 
 import UIKit
 
+typealias DownloadImage = (_ image: UIImage?, _ urlImage: String) -> Void
+
 extension UIImageView {
     
-    typealias DownloadSuccess = (_ image: UIImage?, _ urlString: String) -> Void
+    func downloadImageInURLString(_ urlString: String, placeHolderImage: UIImage?, success: @escaping DownloadImage) {
     
-    func downloadImageInUrlString(_ urlString: String, success: @escaping DownloadSuccess) {
+        self.image = placeHolderImage
         
-        guard let url = URL(string: urlString) else {
-            print("URL INVÁLIDA")
+        guard let urlImage = URL(string: Constants.image_fs + urlString) else {
+            print("La url no es válida")
             return
         }
-        
-        var imageDownloaded: UIImage?
-        
+    
         DispatchQueue.global(qos: .default).async {
             
+            var imageData: Data!
+            
             do {
-                let dataImage = try Data(contentsOf: url)
-                imageDownloaded = UIImage(data: dataImage)
+                imageData = try Data(contentsOf: urlImage)
             }catch {
-                print("Error al descargar la imagen")
+                print("Se produjo un error")
             }
             
+            guard let imageDataSaved = imageData else { return }
+            
+            let imagenDownloaded = UIImage(data: imageDataSaved)
+            
             DispatchQueue.main.async {
-                success(imageDownloaded, urlString)
+                success(imagenDownloaded, urlString)
             }
         }
     }

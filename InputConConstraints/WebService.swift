@@ -11,6 +11,7 @@ import Foundation
 
 func basicGet(url: String) -> [[String: Any]] {
     var json_response: [[String: Any]] = [[:]]
+    let sem = DispatchSemaphore(value: 0)
     
     var request = URLRequest(url: URL(string: Constants.api_base_url + url)!)
     request.httpMethod = "GET"
@@ -19,8 +20,8 @@ func basicGet(url: String) -> [[String: Any]] {
     let task = session.dataTask(with: request, completionHandler: { data, response, error -> Void in
         //print(response!)
         
-        let string = String(data: request.httpBody!, encoding: .utf8)
-        print(string!)
+        //let string = String(data: request.httpBody!, encoding: .utf8)
+        //print(string!)
         
         if let httpResponse = response as? HTTPURLResponse {
             print(httpResponse.statusCode)
@@ -35,12 +36,51 @@ func basicGet(url: String) -> [[String: Any]] {
          } catch {
          print("error")
          }
-         
+        sem.signal()
     })
     
     task.resume()
+    sem.wait()
     return json_response
 }
+
+
+
+func basicGetStringBody(url: String) -> String {
+    let sem = DispatchSemaphore(value: 0)
+    var request = URLRequest(url: URL(string: Constants.api_base_url + url)!)
+    request.httpMethod = "GET"
+    var string_response = ""
+    let session = URLSession.shared
+    let task = session.dataTask(with: request, completionHandler: { data, response, error -> Void in
+        //print(response!)
+        
+        //let string = String(data: request.httpBody!, encoding: .utf8)
+        //print(string!)
+        
+        if let httpResponse = response as? HTTPURLResponse {
+            //print(httpResponse.statusCode)
+            string_response = String(data: data!, encoding: .utf8) ?? ""
+            //print(string_response)
+        }
+        /*
+         do {
+            //json_response = try JSONSerialization.jsonObject(with: data!) as! Dictionary<String, Any>
+            json_response = try (JSONSerialization.jsonObject(with: data!, options: []) as? [[String: Any]])!
+         //print(json)
+         } catch {
+         print("error")
+         }
+         */
+        sem.signal()
+    })
+    
+    task.resume()
+    sem.wait()
+    print(string_response)
+    return string_response
+}
+
 
 
 func basicPostWithNoBody(url: String) -> Void{
@@ -79,7 +119,7 @@ func basicPostWithBody(url: String, dictionary: [[String: Any]]) -> Void {
     let session = URLSession.shared
     let task = session.dataTask(with: request, completionHandler: { data, response, error -> Void in
         //print(response!)
-        
+        /*
         let string = String(data: request.httpBody!, encoding: .utf8)
         print(string!)
         
@@ -88,7 +128,7 @@ func basicPostWithBody(url: String, dictionary: [[String: Any]]) -> Void {
               let string = String(data: data!, encoding: .utf8)
              print(string!)
         }
-        
+       */
     })
     task.resume()
    
