@@ -12,6 +12,7 @@ extension WebServiceManager {
     
     typealias JSON      = [String: Any]
     typealias Response  = (_ jsonResponse: Any?) -> Void
+    typealias Request   = (_ jsonRequest: Any?) -> Void
     
     enum HTTPMethod: String {
         
@@ -25,7 +26,7 @@ extension WebServiceManager {
 
 class WebServiceManager {
     
-    class func doRequestWithMethod(_ httpMethod: HTTPMethod, urlString: String, response: @escaping Response) {
+    class func doRequestWithMethod(_ httpMethod: HTTPMethod, urlString: String, requestBody: Request?, response: @escaping Response) {
         
         let urlStringWithFormat = urlString.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed) ?? ""
         
@@ -36,6 +37,10 @@ class WebServiceManager {
         
         var request = URLRequest(url: url)
         request.httpMethod = httpMethod.rawValue
+        
+        do{
+            try request.httpBody = JSONSerialization.data(withJSONObject: requestBody ?? "", options: .prettyPrinted)
+        } catch {}
         
         let sessionConfiguration = URLSessionConfiguration.default
         sessionConfiguration.httpAdditionalHeaders = ["Content-Type": "application/json"]

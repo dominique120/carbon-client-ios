@@ -1,5 +1,5 @@
 //
-//  PostWS.swift
+//  PersonWS.swift
 //  InputConConstraints
 //
 //  Created by Dominique Verellen on 12/2/20.
@@ -8,27 +8,27 @@
 
 import Foundation
 
-typealias Posts = (_ arrayDiscs: [Post]) -> Void
 
-class PostWS {
+typealias Persons = (_ arrayPersons: [Person]) -> Void
+
+class PersonWS {
     
-    class func getAllPosts(_ success: @escaping Posts) {
+    class func getPerson(_ success: @escaping Persons) {
         
-        WebServiceManager.doRequestWithMethod(.get, urlString: Constants.api_base_url + "/getposts", requestBody: nil) { (responseService) in
+        WebServiceManager.doRequestWithMethod(.get, urlString: Constants.api_base_url + "/getoneperson", requestBody: nil) { (responseService) in
             
             let json = responseService as? [JSON] ?? []
             //let products = json["productos"] as? JSON ?? [:]
             //let discsWS = products["discos"] as? [JSON] ?? []
             
-            var arrayDiscs = [Post]()
+            var arrayPersons = [Person]()
             
             for element in json {
-                let obj = Post(json: element)
-                arrayDiscs.append(obj)
+                let obj = Person(json: element)
+                arrayPersons.append(obj)
             }
             
-            success(arrayDiscs)
+            success(arrayPersons)
         }
     }
-    
 }

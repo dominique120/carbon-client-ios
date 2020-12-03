@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class LogInViewController: UIViewController {
-    
+    var arrayPersons = [Person]()
     /* LogIn Actions */
     @IBAction func clickCloseKeyboard(_ sender: Any) {
         self.view.endEditing(true)
@@ -41,15 +41,18 @@ class LogInViewController: UIViewController {
         let status: Int = self.sendAuthRequest(username: usr, password: pwd)
         
         if (status == 200) {
+            
+            PersonBL.getPerson{ (arrayPersons) in
+                self.arrayPersons = arrayPersons
+            }
+            g_personId = arrayPersons.first?.personId ?? ""
+            g_personName = arrayPersons.first?.displayName ?? ""
             self.sendToHomeScren()
         } else if (status == 403) {
             self.showMessage(controller: self, message: "Credenciales invalidas!", seconds: 5.0)
         } else {
             self.showMessage(controller: self, message: "Ocurrio un error!", seconds: 5.0)
         }
-        
-        
-        
     }
     
     func sendAuthRequest(username: String, password: String) -> Int {
