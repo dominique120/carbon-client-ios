@@ -42,9 +42,9 @@ class LogInViewController: UIViewController {
         if (status == 200) {
             self.sendToHomeScren()
         } else if (status == 403) {
-            self.showMessage(controller: self, message: "Credenciales invalidas!", seconds: 5.0)
+            Util.showMessage(controller: self, message: "Credenciales invalidas!", seconds: 5.0)
         } else {
-            self.showMessage(controller: self, message: "Ocurrio un error!", seconds: 5.0)
+            Util.showMessage(controller: self, message: "Ocurrio un error!", seconds: 5.0)
         }
     }
     
@@ -149,19 +149,6 @@ class LogInViewController: UIViewController {
     
     @objc func keyboardWillHide(_ notification: Notification) {
         view.frame.origin.y = 0
-    }
-    
-    func showMessage(controller: UIViewController, message : String, seconds: Double) {
-        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-        alert.view.backgroundColor = UIColor.black
-        alert.view.alpha = 0.6
-        alert.view.layer.cornerRadius = 15
-        
-        controller.present(alert, animated: true)
-        
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds) {
-            alert.dismiss(animated: true)
-        }
     }
 }
 

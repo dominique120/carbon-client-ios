@@ -59,20 +59,15 @@
                                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             </state>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hMd-8T-geu">
-                                                            <rect key="frame" x="367" y="14" width="27" height="24"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <state key="normal">
-                                                                <imageReference key="image" image="ellipsis.rectangle.fill" catalog="system" symbolScale="large"/>
-                                                            </state>
-                                                        </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9nN-Bm-aDc">
                                                             <rect key="frame" x="24" y="391" width="25.5" height="22"/>
                                                             <color key="tintColor" systemColor="linkColor"/>
                                                             <state key="normal">
                                                                 <imageReference key="image" image="heart.fill" catalog="system" symbolScale="large"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="likePost:" destination="lcv-PY-85D" eventType="touchUpInside" id="B2Q-3A-jqh"/>
+                                                            </connections>
                                                         </button>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6a6-oK-GhS">
                                                             <rect key="frame" x="0.0" y="46" width="414" height="297"/>
@@ -92,17 +87,18 @@
                                                             <state key="normal">
                                                                 <imageReference key="image" image="message.fill" catalog="system" symbolScale="large"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="viewComments:" destination="lcv-PY-85D" eventType="touchUpInside" id="7Ht-ze-nfC"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="Tue-eN-9DF" firstAttribute="leading" secondItem="OLw-Q9-YEk" secondAttribute="leadingMargin" id="11z-In-9KE"/>
-                                                        <constraint firstItem="hMd-8T-geu" firstAttribute="top" secondItem="OLw-Q9-YEk" secondAttribute="top" constant="14" id="3CL-vN-dDB"/>
                                                         <constraint firstItem="Tue-eN-9DF" firstAttribute="leading" secondItem="OLw-Q9-YEk" secondAttribute="leading" constant="20" id="3Uc-ui-g6q"/>
                                                         <constraint firstAttribute="trailing" secondItem="6a6-oK-GhS" secondAttribute="trailing" id="ABn-NY-Raq"/>
                                                         <constraint firstItem="7EY-Wy-6nk" firstAttribute="top" secondItem="Tue-eN-9DF" secondAttribute="bottom" constant="317.5" id="GBk-AY-QzH"/>
                                                         <constraint firstItem="6a6-oK-GhS" firstAttribute="leading" secondItem="OLw-Q9-YEk" secondAttribute="leading" id="Nlv-hL-0bQ"/>
                                                         <constraint firstItem="9nN-Bm-aDc" firstAttribute="leading" secondItem="OLw-Q9-YEk" secondAttribute="leading" constant="24" id="Thm-ca-q9A"/>
-                                                        <constraint firstAttribute="trailing" secondItem="hMd-8T-geu" secondAttribute="trailing" constant="20" id="Wef-84-o3X"/>
                                                         <constraint firstAttribute="bottom" secondItem="9nN-Bm-aDc" secondAttribute="bottom" constant="17" id="bq5-O8-Hv6"/>
                                                         <constraint firstItem="P65-2i-z28" firstAttribute="top" secondItem="7EY-Wy-6nk" secondAttribute="bottom" constant="12" id="iHK-Go-lCm"/>
                                                         <constraint firstAttribute="trailing" secondItem="7EY-Wy-6nk" secondAttribute="trailing" constant="20" id="kMq-Ab-2oE"/>
@@ -120,7 +116,7 @@
                                                     <outlet property="imgPost" destination="6a6-oK-GhS" id="7oj-lc-Rdz"/>
                                                     <outlet property="likePost" destination="9nN-Bm-aDc" id="DnD-vg-irn"/>
                                                     <outlet property="personName" destination="Tue-eN-9DF" id="BaU-i5-vZ7"/>
-                                                    <outlet property="viewComments" destination="hMd-8T-geu" id="VEO-45-k3S"/>
+                                                    <outlet property="postContent" destination="7EY-Wy-6nk" id="ff6-hN-YSI"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -332,7 +328,6 @@
     </scenes>
     <resources>
         <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
-        <image name="ellipsis.rectangle.fill" catalog="system" width="128" height="81"/>
         <image name="globe" catalog="system" width="128" height="121"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="message.fill" catalog="system" width="128" height="113"/>

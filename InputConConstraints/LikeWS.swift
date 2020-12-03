@@ -31,7 +31,7 @@ class LikeWS {
     }
     
     class func newLike(postId: String, personId: String ) {
-    WebServiceManager.doRequest(.get, urlString: Constants.api_base_url + "/newlike?postid=" + postId + "?personId=" + personId) { (responseService) in
+    WebServiceManager.doRequest(.post, urlString: Constants.api_base_url + "/likepost?postId=" + postId + "&personId=" + personId) { (responseService) in
 
     }
 }

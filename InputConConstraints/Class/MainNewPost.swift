@@ -15,6 +15,19 @@ class MainNewPost: UIViewController{
         return.lightContent
     }
     
+    @IBOutlet weak var newPost: UIButton!
+    
+    @IBOutlet weak var postBody: UITextField!
+    @IBAction func sendNewPost(_ sender: Any) {
+        if (postBody.text!.isEmpty) {
+            Util.showMessage(controller: self, message: "Ingrese un post", seconds: 5)
+        } else {
+            PostBL.newPost({}, img: "/img.jpg", postBody: postBody.text!, personId: g_personId, posterName: g_personName)
+            postBody.text = ""
+            Util.showMessage(controller: self, message: "Enviaste un post", seconds: 5)
+        }
+    }
+    
     @IBAction func TapCloseKeyboard(_ sender: Any) {
         self.view.endEditing(true)
     }

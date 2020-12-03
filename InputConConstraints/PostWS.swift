@@ -31,4 +31,19 @@ class PostWS {
         }
     }
     
+    class func newPost(_ success: @escaping Success, img: String, postBody: String, personId: String, posterName: String) {
+        
+        let json : WebServiceManager.JSON = ["mainContent"   : postBody,
+                                             "personId"     : personId,
+                                             "posterName"         : posterName,
+                                             "timesLiked"      : "0",
+                                             "timesCommented"      : "0",
+                                             "pictureUrl"      : img]
+        
+        WebServiceManager.doRequest(.post, urlString: Constants.api_base_url + "/newpost", bodyParams: json) { (response) in
+            print(response ?? "SIN RESPUESTA")
+            success()
+        }
+    }
+    
 }

@@ -28,6 +28,7 @@
 		15774F0B2562367D00BE6B4B /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15774F0A2562367D00BE6B4B /* User.storyboard */; };
 		159BFF00257952DC00CD5124 /* AuthWS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159BFEFF257952DC00CD5124 /* AuthWS.swift */; };
 		159BFF032579534F00CD5124 /* Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159BFF022579534F00CD5124 /* Closures.swift */; };
+		159BFF07257972D200CD5124 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159BFF06257972D200CD5124 /* Util.swift */; };
 		15D1085D256197A600CC6255 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D1085C256197A600CC6255 /* Constants.swift */; };
 		4E8D72BA25366E3E00573733 /* TFUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8D72B925366E3E00573733 /* TFUIView.swift */; };
 		4E8D72BD2536716C00573733 /* BTUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8D72BC2536716C00573733 /* BTUIView.swift */; };
@@ -68,6 +69,7 @@
 		15774F0A2562367D00BE6B4B /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
 		159BFEFF257952DC00CD5124 /* AuthWS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWS.swift; sourceTree = "<group>"; };
 		159BFF022579534F00CD5124 /* Closures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closures.swift; sourceTree = "<group>"; };
+		159BFF06257972D200CD5124 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		15D1085C256197A600CC6255 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4E8D72B925366E3E00573733 /* TFUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFUIView.swift; sourceTree = "<group>"; };
 		4E8D72BC2536716C00573733 /* BTUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTUIView.swift; sourceTree = "<group>"; };
@@ -105,6 +107,8 @@
 				15419A9D25780C6F00F7CA1F /* Core */,
 				159BFF022579534F00CD5124 /* Closures.swift */,
 				15D1085C256197A600CC6255 /* Constants.swift */,
+				15419AAB257843DC00F7CA1F /* Globals.swift */,
+				159BFF06257972D200CD5124 /* Util.swift */,
 			);
 			name = General;
 			sourceTree = "<group>";
@@ -211,7 +215,6 @@
 				4E8D72BF2536756E00573733 /* VUIView.swift */,
 				15774F0A2562367D00BE6B4B /* User.storyboard */,
 				157365D4256F37F10081E7E3 /* AlertManager.swift */,
-				15419AAB257843DC00F7CA1F /* Globals.swift */,
 			);
 			path = InputConConstraints;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				15419A9F25780C8800F7CA1F /* WebServicesManager.swift in Sources */,
 				15419AB825787CAB00F7CA1F /* CommentBL.swift in Sources */,
 				FBD3D19B2526260F0010A094 /* AppDelegate.swift in Sources */,
+				159BFF07257972D200CD5124 /* Util.swift in Sources */,
 				88A0558125753FBA009D35CB /* MainComment.swift in Sources */,
 				150B41E92533D6E7007292DB /* SignUpViewController.swift in Sources */,
 				15419ABE2578800500F7CA1F /* LikeBL.swift in Sources */,

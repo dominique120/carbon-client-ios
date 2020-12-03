@@ -15,6 +15,7 @@ class Post {
     var personId: String = "";
     var mainContent: String = "";
     var pictureURL: String = "";
+    var posterName: String = "";
     
     // extra types
     var timesLiked: Int = 0;
@@ -25,6 +26,7 @@ class Post {
         self.personId           = json["personId"]          as? String ?? ""
         self.mainContent        = json["mainContent"]       as? String ?? ""
         self.pictureURL         = json["pictureURL"]        as? String ?? ""
+        self.posterName         = json["posterName"]        as? String ?? ""
         self.timesLiked         = Int(json["timesLiked"]        as? String ?? "") ?? 0
         self.timesCommented     = Int(json["timesCommented"]    as? String ?? "") ?? 0
     }
@@ -32,13 +34,13 @@ class Post {
 
 
 class User {
-    var userId: String = "";
+    var personId: String = "";
     var userName: String = "";
     var password: String = "";
     
     
     init(json: JSON) {
-        self.userId             = json["userId"]            as? String ?? ""
+        self.personId             = json["personId"]            as? String ?? ""
         self.userName           = json["userName"]          as? String ?? ""
         self.password           = json["password"]          as? String ?? ""
     }
@@ -46,7 +48,6 @@ class User {
 
 class Person {
     var personId: String = "";
-    var userId: String = "";
     var profileId: String = "";
     var displayName: String = "";
     var email: String = "";
@@ -56,7 +57,6 @@ class Person {
     
     init(json: JSON) {
         self.personId             = json["personId"]           as? String ?? ""
-        self.userId               = json["userId"]             as? String ?? ""
         self.profileId            = json["profileId"]          as? String ?? ""
         self.displayName          = json["displayName"]        as? String ?? ""
         self.email                = json["email"]              as? String ?? ""
@@ -74,8 +74,7 @@ class Profile {
     var birthDate: String = "";
     
     // extra types
-    var followersCount: Int = 0;
-    
+    var followersCount: Int = 0;    
     
     init(json: JSON) {
         self.profileId          = json["profileId"]            as? String ?? ""

@@ -13,9 +13,14 @@ class PostBL {
     class func getAllPosts(_ success: @escaping Posts) {
         
         PostWS.getAllPosts { (arrayPosts) in
-            
-            //let arraySorted = arrayDisc.sorted(by: { $0.disc_releaseDate > $1.disc_releaseDate })
             success(arrayPosts)
         }
+    }
+    
+    class func newPost(_ success: @escaping Success, img: String, postBody: String, personId: String, posterName: String ) {
+        
+        PostWS.newPost({
+            success()
+        }, img:img, postBody:postBody, personId:personId, posterName:posterName)
     }
 }

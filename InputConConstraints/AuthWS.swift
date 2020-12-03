@@ -30,7 +30,7 @@ class AuthWS {
                 user.append(obj)
             }
             
-            g_personId = user.first?.userId ?? "-1"
+            g_personId = user.first?.personId ?? "-1"
             
             success()
         }

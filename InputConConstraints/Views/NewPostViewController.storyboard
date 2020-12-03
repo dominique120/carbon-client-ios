@@ -37,14 +37,6 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jds-mr-xBS">
-                                                <rect key="frame" x="370" y="11" width="44" height="26"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="44" id="Q4x-Oy-6zF"/>
-                                                </constraints>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" image="square.and.arrow.up" catalog="system"/>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LkU-u4-VG2">
                                                 <rect key="frame" x="0.0" y="11" width="44" height="22"/>
                                                 <constraints>
@@ -53,13 +45,25 @@
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="photo" catalog="system"/>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jds-mr-xBS">
+                                                <rect key="frame" x="323" y="7" width="77" height="26"/>
+                                                <accessibility key="accessibilityConfiguration" label="Send"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="77" id="Q4x-Oy-6zF"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Send" image="square.and.arrow.up" catalog="system"/>
+                                                <connections>
+                                                    <action selector="sendNewPost:" destination="yja-ji-fet" eventType="touchUpInside" id="HvT-bC-4bv"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.10980392160000001" green="0.1019607843" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="BFA-s7-GrW"/>
-                                            <constraint firstAttribute="trailing" secondItem="jds-mr-xBS" secondAttribute="trailing" id="Qix-0B-tyO"/>
+                                            <constraint firstAttribute="trailing" secondItem="jds-mr-xBS" secondAttribute="trailing" constant="14" id="Qix-0B-tyO"/>
                                             <constraint firstItem="LkU-u4-VG2" firstAttribute="top" secondItem="ZhX-1b-FTP" secondAttribute="top" constant="11" id="TGH-VH-VjH"/>
-                                            <constraint firstItem="jds-mr-xBS" firstAttribute="top" secondItem="ZhX-1b-FTP" secondAttribute="top" constant="11" id="TQL-GJ-Vf4"/>
+                                            <constraint firstItem="jds-mr-xBS" firstAttribute="top" secondItem="ZhX-1b-FTP" secondAttribute="top" constant="7" id="TQL-GJ-Vf4"/>
                                             <constraint firstItem="LkU-u4-VG2" firstAttribute="leading" secondItem="ZhX-1b-FTP" secondAttribute="leading" id="dFz-ye-FmF"/>
                                         </constraints>
                                     </view>
@@ -102,6 +106,10 @@
                         <color key="badgeColor" systemColor="systemBlueColor"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="newPost" destination="jds-mr-xBS" id="dDY-wQ-Jym"/>
+                        <outlet property="postBody" destination="pFU-Dd-Srx" id="vFW-2s-8JM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qn3-Lg-EYf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="9Lf-cY-37o">

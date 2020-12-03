@@ -30,4 +30,24 @@ class PersonWS {
             success(arrayPersons)
         }
     }
+    
+    class func getPersonById(_ success: @escaping Persons, personId: String) {
+        
+        WebServiceManager.doRequest(.get, urlString: Constants.api_base_url + "/personbyid?id=" + personId, wait: true) { (responseService) in
+            
+            let json = responseService as? [JSON] ?? []
+            //let products = json["productos"] as? JSON ?? [:]
+            //let discsWS = products["discos"] as? [JSON] ?? []
+            
+            var arrayPersons = [Person]()
+            
+            for element in json {
+                let obj = Person(json: element)
+                arrayPersons.append(obj)
+            }
+            success(arrayPersons)
+        }
+    }
+    
+    
 }

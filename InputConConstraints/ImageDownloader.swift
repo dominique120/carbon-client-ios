@@ -26,7 +26,7 @@ extension UIImageView {
             do {
                 let dataImage = try Data(contentsOf: url)
                 imageDownloaded = UIImage(data: dataImage)
-            }catch {
+            } catch {
                 print("Error al descargar la imagen")
             }
             

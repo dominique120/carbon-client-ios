@@ -9,13 +9,23 @@
 import UIKit
 
 class PlaceTableViewCell: UITableViewCell {
-        
+    
     @IBOutlet weak var personName: UIButton!
     @IBOutlet weak var imgPost: UIImageView!
     @IBOutlet weak var likePost: UIButton!
     @IBOutlet weak var commentOnPost: UIButton!
-    @IBOutlet weak var viewComments: UIButton!
+    @IBOutlet weak var postContent: UILabel!
     
+    
+
+    
+    @IBAction func viewComments(_ sender: Any) {
+        
+    }
+    
+    
+    
+    var poster: Person!
     
     var objPost: Post! {
         didSet {
@@ -23,18 +33,33 @@ class PlaceTableViewCell: UITableViewCell {
         }
     }
     
+    func getPoster(personId: String) {
+        PersonBL.getPersonById({ (arrayPosts) in
+            
+            self.poster = arrayPosts.first!
+            
+        }, personId: personId)
+    }
+    
     private func updateData() {
+        self.getPoster(personId: objPost.personId)
+        self.postContent.text = self.objPost.mainContent
         
-        self.personName.setTitle(self.objPost.personId, for: .normal)
-        self.imgPost.downloadImageInUrlString(self.objPost.pictureURL) { (image, urlString) in
+        self.imgPost.downloadImageInUrlString(Constants.image_fs + /*self.objPost.pictureURL*/"/img.jpg") { (image, urlString) in
             if self.objPost.pictureURL == urlString {
                 self.imgPost.image = image
             }
         }
+        self.personName.setTitle(self.objPost.posterName, for: .normal)
     }
     
     override func draw(_ rect: CGRect) {
-        
         self.imgPost.layer.cornerRadius = 20
+    }
+    
+    @IBAction func likePost(_ sender: Any) {
+        LikeBL.newLike(postId: objPost.postId, personId: g_personId)
+        print("le diste like a la publicacion")
+        // send some visual alert
     }
 }

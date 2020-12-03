@@ -8,9 +8,6 @@
 
 import Foundation
 
-func setPerson (person: Person) {
-    
-}
-
 var g_personName: String = ""
 var g_personId: String = ""
+var g_activePostId: String = ""
