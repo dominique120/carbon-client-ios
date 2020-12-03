@@ -17,7 +17,7 @@ class PlaceTableViewCell: UITableViewCell {
     @IBOutlet weak var viewComments: UIButton!
     
     
-    var objPlace: Post! {
+    var objPost: Post! {
         didSet {
             self.updateData()
         }
@@ -25,9 +25,9 @@ class PlaceTableViewCell: UITableViewCell {
     
     private func updateData() {
         
-        self.personName.setTitle(self.objPlace.personId, for: .normal)
-        self.imgPost.downloadImageInURLString(self.objPlace.pictureURL, placeHolderImage: nil) { (image, urlString) in
-            if self.objPlace.pictureURL == urlString {
+        self.personName.setTitle(self.objPost.personId, for: .normal)
+        self.imgPost.downloadImageInUrlString(self.objPost.pictureURL) { (image, urlString) in
+            if self.objPost.pictureURL == urlString {
                 self.imgPost.image = image
             }
         }

@@ -13,9 +13,9 @@ typealias Persons = (_ arrayPersons: [Person]) -> Void
 
 class PersonWS {
     
-    class func getPerson(_ success: @escaping Persons) {
+    class func getPerson(_ success: @escaping Persons, personId: String) {
         
-        WebServiceManager.doRequestWithMethod(.get, urlString: Constants.api_base_url + "/getoneperson", requestBody: nil) { (responseService) in
+        WebServiceManager.doRequest(.get, urlString: Constants.api_base_url + "/personbyuser?id=" + personId, wait: true) { (responseService) in
             
             let json = responseService as? [JSON] ?? []
             //let products = json["productos"] as? JSON ?? [:]
@@ -27,7 +27,6 @@ class PersonWS {
                 let obj = Person(json: element)
                 arrayPersons.append(obj)
             }
-            
             success(arrayPersons)
         }
     }

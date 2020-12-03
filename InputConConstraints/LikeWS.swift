@@ -14,7 +14,7 @@ class LikeWS {
     
     class func getLikesByPost(_ success: @escaping Likes, postId: String) {
         
-        WebServiceManager.doRequestWithMethod(.get, urlString: Constants.api_base_url + "/likes?id=" + postId, requestBody: nil) { (responseService) in
+        WebServiceManager.doRequest(.get, urlString: Constants.api_base_url + "/likes?id=" + postId) { (responseService) in
             
             let json = responseService as? [JSON] ?? []
             //let products = json["productos"] as? JSON ?? [:]
@@ -31,7 +31,7 @@ class LikeWS {
     }
     
     class func newLike(postId: String, personId: String ) {
-    WebServiceManager.doRequestWithMethod(.get, urlString: Constants.api_base_url + "/newlike?postid=" + postId + "?personId=" + personId, requestBody: nil) { (responseService) in
+    WebServiceManager.doRequest(.get, urlString: Constants.api_base_url + "/newlike?postid=" + postId + "?personId=" + personId) { (responseService) in
 
     }
 }

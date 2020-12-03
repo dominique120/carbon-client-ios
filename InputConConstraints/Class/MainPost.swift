@@ -50,7 +50,7 @@ extension MainPost: UITableViewDataSource { //number, number, cellfor
         
         let cellIdentidier = "PlaceTableViewCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentidier, for: indexPath) as! PlaceTableViewCell
-        cell.objPlace = self.arrayPosts[indexPath.row]
+        cell.objPost = self.arrayPosts[indexPath.row]
         
         return cell
     }

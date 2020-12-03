@@ -9,8 +9,8 @@
 import Foundation
 
 class PersonBL {
-    
-    class func getPerson( _ success: @escaping Persons) {
+    /*
+    class func getPerson( _ success: @escaping Persons, personId: String) {
         
         PersonWS.getPerson {(arrayPersons) in
             
@@ -18,4 +18,5 @@ class PersonBL {
             success(arrayPersons)
         }
     }
+ */
 }

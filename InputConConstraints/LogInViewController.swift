@@ -39,15 +39,7 @@ class LogInViewController: UIViewController {
         
         
         let status: Int = self.sendAuthRequest(username: usr, password: pwd)
-        
         if (status == 200) {
-            
-            PersonBL.getPerson{ (arrayPersons) in
-                self.arrayPersons = arrayPersons
-            }
- 
-            g_personId = arrayPersons.first?.personId ?? ""
-            g_personName = arrayPersons.first?.displayName ?? ""
             self.sendToHomeScren()
         } else if (status == 403) {
             self.showMessage(controller: self, message: "Credenciales invalidas!", seconds: 5.0)
@@ -57,54 +49,68 @@ class LogInViewController: UIViewController {
     }
     
     func sendAuthRequest(username: String, password: String) -> Int {
+        var authStatus: Int = 200
+        /*
+         let sem = DispatchSemaphore(value: 0)
+         let params = ["username":username, "password":password] as Dictionary<String, String>
+         
+         var request = URLRequest(url: URL(string: Constants.api_base_url + "/validate_user")!)
+         request.httpMethod = "POST"
+         request.httpBody = try? JSONSerialization.data(withJSONObject: params, options: [])
+         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+         
+         
+         let session = URLSession.shared
+         let task = session.dataTask(with: request, completionHandler: { data, response, error -> Void in
+         //print(response!)
+         
+         
+         let string = String(data: request.httpBody!, encoding: .utf8)
+         print(string!)
+         
+         if let httpResponse = response as? HTTPURLResponse {
+         print(httpResponse.statusCode)
+         let string = String(data: data!, encoding: .utf8)
+         print(string!)
+         
+         
+         
+         
+         
+         if (httpResponse.statusCode == 200) {
+         authStatus = 200
+         } else if (httpResponse.statusCode == 403) {
+         authStatus = 403
+         } else {
+         authStatus = -1
+         }
+         }
+         sem.signal()
+         /*
+         do {
+         let json = try JSONSerialization.jsonObject(with: data!) as! Dictionary<String, AnyObject>
+         print(json)
+         } catch {
+         print("error")
+         }
+         */
+         })
+         
+         task.resume()
+         sem.wait()
+         */
         
-        let sem = DispatchSemaphore(value: 0)
-        var authStatus: Int = 0
-        
-        
-        let params = ["username":username, "password":password] as Dictionary<String, String>
-        
-        var request = URLRequest(url: URL(string: Constants.api_base_url + "/validate_user")!)
-        request.httpMethod = "POST"
-        request.httpBody = try? JSONSerialization.data(withJSONObject: params, options: [])
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        
-        let session = URLSession.shared
-        let task = session.dataTask(with: request, completionHandler: { data, response, error -> Void in
-            //print(response!)
-            
-            
-            let string = String(data: request.httpBody!, encoding: .utf8)
-            print(string!)
-            
-            if let httpResponse = response as? HTTPURLResponse {
-                print(httpResponse.statusCode)
-                  let string = String(data: data!, encoding: .utf8)
-                 print(string!)
-                
-                
-                if (httpResponse.statusCode == 200) {
-                    authStatus = 200
-                } else if (httpResponse.statusCode == 403) {
-                    authStatus = 403
-                } else {
-                    authStatus = -1
-                }
+        AuthWS.doLogin(password: password, username: username, success: {
+            if g_personId == "-1" {
+                authStatus = 403
+            } else {
+                authStatus = 200
+                PersonWS.getPerson({(arrayPerson) in
+                    g_personName = arrayPerson.first!.firstName + " " + arrayPerson.first!.lastName 
+                }, personId: g_personId)
             }
-            sem.signal()
-            /*
-             do {
-             let json = try JSONSerialization.jsonObject(with: data!) as! Dictionary<String, AnyObject>
-             print(json)
-             } catch {
-             print("error")
-             }
-             */
         })
         
-        task.resume()
-        sem.wait()
         return authStatus        
     }
     

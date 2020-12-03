@@ -15,7 +15,7 @@ class CommentWS {
     
     class func getCommentsByPost(_ success: @escaping Comments, postId: String) {
         
-        WebServiceManager.doRequestWithMethod(.get, urlString: Constants.api_base_url + "/comments?id=" + postId, requestBody: nil) { (responseService) in
+        WebServiceManager.doRequest(.get, urlString: Constants.api_base_url + "/comments?id=" + postId) { (responseService) in
             
             let json = responseService as? [JSON] ?? []
             //let products = json["productos"] as? JSON ?? [:]
@@ -38,7 +38,7 @@ class CommentWS {
 
         // insert dictionary converting thing etc etc
         
-        WebServiceManager.doRequestWithMethod(.post, urlString: Constants.api_base_url + "/comments", requestBody: nil) { (responseService) in
+        WebServiceManager.doRequest(.post, urlString: Constants.api_base_url + "/comments") { (responseService) in
             
             let json = responseService as? [JSON] ?? []
             //let products = json["productos"] as? JSON ?? [:]
