@@ -80,8 +80,8 @@
                                                                 <constraint firstAttribute="width" secondItem="6a6-oK-GhS" secondAttribute="height" multiplier="46:33" id="NFc-Qi-Sf6"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7EY-Wy-6nk">
-                                                            <rect key="frame" x="20" y="358" width="374" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7EY-Wy-6nk">
+                                                            <rect key="frame" x="20" y="358.5" width="374" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -99,6 +99,7 @@
                                                         <constraint firstItem="hMd-8T-geu" firstAttribute="top" secondItem="OLw-Q9-YEk" secondAttribute="top" constant="14" id="3CL-vN-dDB"/>
                                                         <constraint firstItem="Tue-eN-9DF" firstAttribute="leading" secondItem="OLw-Q9-YEk" secondAttribute="leading" constant="20" id="3Uc-ui-g6q"/>
                                                         <constraint firstAttribute="trailing" secondItem="6a6-oK-GhS" secondAttribute="trailing" id="ABn-NY-Raq"/>
+                                                        <constraint firstItem="7EY-Wy-6nk" firstAttribute="top" secondItem="Tue-eN-9DF" secondAttribute="bottom" constant="317.5" id="GBk-AY-QzH"/>
                                                         <constraint firstItem="6a6-oK-GhS" firstAttribute="leading" secondItem="OLw-Q9-YEk" secondAttribute="leading" id="Nlv-hL-0bQ"/>
                                                         <constraint firstItem="9nN-Bm-aDc" firstAttribute="leading" secondItem="OLw-Q9-YEk" secondAttribute="leading" constant="24" id="Thm-ca-q9A"/>
                                                         <constraint firstAttribute="trailing" secondItem="hMd-8T-geu" secondAttribute="trailing" constant="20" id="Wef-84-o3X"/>
@@ -150,7 +151,7 @@
         <!--Main Comment-->
         <scene sceneID="bCS-eC-6v5">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Lum-IL-IOq" customClass="MainComment" customModule="IsilInsta" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="comment" modalPresentationStyle="fullScreen" id="Lum-IL-IOq" customClass="MainComment" customModule="IsilInsta" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V2F-p6-6OW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
