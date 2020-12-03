@@ -45,6 +45,7 @@ class LogInViewController: UIViewController {
             PersonBL.getPerson{ (arrayPersons) in
                 self.arrayPersons = arrayPersons
             }
+ 
             g_personId = arrayPersons.first?.personId ?? ""
             g_personName = arrayPersons.first?.displayName ?? ""
             self.sendToHomeScren()
@@ -109,9 +110,9 @@ class LogInViewController: UIViewController {
     
     func sendToHomeScren() -> Void {
         print("isAuthenticated")
-        let storyBoard : UIStoryboard = UIStoryboard(name: "User", bundle:nil)
+        let storyBoard : UIStoryboard = UIStoryboard(name: "TabBarViewController", bundle:nil)
         
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Home") as UIViewController
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MainHome") as UIViewController
         nextViewController.modalPresentationStyle = .fullScreen
         self.present(nextViewController, animated:true, completion:nil)
     }

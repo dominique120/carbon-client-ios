@@ -37,11 +37,11 @@ class WebServiceManager {
         
         var request = URLRequest(url: url)
         request.httpMethod = httpMethod.rawValue
-        
+        /*
         do{
             try request.httpBody = JSONSerialization.data(withJSONObject: requestBody ?? "", options: .prettyPrinted)
         } catch {}
-        
+        */
         let sessionConfiguration = URLSessionConfiguration.default
         sessionConfiguration.httpAdditionalHeaders = ["Content-Type": "application/json"]
         

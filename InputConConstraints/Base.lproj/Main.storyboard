@@ -273,16 +273,6 @@
             </objects>
             <point key="canvasLocation" x="3185.507246376812" y="131.25"/>
         </scene>
-        <!--TabBarViewController-->
-        <scene sceneID="Uxm-0t-SRY">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="TabBarViewController" storyboardName="TabBarViewController" referencedIdentifier="TabBarViewController" id="qSs-RX-yR5" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="faE-eo-8ab"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mus-sA-YkL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3582" y="-281"/>
-        </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="hPx-Zr-unz">
             <objects>
