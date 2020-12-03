@@ -228,20 +228,11 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8SC-1t-Mdy">
-                                        <rect key="frame" x="274" y="107" width="93" height="30"/>
-                                        <state key="normal" title="Boton prueba"/>
-                                        <connections>
-                                            <segue destination="qSs-RX-yR5" kind="show" id="mmC-dQ-QWa"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="8SC-1t-Mdy" firstAttribute="top" secondItem="1QC-KX-mBq" secondAttribute="top" constant="107" id="4Jm-if-Xsb"/>
                                     <constraint firstItem="NbB-WL-Ubk" firstAttribute="centerX" secondItem="1QC-KX-mBq" secondAttribute="centerX" id="LPJ-DS-CqT"/>
                                     <constraint firstItem="NbB-WL-Ubk" firstAttribute="centerY" secondItem="1QC-KX-mBq" secondAttribute="centerY" constant="-34" id="W9r-fW-iv6"/>
-                                    <constraint firstAttribute="trailing" secondItem="8SC-1t-Mdy" secondAttribute="trailing" constant="47" id="xHY-lH-P1f"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -340,7 +331,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Last Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gCf-Wc-bZW" customClass="TFUIView" customModule="IsilInsta" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Last Name" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gCf-Wc-bZW" customClass="TFUIView" customModule="IsilInsta" customModuleProvider="target">
                                                 <rect key="frame" x="35" y="193" width="250" height="34"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
