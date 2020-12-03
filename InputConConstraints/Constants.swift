@@ -8,7 +8,7 @@
 
 
 struct Constants {
-    private static let ip = "192.168.1.72"
+    private static let ip = "190.238.243.95"
     private static let port = "80"
     
     public static let api_base_url = "http://" + ip + ":" + port + "/isilinsta"

@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -91,6 +90,9 @@
                                     <constraint firstItem="ZhX-1b-FTP" firstAttribute="leading" secondItem="d0u-gi-tg7" secondAttribute="leading" id="cI3-ba-jSO"/>
                                     <constraint firstAttribute="trailing" secondItem="pFU-Dd-Srx" secondAttribute="trailing" constant="8" id="ePC-CO-1PO"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="9Lf-cY-37o" appends="YES" id="rbd-P8-rGC"/>
+                                </connections>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="V3r-j2-XGi"/>
@@ -109,6 +111,11 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qn3-Lg-EYf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="9Lf-cY-37o">
+                    <connections>
+                        <action selector="TapCloseKeyboard:" destination="yja-ji-fet" id="CBQ-tI-MUM"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="285.50724637681162" y="77.678571428571431"/>
         </scene>
