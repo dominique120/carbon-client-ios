@@ -182,7 +182,7 @@
                                         <rect key="frame" x="0.0" y="88" width="414" height="715"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="91" id="oHn-TT-nia" customClass="MainCelda" customModule="IsilInsta" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="commentCell" rowHeight="91" id="oHn-TT-nia" customClass="MainCelda" customModule="IsilInsta" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="414" height="91"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oHn-TT-nia" id="Chr-ma-ZOi">
@@ -346,6 +346,7 @@
                     <connections>
                         <outlet property="ConstraintCenterYContent" destination="Z3J-rl-1dw" id="5PE-lM-fB1"/>
                         <outlet property="ViewContent" destination="l0L-qg-iWN" id="C3D-xN-7Ao"/>
+                        <outlet property="commentTable" destination="MWl-HB-9yK" id="C4P-hq-a0h"/>
                         <outlet property="commentTextBox" destination="oVF-mo-okQ" id="Boy-Qn-HCT"/>
                     </connections>
                 </viewController>
