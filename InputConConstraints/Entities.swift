@@ -14,7 +14,7 @@ class Post {
     var postId: String = "";
     var personId: String = "";
     var mainContent: String = "";
-    var pictureURL: String = "";
+    var pictureUrl: String = "";
     var posterName: String = "";
     
     // extra types
@@ -25,7 +25,7 @@ class Post {
         self.postId             = json["postId"]            as? String ?? ""
         self.personId           = json["personId"]          as? String ?? ""
         self.mainContent        = json["mainContent"]       as? String ?? ""
-        self.pictureURL         = json["pictureURL"]        as? String ?? ""
+        self.pictureUrl         = json["pictureUrl"]        as? String ?? ""
         self.posterName         = json["posterName"]        as? String ?? ""
         self.timesLiked         = Int(json["timesLiked"]        as? String ?? "") ?? 0
         self.timesCommented     = Int(json["timesCommented"]    as? String ?? "") ?? 0

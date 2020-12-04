@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class MainPost: UIViewController{
+   
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return.lightContent
     }
@@ -51,10 +52,11 @@ extension MainPost: UITableViewDataSource { //number, number, cellfor
         let cellIdentidier = "PlaceTableViewCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentidier, for: indexPath) as! PlaceTableViewCell
         cell.objPost = self.arrayPosts[indexPath.row]
-        
         return cell
     }
 }
+
+
 /*
  //Se encarga de notificar los eventos del usuario en la tabla
  extension MainPost: UITableViewDelegate {

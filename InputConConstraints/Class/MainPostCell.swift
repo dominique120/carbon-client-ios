@@ -16,14 +16,9 @@ class PlaceTableViewCell: UITableViewCell {
     @IBOutlet weak var commentOnPost: UIButton!
     @IBOutlet weak var postContent: UILabel!
     
-    
-
-    
     @IBAction func viewComments(_ sender: Any) {
-        
+        g_activePostId = objPost.postId
     }
-    
-    
     
     var poster: Person!
     
@@ -45,10 +40,8 @@ class PlaceTableViewCell: UITableViewCell {
         self.getPoster(personId: objPost.personId)
         self.postContent.text = self.objPost.mainContent
         
-        self.imgPost.downloadImageInUrlString(Constants.image_fs + /*self.objPost.pictureURL*/"/img.jpg") { (image, urlString) in
-            if self.objPost.pictureURL == urlString {
+        self.imgPost.downloadImageInUrlString(Constants.image_fs + self.objPost.pictureUrl) { (image, urlString) in
                 self.imgPost.image = image
-            }
         }
         self.personName.setTitle(self.objPost.posterName, for: .normal)
     }
@@ -62,4 +55,7 @@ class PlaceTableViewCell: UITableViewCell {
         print("le diste like a la publicacion")
         // send some visual alert
     }
+    
+
 }
+
