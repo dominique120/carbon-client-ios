@@ -291,6 +291,9 @@
                                                 <state key="normal" title="Send">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="sendComment:" destination="Lum-IL-IOq" eventType="touchUpInside" id="90K-al-c81"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
@@ -343,6 +346,7 @@
                     <connections>
                         <outlet property="ConstraintCenterYContent" destination="Z3J-rl-1dw" id="5PE-lM-fB1"/>
                         <outlet property="ViewContent" destination="l0L-qg-iWN" id="C3D-xN-7Ao"/>
+                        <outlet property="commentTextBox" destination="oVF-mo-okQ" id="Boy-Qn-HCT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lHy-lr-CGr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

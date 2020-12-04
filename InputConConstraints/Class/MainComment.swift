@@ -12,7 +12,13 @@ import UIKit
 class MainComment: UIViewController{
     
    
+    @IBOutlet weak var commentTextBox: UITextField!
     
+    @IBAction func sendComment(_ sender: Any) {
+        
+        
+        
+    }
     @IBOutlet weak var ConstraintCenterYContent: NSLayoutConstraint!
     @IBOutlet weak var ViewContent: UIView!
     

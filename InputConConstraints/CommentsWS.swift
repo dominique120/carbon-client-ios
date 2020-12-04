@@ -33,24 +33,16 @@ class CommentWS {
     
     
     
-    class func newComment(comment: Comment) {
+    class func newComment(_ success: @escaping Success, postId: String, commentText: String, personId: String) {
         
-
-        // insert dictionary converting thing etc etc
+        let json : WebServiceManager.JSON = ["postId"       : postId,
+                                             "personId"     : personId,
+                                             "commentText"  : commentText
+                                             ]
         
-        WebServiceManager.doRequest(.post, urlString: Constants.api_base_url + "/comments") { (responseService) in
-            
-            let json = responseService as? [JSON] ?? []
-            //let products = json["productos"] as? JSON ?? [:]
-            //let discsWS = products["discos"] as? [JSON] ?? []
-            
-            var arrayComments = [Comment]()
-            
-            for element in json {
-                let obj = Comment(json: element)
-                arrayComments.append(obj)
-            }
-            //success(arrayComments)
+        WebServiceManager.doRequest(.post, urlString: Constants.api_base_url + "/newcomment", bodyParams: json) { (response) in
+            print(response ?? "SIN RESPUESTA")
+            success()
         }
     }
 }
