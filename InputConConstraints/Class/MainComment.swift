@@ -11,6 +11,8 @@ import UIKit
 
 class MainComment: UIViewController{
     
+   
+    
     @IBOutlet weak var ConstraintCenterYContent: NSLayoutConstraint!
     @IBOutlet weak var ViewContent: UIView!
     
@@ -25,8 +27,7 @@ class MainComment: UIViewController{
         self.view.endEditing(true)
     }
     
-
-    
+        
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         

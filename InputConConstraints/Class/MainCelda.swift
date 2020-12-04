@@ -11,4 +11,11 @@ import UIKit
 
 class MainCelda : UITableViewCell{
     
+    @IBOutlet weak var commentDate: UILabel!
+    @IBOutlet weak var personProfilePic: UIImageView!
+    @IBOutlet weak var personName: UIButton!
+    @IBOutlet weak var commentText: UILabel!
+    
+    
+    
 }

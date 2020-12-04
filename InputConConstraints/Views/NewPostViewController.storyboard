@@ -136,6 +136,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="newPost" destination="jds-mr-xBS" id="dDY-wQ-Jym"/>
+                        <outlet property="newPostBox" destination="06u-Ov-got" id="lqY-V8-d98"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qn3-Lg-EYf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

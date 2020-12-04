@@ -170,7 +170,7 @@
         <!--Main Comment-->
         <scene sceneID="bCS-eC-6v5">
             <objects>
-                <viewController storyboardIdentifier="comment" modalPresentationStyle="fullScreen" id="Lum-IL-IOq" customClass="MainComment" customModule="IsilInsta" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CommentTable" modalPresentationStyle="fullScreen" id="Lum-IL-IOq" customClass="MainComment" customModule="IsilInsta" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V2F-p6-6OW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -229,6 +229,12 @@
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
+                                                <connections>
+                                                    <outlet property="commentDate" destination="7QT-fD-FW4" id="9l7-Y0-txV"/>
+                                                    <outlet property="commentText" destination="uY4-q3-uKT" id="A7u-7o-Eoc"/>
+                                                    <outlet property="personName" destination="UsD-oi-rR1" id="SBD-YH-hcb"/>
+                                                    <outlet property="personProfilePic" destination="mZE-9S-gRh" id="twO-lH-Ca9"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>

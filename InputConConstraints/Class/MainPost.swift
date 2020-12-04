@@ -33,6 +33,14 @@ class MainPost: UIViewController{
             self.tableVirePosts.reloadData()
         }
     }
+    
+    func postAComment (_ post: Post) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "PostViewController", bundle:nil)
+        
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "CommentTable") as UIViewController
+        nextViewController.modalPresentationStyle = .fullScreen
+        self.present(nextViewController, animated:true, completion:nil)
+    }
 }
 
 
@@ -51,21 +59,16 @@ extension MainPost: UITableViewDataSource { //number, number, cellfor
         
         let cellIdentidier = "PlaceTableViewCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentidier, for: indexPath) as! PlaceTableViewCell
+        cell.delegate = self
         cell.objPost = self.arrayPosts[indexPath.row]
         return cell
     }
 }
 
 
-/*
- //Se encarga de notificar los eventos del usuario en la tabla
- extension MainPost: UITableViewDelegate {
- 
- func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
- 
- let objPlace = self.arrayPosts[indexPath.row]
- self.performSegue(withIdentifier: "MapViewController", sender: objPlace)
- }
- 
- }
- */
+extension MainPost: MainPostDelegate {    
+    func placeTableViewCell(_ cell: PlaceTableViewCell, deletePlace objPlace: Post) {
+        self.postAComment(objPlace)
+    }
+}
+

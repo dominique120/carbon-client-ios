@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol MainPostDelegate {
+    func placeTableViewCell(_ cell: PlaceTableViewCell, deletePlace objPlace: Post)
+}
+
 class PlaceTableViewCell: UITableViewCell {
     
     @IBOutlet weak var personName: UIButton!
@@ -16,8 +20,12 @@ class PlaceTableViewCell: UITableViewCell {
     @IBOutlet weak var commentOnPost: UIButton!
     @IBOutlet weak var postContent: UILabel!
     
+    var delegate: MainPostDelegate?
+    
     @IBAction func viewComments(_ sender: Any) {
         g_activePostId = objPost.postId
+        self.delegate?.placeTableViewCell(self, deletePlace: self.objPost)
+        
     }
     
     var poster: Person!
@@ -41,7 +49,7 @@ class PlaceTableViewCell: UITableViewCell {
         self.postContent.text = self.objPost.mainContent
         
         self.imgPost.downloadImageInUrlString(Constants.image_fs + self.objPost.pictureUrl) { (image, urlString) in
-                self.imgPost.image = image
+            self.imgPost.image = image
         }
         self.personName.setTitle(self.objPost.posterName, for: .normal)
     }
@@ -56,6 +64,6 @@ class PlaceTableViewCell: UITableViewCell {
         // send some visual alert
     }
     
-
+    
 }
 
