@@ -18,8 +18,6 @@ class CommentWS {
         WebServiceManager.doRequest(.post, urlString: Constants.api_base_url + "/getpostcomments?id=" + postId) { (responseService) in
             
             let json = responseService as? [JSON] ?? []
-            //let products = json["productos"] as? JSON ?? [:]
-            //let discsWS = products["discos"] as? [JSON] ?? []
             
             var arrayComments = [Comment]()
             

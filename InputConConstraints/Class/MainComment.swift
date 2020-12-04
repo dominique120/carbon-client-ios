@@ -22,18 +22,16 @@ class MainComment: UIViewController{
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.getAllPosts();
+        self.getAllComments();
     }
     
-    func getAllPosts() {
+    func getAllComments() {
         CommentBL.getCommentsByPost({arrayComments in
             self.arrayComments = arrayComments
             self.commentTable.reloadData()
         }, postId: g_activePostId)
         
     }
-    
-    
     
    
     @IBOutlet weak var commentTextBox: UITextField!

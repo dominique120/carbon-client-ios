@@ -17,8 +17,6 @@ class PostWS {
         WebServiceManager.doRequest(.get, urlString: Constants.api_base_url + "/getposts") { (responseService) in
             
             let json = responseService as? [JSON] ?? []
-            //let products = json["productos"] as? JSON ?? [:]
-            //let discsWS = products["discos"] as? [JSON] ?? []
             
             var arrayDiscs = [Post]()
             
