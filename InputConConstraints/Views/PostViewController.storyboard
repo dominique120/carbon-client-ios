@@ -167,6 +167,16 @@
             </objects>
             <point key="canvasLocation" x="-336.23188405797106" y="83.705357142857139"/>
         </scene>
+        <!--PostViewController-->
+        <scene sceneID="TFK-iV-V8b">
+            <objects>
+                <viewControllerPlaceholder referencedIdentifier="PostViewController" id="VbO-16-WQ1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="UsJ-aG-gIg"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vWX-dN-mKn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="102" y="-243"/>
+        </scene>
         <!--Main Comment-->
         <scene sceneID="bCS-eC-6v5">
             <objects>
@@ -263,6 +273,7 @@
                                                 <state key="normal" image="arrowshape.turn.up.left.fill" catalog="system"/>
                                                 <connections>
                                                     <action selector="clickBtnBack:" destination="Lum-IL-IOq" eventType="touchUpInside" id="3HP-Zv-gdP"/>
+                                                    <segue destination="VbO-16-WQ1" kind="showDetail" id="gSy-LW-Fpl"/>
                                                 </connections>
                                             </button>
                                         </subviews>

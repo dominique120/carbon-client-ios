@@ -17,7 +17,8 @@ class MainComment: UIViewController{
     @IBOutlet weak var ViewContent: UIView!
     
     @IBAction  func clickBtnBack(_ sender: Any){
-        self.navigationController?.popViewController(animated: true)
+
+        
     }
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return.lightContent
