@@ -15,7 +15,7 @@ class CommentWS {
     
     class func getCommentsByPost(_ success: @escaping Comments, postId: String) {
         
-        WebServiceManager.doRequest(.get, urlString: Constants.api_base_url + "/comments?id=" + postId) { (responseService) in
+        WebServiceManager.doRequest(.post, urlString: Constants.api_base_url + "/getpostcomments?id=" + postId) { (responseService) in
             
             let json = responseService as? [JSON] ?? []
             //let products = json["productos"] as? JSON ?? [:]
