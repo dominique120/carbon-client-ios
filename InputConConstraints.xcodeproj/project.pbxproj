@@ -33,6 +33,8 @@
 		4E8D72BA25366E3E00573733 /* TFUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8D72B925366E3E00573733 /* TFUIView.swift */; };
 		4E8D72BD2536716C00573733 /* BTUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8D72BC2536716C00573733 /* BTUIView.swift */; };
 		4E8D72C02536756E00573733 /* VUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8D72BF2536756E00573733 /* VUIView.swift */; };
+		8840F8B42579D68700CD1421 /* TVUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8840F8B32579D68700CD1421 /* TVUIView.swift */; };
+		8840F8B82579DDC700CD1421 /* MainCelda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8840F8B72579DDC700CD1421 /* MainCelda.swift */; };
 		88A0556025753CF8009D35CB /* PostViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88A0555F25753CF8009D35CB /* PostViewController.storyboard */; };
 		88A0556325753D0A009D35CB /* NewPostViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88A0556225753D0A009D35CB /* NewPostViewController.storyboard */; };
 		88A0556625753D19009D35CB /* ProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88A0556525753D19009D35CB /* ProfileViewController.storyboard */; };
@@ -74,6 +76,8 @@
 		4E8D72B925366E3E00573733 /* TFUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFUIView.swift; sourceTree = "<group>"; };
 		4E8D72BC2536716C00573733 /* BTUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTUIView.swift; sourceTree = "<group>"; };
 		4E8D72BF2536756E00573733 /* VUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VUIView.swift; sourceTree = "<group>"; };
+		8840F8B32579D68700CD1421 /* TVUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVUIView.swift; sourceTree = "<group>"; };
+		8840F8B72579DDC700CD1421 /* MainCelda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCelda.swift; sourceTree = "<group>"; };
 		88A0555F25753CF8009D35CB /* PostViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostViewController.storyboard; sourceTree = "<group>"; };
 		88A0556225753D0A009D35CB /* NewPostViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewPostViewController.storyboard; sourceTree = "<group>"; };
 		88A0556525753D19009D35CB /* ProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileViewController.storyboard; sourceTree = "<group>"; };
@@ -161,6 +165,7 @@
 				88A0557625753F58009D35CB /* MainProfile.swift */,
 				88A0558025753FBA009D35CB /* MainComment.swift */,
 				15542EC22577E19100252F6F /* MainPostCell.swift */,
+				8840F8B72579DDC700CD1421 /* MainCelda.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 				4E8D72B925366E3E00573733 /* TFUIView.swift */,
 				4E8D72BC2536716C00573733 /* BTUIView.swift */,
 				4E8D72BF2536756E00573733 /* VUIView.swift */,
+				8840F8B32579D68700CD1421 /* TVUIView.swift */,
 				15774F0A2562367D00BE6B4B /* User.storyboard */,
 				157365D4256F37F10081E7E3 /* AlertManager.swift */,
 			);
@@ -303,6 +309,7 @@
 				15419AB825787CAB00F7CA1F /* CommentBL.swift in Sources */,
 				FBD3D19B2526260F0010A094 /* AppDelegate.swift in Sources */,
 				159BFF07257972D200CD5124 /* Util.swift in Sources */,
+				8840F8B82579DDC700CD1421 /* MainCelda.swift in Sources */,
 				88A0558125753FBA009D35CB /* MainComment.swift in Sources */,
 				150B41E92533D6E7007292DB /* SignUpViewController.swift in Sources */,
 				15419ABE2578800500F7CA1F /* LikeBL.swift in Sources */,
@@ -312,6 +319,7 @@
 				159BFF032579534F00CD5124 /* Closures.swift in Sources */,
 				15419AAF2578453100F7CA1F /* PersonWS.swift in Sources */,
 				157365D7256F39A60081E7E3 /* Entities.swift in Sources */,
+				8840F8B42579D68700CD1421 /* TVUIView.swift in Sources */,
 				15419ABB25787DEF00F7CA1F /* LikeWS.swift in Sources */,
 				15542EC32577E19100252F6F /* MainPostCell.swift in Sources */,
 				FBD3D19D2526260F0010A094 /* SceneDelegate.swift in Sources */,

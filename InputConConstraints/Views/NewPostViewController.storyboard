@@ -20,19 +20,11 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d0u-gi-tg7">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Say something" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pFU-Dd-Srx">
-                                        <rect key="frame" x="8" y="135" width="398" height="34"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZhX-1b-FTP">
                                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New post" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMl-us-Myw">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New post" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gMl-us-Myw">
                                                 <rect key="frame" x="166.5" y="11" width="81" height="22"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -65,6 +57,8 @@
                                             <constraint firstItem="LkU-u4-VG2" firstAttribute="top" secondItem="ZhX-1b-FTP" secondAttribute="top" constant="11" id="TGH-VH-VjH"/>
                                             <constraint firstItem="jds-mr-xBS" firstAttribute="top" secondItem="ZhX-1b-FTP" secondAttribute="top" constant="7" id="TQL-GJ-Vf4"/>
                                             <constraint firstItem="LkU-u4-VG2" firstAttribute="leading" secondItem="ZhX-1b-FTP" secondAttribute="leading" id="dFz-ye-FmF"/>
+                                            <constraint firstItem="gMl-us-Myw" firstAttribute="centerX" secondItem="ZhX-1b-FTP" secondAttribute="centerX" id="u9L-O6-IB8"/>
+                                            <constraint firstItem="gMl-us-Myw" firstAttribute="centerY" secondItem="ZhX-1b-FTP" secondAttribute="centerY" id="ubZ-WS-lvA"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="77Y-kg-V0R">
@@ -74,18 +68,52 @@
                                             <constraint firstAttribute="height" constant="44" id="z0S-sG-fUM"/>
                                         </constraints>
                                     </view>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="06u-Ov-got" customClass="TVUIView" customModule="IsilInsta" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="135" width="398" height="193"/>
+                                        <color key="backgroundColor" red="0.21568627450980393" green="0.21568627450980393" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="398" id="eBa-x4-0SP"/>
+                                            <constraint firstAttribute="height" constant="193" id="uL4-ee-xvL"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="conerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" systemColor="linkColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" systemColor="linkColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                <size key="value" width="5" height="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="pFU-Dd-Srx" firstAttribute="leading" secondItem="d0u-gi-tg7" secondAttribute="leading" constant="8" id="CVc-AX-4Qi"/>
+                                    <constraint firstAttribute="trailing" secondItem="06u-Ov-got" secondAttribute="trailing" constant="8" id="Cwt-A0-GVa"/>
                                     <constraint firstAttribute="trailing" secondItem="77Y-kg-V0R" secondAttribute="trailing" id="ETk-on-KUD"/>
-                                    <constraint firstItem="pFU-Dd-Srx" firstAttribute="top" secondItem="ZhX-1b-FTP" secondAttribute="bottom" constant="47" id="Lnj-U7-Srd"/>
                                     <constraint firstItem="ZhX-1b-FTP" firstAttribute="top" secondItem="77Y-kg-V0R" secondAttribute="bottom" id="LsW-hD-svW"/>
                                     <constraint firstItem="77Y-kg-V0R" firstAttribute="top" secondItem="d0u-gi-tg7" secondAttribute="top" id="R3P-n9-NSd"/>
                                     <constraint firstAttribute="trailing" secondItem="ZhX-1b-FTP" secondAttribute="trailing" id="YZM-f2-zSZ"/>
                                     <constraint firstItem="77Y-kg-V0R" firstAttribute="leading" secondItem="d0u-gi-tg7" secondAttribute="leading" id="bdU-a7-G9L"/>
                                     <constraint firstItem="ZhX-1b-FTP" firstAttribute="leading" secondItem="d0u-gi-tg7" secondAttribute="leading" id="cI3-ba-jSO"/>
-                                    <constraint firstAttribute="trailing" secondItem="pFU-Dd-Srx" secondAttribute="trailing" constant="8" id="ePC-CO-1PO"/>
+                                    <constraint firstItem="06u-Ov-got" firstAttribute="leading" secondItem="d0u-gi-tg7" secondAttribute="leading" constant="8" id="gxH-rz-Y71"/>
+                                    <constraint firstItem="06u-Ov-got" firstAttribute="top" secondItem="ZhX-1b-FTP" secondAttribute="bottom" constant="47" id="nQJ-Jm-IV3"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="9Lf-cY-37o" appends="YES" id="rbd-P8-rGC"/>
@@ -108,7 +136,6 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="newPost" destination="jds-mr-xBS" id="dDY-wQ-Jym"/>
-                        <outlet property="postBody" destination="pFU-Dd-Srx" id="vFW-2s-8JM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qn3-Lg-EYf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -125,6 +152,9 @@
         <image name="photo" catalog="system" width="128" height="93"/>
         <image name="plus.app.fill" catalog="system" width="128" height="114"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
