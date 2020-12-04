@@ -60,7 +60,7 @@ class PlaceTableViewCell: UITableViewCell {
     
     @IBAction func likePost(_ sender: Any) {
         LikeBL.newLike(postId: objPost.postId, personId: g_personId)
-        print("le diste like a la publicacion")
+        print("Le diste like a la publicacion!")
         // send some visual alert
     }
     

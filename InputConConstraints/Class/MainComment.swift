@@ -11,8 +11,42 @@ import UIKit
 
 class MainComment: UIViewController{
     
-   
     
+    @IBOutlet weak var commentTable: UITableView!
+    
+    var arrayComments = [Comment]()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.getAllPosts();
+    }
+    
+    func getAllPosts() {
+        CommentBL.getCommentsByPost({arrayComments in
+            self.arrayComments = arrayComments
+            self.commentTable.reloadData()
+        }, postId: g_activePostId)
+        
+    }
+    
+    
+    
+   
+    @IBOutlet weak var commentTextBox: UITextField!
+    
+    @IBAction func sendComment(_ sender: Any) {
+        if (commentTextBox.text!.isEmpty) {
+            Util.showMessage(controller: self, message: "Ingrese un comentario", seconds: 5)
+        } else {
+            CommentBL.newComment({}, postId: g_activePostId, commentText: commentTextBox.text!, personId: g_personId)
+            commentTextBox.text = ""
+            Util.showMessage(controller: self, message: "Enviaste un comentario", seconds: 5)
+        }
+    }
     @IBOutlet weak var ConstraintCenterYContent: NSLayoutConstraint!
     @IBOutlet weak var ViewContent: UIView!
     
@@ -80,5 +114,27 @@ class MainComment: UIViewController{
             self.view.layoutIfNeeded()
             
         }
+    }
+}
+
+
+
+extension MainComment: UITableViewDataSource { //number, number, cellfor
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.arrayComments.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cellIdentidier = "commentCell"
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentidier, for: indexPath) as! MainCelda
+        //cell.delegate = self
+        cell.objComment = self.arrayComments[indexPath.row]
+        return cell
     }
 }
