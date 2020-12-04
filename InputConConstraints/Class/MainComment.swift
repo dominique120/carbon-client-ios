@@ -15,9 +15,13 @@ class MainComment: UIViewController{
     @IBOutlet weak var commentTextBox: UITextField!
     
     @IBAction func sendComment(_ sender: Any) {
-        
-        
-        
+        if (commentTextBox.text!.isEmpty) {
+            Util.showMessage(controller: self, message: "Ingrese un comentario", seconds: 5)
+        } else {
+            CommentBL.newComment({}, postId: g_activePostId, commentText: commentTextBox.text!, personId: g_personId)
+            commentTextBox.text = ""
+            Util.showMessage(controller: self, message: "Enviaste un comentario", seconds: 5)
+        }
     }
     @IBOutlet weak var ConstraintCenterYContent: NSLayoutConstraint!
     @IBOutlet weak var ViewContent: UIView!
