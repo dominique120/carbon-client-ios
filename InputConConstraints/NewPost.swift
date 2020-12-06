@@ -20,11 +20,12 @@ class MainNewPost: UIViewController{
     
     @IBAction func sendNewPost(_ sender: Any) {
         if (newPostBox.text!.isEmpty) {
-            Util.showMessage(controller: self, message: "Ingrese un post", seconds: 5)
+            Util.showMessage(controller: self, message: "Ingrese un texto", seconds: 5)
         } else {
-            PostBL.newPost({}, img: "/img.jpg", postBody: newPostBox.text!, personId: g_personId, posterName: g_personName)
-            newPostBox.text = ""
-            Util.showMessage(controller: self, message: "Enviaste un post", seconds: 5)
+            PostWS.newPost({() in
+                Util.showMessage(controller: self, message: "Enviaste un mensaje!", seconds: 3.0)
+                // pop view controller
+            }, img: "/img.jpg", postBody: newPostBox.text!, personId: PersonBE.shared!.personId, posterName: PersonBE.shared!.displayName, error: {(errorMessage) in print(errorMessage)})
         }
     }
     

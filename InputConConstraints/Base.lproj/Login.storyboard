@@ -177,6 +177,7 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="onSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yyh-bK-Lri"/>
+                                                    <segue destination="ZWi-X7-GW4" kind="show" identifier="TabBarApplication" id="RZ0-md-5I9"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -629,7 +630,17 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="4090" y="-19"/>
+            <point key="canvasLocation" x="4004" y="-139"/>
+        </scene>
+        <!--MainInterfaceRoot-->
+        <scene sceneID="fMK-XQ-0xU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TabBarViewController" referencedIdentifier="MainInterfaceRoot" id="ZWi-X7-GW4" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="30S-RD-oYM"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f6q-ks-PjX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3968" y="228"/>
         </scene>
         <!--Recover Pasword View Controller-->
         <scene sceneID="Mad-lF-fdY">

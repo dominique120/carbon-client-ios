@@ -42,6 +42,7 @@ class LogInViewController: UIViewController {
             self.performSegue(withIdentifier: "TabBarApplication", sender: nil)
             
         }) { (errorMessage) in
+            Util.showMessage(controller: self, message: "Credenciales Incorrectas", seconds: 5.0)
             print(errorMessage)
         }
     

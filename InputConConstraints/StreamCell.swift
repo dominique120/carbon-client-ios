@@ -28,7 +28,7 @@ class PlaceTableViewCell: UITableViewCell {
         
     }
     
-    var poster: Person!
+    var poster: PersonBE!
     
     var objPost: PostBE! {
         didSet {
@@ -37,11 +37,12 @@ class PlaceTableViewCell: UITableViewCell {
     }
     
     func getPoster(personId: String) {
-        PersonBL.getPersonById({ (arrayPosts) in
-            
-            self.poster = arrayPosts.first!
-            
-        }, personId: personId)
+        PersonWS.getPersonByPersonId(personId, success: {
+            (person) in
+            self.poster = person
+        }, error: {(errorMessage) in
+            print(errorMessage)
+        })
     }
     
     private func updateData() {
@@ -59,12 +60,15 @@ class PlaceTableViewCell: UITableViewCell {
     }
     
     @IBAction func likePost(_ sender: Any) {
-        LikeBL.newLike(postId: objPost.postId, personId: g_personId)
-        //(UIApplication.shared.delegate as! AppDelegate).window.sc
-        print("Le diste like a la publicacion!")
-        // send some visual alert
+        LikeWS.newLike(postId: objPost.postId, personId: PersonBE.shared!.personId, success: {
+            // print a message or something
+            // or change button color
+            print("Le diste like a la publicacion!")
+            //(UIApplication.shared.delegate as! AppDelegate).window.sc
+        }, error: {
+            (errorMessage) in
+            print(errorMessage)
+        })
     }
-    
-    
 }
 

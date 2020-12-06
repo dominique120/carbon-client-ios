@@ -7,23 +7,24 @@
 //
 
 import Foundation
-
+/*
 class PersonBL {
     
-    class func getPerson( _ success: @escaping Persons, personId: String) {
+    class func getPersonByPersonId( _ success: @escaping Persons, personId: String) {
         
-        PersonWS.getPerson( {(arrayPersons) in
+        PersonWS.getPersonByPersonId( {(arrayPersons) in
             
             success(arrayPersons)
         }, personId: personId)
     }
     
-    class func getPersonById( _ success: @escaping Persons, personId: String) {
+    class func getPersonByUserId( _ success: @escaping Persons, userId: String) {
         
-        PersonWS.getPersonById( {(arrayPersons) in
+        PersonWS.getPersonBeUserId( {(arrayPersons) in
             
             success(arrayPersons)
-        }, personId: personId)
+        }, personId: userId)
     }
     
 }
+*/

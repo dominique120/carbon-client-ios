@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+/*
 class LikeBL {
     
     class func getLikesByPost(_ success: @escaping Likes, postId: String) {
@@ -21,3 +21,4 @@ class LikeBL {
         LikeWS.newLike(postId: postId, personId: personId)
     }
 }
+*/

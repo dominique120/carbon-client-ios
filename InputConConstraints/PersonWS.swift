@@ -8,9 +8,6 @@
 
 import Foundation
 
-
-typealias Persons = (_ arrayPersons: [Person]) -> Void
-
 class PersonWS {
     
     class func getPersonByUserId(_ personId: String, success: @escaping Person, error: @escaping ErrorMessage) {

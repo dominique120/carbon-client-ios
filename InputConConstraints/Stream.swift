@@ -28,10 +28,12 @@ class MainPost: UIViewController{
     }
     
     func getAllPosts() {
-        PostBL.getAllPosts{ (arrayPosts) in
+        PostWS.getAllPosts(success: {(arrayPosts) in
             self.arrayPosts = arrayPosts
             self.tableVirePosts.reloadData()
-        }
+        }, error: {(errorMessage) in
+            print(errorMessage)
+        })
     }
     
     func postAComment (_ post: PostBE) {

@@ -16,7 +16,7 @@ class MainCelda : UITableViewCell{
     @IBOutlet weak var personName: UIButton!
     @IBOutlet weak var commentText: UILabel!
     
-    var poster: Person!
+    var poster: PersonBE!
     
     var objComment: CommentBE! {
         didSet {
@@ -35,14 +35,12 @@ class MainCelda : UITableViewCell{
     }
     
     
-    func getPoster(personId: String) {
-        PersonBL.getPersonById({ (arrayPosts) in
-            
-            self.poster = arrayPosts.first!
-            
-        }, personId: personId)
+    func getPoster(personId: String) {        
+        PersonWS.getPersonByPersonId(personId, success: {(person) in
+            self.poster = person
+        }, error: {(errorMessage) in
+            print(errorMessage)
+        })
     }
-    
-    
 }
 

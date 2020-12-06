@@ -8,7 +8,7 @@
 
     import Foundation
 
-
+/*
     class CommentBL {
         
         class func getCommentsByPost(_ success: @escaping Comments, postId: String) {
@@ -26,3 +26,4 @@
             }, postId:postId, commentText:commentText, personId:personId)
         }
     }
+*/

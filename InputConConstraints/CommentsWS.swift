@@ -8,39 +8,42 @@
 
 import Foundation
 
-
-typealias Comments = (_ arrayComments: [CommentBE]) -> Void
-
 class CommentWS {
-    
-    class func getCommentsByPost(_ success: @escaping Comments, postId: String) {
+     
+    class func getCommentsByPost(_ postId: String,success: @escaping Comments, error: @escaping ErrorMessage) {
         
-        WebServiceManager.doRequest(.post, urlString: Constants.api_base_url + "/getpostcomments?id=" + postId) { (responseService) in
+        CSWebServiceManager.shared.request.getRequest(urlString: WebServicesURL.getCommentsByPost(postId), parameters: nil) { (response) in
             
-            let json = responseService as? [JSON] ?? []
-            
-            var arrayComments = [CommentBE]()
-            
-            for element in json {
-                let obj = CommentBE(json: element)
-                arrayComments.append(obj)
-            }            
-            success(arrayComments)
+            if response.errorCode == 200 {
+                let commentWS = response.JSON?.array ?? []
+                var arrayComments = [CommentBE]()
+                
+                for element in commentWS{
+                    let objComment = CommentBE(json: element)
+                    arrayComments.append(objComment)
+                }
+                success(arrayComments)
+            }else{
+                error(StatusCodeBE.getErrorMessageByStatusCode(response.errorCode))
+            }
         }
     }
     
     
     
-    class func newComment(_ success: @escaping Success, postId: String, commentText: String, personId: String) {
+    class func newComment(_ success: @escaping Success, _ error: @escaping ErrorMessage, postId: String, commentText: String, personId: String) {
         
-        let json : WebServiceManager.JSON = ["postId"       : postId,
-                                             "personId"     : personId,
-                                             "commentText"  : commentText
-                                             ]
+        let dic: [String: Any]  = ["postId"       : postId,
+                                   "personId"     : personId,
+                                   "commentText"  : commentText
+        ]
         
-        WebServiceManager.doRequest(.post, urlString: Constants.api_base_url + "/newcomment", bodyParams: json) { (response) in
-            print(response ?? "SIN RESPUESTA")
-            success()
+        CSWebServiceManager.shared.request.postRequest(urlString: WebServicesURL.login, parameters: dic) { (response) in
+            if  response.errorCode == 200 {
+                success()
+            }else{
+                error(StatusCodeBE.getErrorMessageByStatusCode(response.errorCode))
+            }
         }
     }
 }

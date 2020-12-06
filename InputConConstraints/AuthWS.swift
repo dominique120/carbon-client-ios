@@ -29,35 +29,3 @@ class AuthWS {
         }
     }
 }
-
-
-
-
-/*
-class AuthWS {
-        
-    class func doLogin(password: String, username: String, success: @escaping Success) {
-        
-        let json : WebServiceManager.JSON = ["username"   : username,
-                                             "password"     : password]
-
-        WebServiceManager.doRequest(.post, urlString: Constants.api_base_url + "/validate_user", bodyParams: json, wait: true) { (response) in
-            print(response ?? "SIN RESPUESTA")
-                       
-            
-            let json = response as? [JSON] ?? []
-            
-            var user = [User]()
-            
-            for element in json {
-                let obj = UserBE(json: element)
-                user.append(obj)
-            }
-            
-            g_personId = user.first?.personId ?? "-1"
-            
-            success()
-        }
-    }
-}
-*/

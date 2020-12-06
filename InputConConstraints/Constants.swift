@@ -20,6 +20,15 @@ struct Constants {
 struct WebServicesURL {
     static let login = Constants.api_base_url + "/validate_user"
     static let newPost = Constants.api_base_url + "/newpost"
+    static let getPosts = Constants.api_base_url + "/getposts"  
+    
+    static func getCommentsByPost(_ postId: String) -> String {
+        return Constants.api_base_url + "/getpostcomments?id=\(postId)"
+    }
+    
+    static func getLikesByPost(_ postId: String) -> String {
+        return Constants.api_base_url + "/likes?id=\(postId)"
+    }
     
     static func getProfileByUserId(_ personId: String) -> String {
         return Constants.api_base_url + "/personbyuser?id=\(personId)"

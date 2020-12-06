@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+/*
 class PostBL {
     
     class func getAllPosts(_ success: @escaping Posts) {
@@ -24,3 +24,4 @@ class PostBL {
         }, img:img, postBody:postBody, personId:personId, posterName:posterName)
     }
 }
+*/
