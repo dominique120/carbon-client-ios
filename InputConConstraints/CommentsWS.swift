@@ -38,8 +38,8 @@ class CommentWS {
                                    "commentText"  : commentText
         ]
         
-        CSWebServiceManager.shared.request.postRequest(urlString: WebServicesURL.login, parameters: dic) { (response) in
-            if  response.errorCode == 200 {
+        CSWebServiceManager.shared.request.postRequest(urlString: WebServicesURL.newComment, parameters: dic) { (response) in
+            if  response.errorCode == 201 {                
                 success()
             }else{
                 error(StatusCodeBE.getErrorMessageByStatusCode(response.errorCode))

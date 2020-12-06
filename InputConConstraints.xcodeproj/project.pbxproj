@@ -56,7 +56,7 @@
 		88A0558125753FBA009D35CB /* PostComments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A0558025753FBA009D35CB /* PostComments.swift */; };
 		FBD3D19B2526260F0010A094 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD3D19A2526260F0010A094 /* AppDelegate.swift */; };
 		FBD3D19D2526260F0010A094 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD3D19C2526260F0010A094 /* SceneDelegate.swift */; };
-		FBD3D1A22526260F0010A094 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBD3D1A02526260F0010A094 /* Login.storyboard */; };
+		FBD3D1A22526260F0010A094 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBD3D1A02526260F0010A094 /* Main.storyboard */; };
 		FBD3D1A4252626110010A094 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBD3D1A3252626110010A094 /* Assets.xcassets */; };
 		FBD3D1A7252626110010A094 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBD3D1A5252626110010A094 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -112,7 +112,7 @@
 		FBD3D1972526260F0010A094 /* IsilInsta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IsilInsta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBD3D19A2526260F0010A094 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBD3D19C2526260F0010A094 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FBD3D1A12526260F0010A094 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
+		FBD3D1A12526260F0010A094 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FBD3D1A3252626110010A094 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBD3D1A6252626110010A094 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FBD3D1A8252626110010A094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -241,7 +241,7 @@
 		15CCC74E257CA6D700C21D37 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				FBD3D1A02526260F0010A094 /* Login.storyboard */,
+				FBD3D1A02526260F0010A094 /* Main.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -405,7 +405,7 @@
 				FBD3D1A4252626110010A094 /* Assets.xcassets in Resources */,
 				15419AC825793B1E00F7CA1F /* TabBarViewController.storyboard in Resources */,
 				88A0556625753D19009D35CB /* ProfileViewController.storyboard in Resources */,
-				FBD3D1A22526260F0010A094 /* Login.storyboard in Resources */,
+				FBD3D1A22526260F0010A094 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,12 +475,12 @@
 			name = TabBarViewController.storyboard;
 			sourceTree = "<group>";
 		};
-		FBD3D1A02526260F0010A094 /* Login.storyboard */ = {
+		FBD3D1A02526260F0010A094 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				FBD3D1A12526260F0010A094 /* Base */,
 			);
-			name = Login.storyboard;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		FBD3D1A5252626110010A094 /* LaunchScreen.storyboard */ = {

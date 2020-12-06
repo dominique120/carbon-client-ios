@@ -13,7 +13,7 @@ class PostWS {
     class func getAllPosts(success: @escaping Posts, error: @escaping ErrorMessage) {
         
         
-        CSWebServiceManager.shared.request.getRequest(urlString: WebServicesURL.login, parameters: nil) { (response) in
+        CSWebServiceManager.shared.request.getRequest(urlString: WebServicesURL.getPosts, parameters: nil) { (response) in
             
             if response.errorCode == 200 {
                 let postWS = response.JSON?.array ?? []
