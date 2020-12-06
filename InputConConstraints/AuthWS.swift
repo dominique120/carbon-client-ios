@@ -8,8 +8,32 @@
 
 import Foundation
 
+class AuthWS {
+        
+    class func doLogin(password: String, username: String, success: @escaping User, error: @escaping ErrorMessage) {
+        
+        let dic: [String: Any] = ["username": username,
+                                  "password": password]
+
+        CSWebServiceManager.shared.request.postRequest(urlString: WebServicesURL.login, parameters: dic) { (response) in
+            
+            if let userws = response.JSON?.array.first, response.errorCode == 200 {
+                
+                let objUser = UserBE(json: userws)
+                UserBE.shared = objUser
+                success(objUser)
+                
+            }else{
+                error(StatusCodeBE.getErrorMessageByStatusCode(response.errorCode))
+            }
+        }
+    }
+}
 
 
+
+
+/*
 class AuthWS {
         
     class func doLogin(password: String, username: String, success: @escaping Success) {
@@ -26,7 +50,7 @@ class AuthWS {
             var user = [User]()
             
             for element in json {
-                let obj = User(json: element)
+                let obj = UserBE(json: element)
                 user.append(obj)
             }
             
@@ -36,3 +60,4 @@ class AuthWS {
         }
     }
 }
+*/

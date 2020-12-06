@@ -9,7 +9,7 @@
 import Foundation
 
 
-typealias Comments = (_ arrayComments: [Comment]) -> Void
+typealias Comments = (_ arrayComments: [CommentBE]) -> Void
 
 class CommentWS {
     
@@ -19,10 +19,10 @@ class CommentWS {
             
             let json = responseService as? [JSON] ?? []
             
-            var arrayComments = [Comment]()
+            var arrayComments = [CommentBE]()
             
             for element in json {
-                let obj = Comment(json: element)
+                let obj = CommentBE(json: element)
                 arrayComments.append(obj)
             }            
             success(arrayComments)

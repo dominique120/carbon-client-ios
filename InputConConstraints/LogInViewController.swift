@@ -35,9 +35,20 @@ class LogInViewController: UIViewController {
     
     @IBAction func onSignIn(_ sender: Any) {
         let usr: String = txtFirstName.text!
-        let pwd: String = txtPssword.text!
+        let pwd: String = txtPssword.text!        
+         
+        AuthWS.doLogin(password: pwd, username: usr, success: { (_) in
+            
+            self.performSegue(withIdentifier: "TabBarApplication", sender: nil)
+            
+        }) { (errorMessage) in
+            print(errorMessage)
+        }
+    
         
         
+        
+        /*
         let status: Int = self.sendAuthRequest(username: usr, password: pwd)
         if (status == 200) {
             self.sendToHomeScren()
@@ -46,8 +57,9 @@ class LogInViewController: UIViewController {
         } else {
             Util.showMessage(controller: self, message: "Ocurrio un error!", seconds: 5.0)
         }
+ */
     }
-    
+    /*
     func sendAuthRequest(username: String, password: String) -> Int {
         var authStatus: Int = 200
         /*
@@ -99,7 +111,7 @@ class LogInViewController: UIViewController {
          task.resume()
          sem.wait()
          */
-        
+        /*
         AuthWS.doLogin(password: password, username: username, success: {
             if g_personId == "-1" {
                 authStatus = 403
@@ -111,9 +123,13 @@ class LogInViewController: UIViewController {
             }
         })
         
-        return authStatus        
-    }
+        return authStatus
+ 
     
+        
+    }
+    */
+        /*
     func sendToHomeScren() -> Void {
         print("isAuthenticated")
         let storyBoard : UIStoryboard = UIStoryboard(name: "TabBarViewController", bundle:nil)
@@ -122,7 +138,8 @@ class LogInViewController: UIViewController {
         nextViewController.modalPresentationStyle = .fullScreen
         self.present(nextViewController, animated:true, completion:nil)
     }
-    
+    */
+ */
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         

@@ -16,7 +16,7 @@ class MainPost: UIViewController{
     }
     @IBOutlet weak var tableVirePosts: UITableView!
     
-    var arrayPosts = [Post]()
+    var arrayPosts = [PostBE]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +34,7 @@ class MainPost: UIViewController{
         }
     }
     
-    func postAComment (_ post: Post) {
+    func postAComment (_ post: PostBE) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "PostViewController", bundle:nil)
         
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "CommentTable") as UIViewController
@@ -67,7 +67,7 @@ extension MainPost: UITableViewDataSource { //number, number, cellfor
 
 
 extension MainPost: MainPostDelegate {    
-    func placeTableViewCell(_ cell: PlaceTableViewCell, deletePlace objPlace: Post) {
+    func placeTableViewCell(_ cell: PlaceTableViewCell, deletePlace objPlace: PostBE) {
         self.postAComment(objPlace)
     }
 }

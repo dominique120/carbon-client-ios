@@ -15,3 +15,22 @@ struct Constants {
     
     public static let image_fs = "http://" + ip + ":" + port + "/img_store"
 }
+
+
+struct WebServicesURL {
+    static let login = Constants.api_base_url + "/validate_user"
+    static let newPost = Constants.api_base_url + "/newpost"
+    
+    static func getProfileByUserId(_ personId: String) -> String {
+        return Constants.api_base_url + "/personbyuser?id=\(personId)"
+    }
+    
+    static func getProfileByPersonId(_ personId: String) -> String {
+        return Constants.api_base_url + "/personbyid?id=\(personId)"
+    }
+    
+    static func likePost(_ postId: String, _ personId: String) -> String {
+        return Constants.api_base_url + "/likepost?postId=\(postId)&personId=\(personId)"
+    }
+    
+}

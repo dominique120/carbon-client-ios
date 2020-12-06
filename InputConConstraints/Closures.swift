@@ -8,4 +8,7 @@
 
 import Foundation
 
+typealias User          = (_ objUser: UserBE) -> Void
+typealias Person        = (_ objPerson: PersonBE) -> Void
 typealias Success       = () -> Void
+typealias ErrorMessage  = (_ errorMessage: String) -> Void

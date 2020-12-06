@@ -13,41 +13,29 @@ typealias Persons = (_ arrayPersons: [Person]) -> Void
 
 class PersonWS {
     
-    class func getPerson(_ success: @escaping Persons, personId: String) {
+    class func getPersonByUserId(_ personId: String, success: @escaping Person, error: @escaping ErrorMessage) {
         
-        WebServiceManager.doRequest(.get, urlString: Constants.api_base_url + "/personbyuser?id=" + personId, wait: true) { (responseService) in
+        CSWebServiceManager.shared.request.getRequest(urlString: WebServicesURL.getProfileByUserId(personId), parameters: nil) { (response) in
             
-            let json = responseService as? [JSON] ?? []
-            //let products = json["productos"] as? JSON ?? [:]
-            //let discsWS = products["discos"] as? [JSON] ?? []
-            
-            var arrayPersons = [Person]()
-            
-            for element in json {
-                let obj = Person(json: element)
-                arrayPersons.append(obj)
+            if let personws = response.JSON?.array.first, response.errorCode == 200 {
+                success(PersonBE(json: personws))
+            }else{
+                error(StatusCodeBE.getErrorMessageByStatusCode(response.errorCode))
             }
-            success(arrayPersons)
         }
     }
     
-    class func getPersonById(_ success: @escaping Persons, personId: String) {
+    
+    class func getPersonByPersonId(_ personId: String, success: @escaping Person, error: @escaping ErrorMessage) {
         
-        WebServiceManager.doRequest(.get, urlString: Constants.api_base_url + "/personbyid?id=" + personId, wait: true) { (responseService) in
+        CSWebServiceManager.shared.request.getRequest(urlString: WebServicesURL.getProfileByPersonId(personId), parameters: nil) { (response) in
             
-            let json = responseService as? [JSON] ?? []
-            //let products = json["productos"] as? JSON ?? [:]
-            //let discsWS = products["discos"] as? [JSON] ?? []
-            
-            var arrayPersons = [Person]()
-            
-            for element in json {
-                let obj = Person(json: element)
-                arrayPersons.append(obj)
+            if let personws = response.JSON?.array.first, response.errorCode == 200 {
+                success(PersonBE(json: personws))
+            }else{
+                error(StatusCodeBE.getErrorMessageByStatusCode(response.errorCode))
             }
-            success(arrayPersons)
         }
     }
-    
     
 }

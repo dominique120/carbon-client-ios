@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias Posts = (_ arrayDiscs: [Post]) -> Void
+typealias Posts = (_ arrayDiscs: [PostBE]) -> Void
 
 class PostWS {
     
@@ -18,10 +18,10 @@ class PostWS {
             
             let json = responseService as? [JSON] ?? []
             
-            var arrayDiscs = [Post]()
+            var arrayDiscs = [PostBE]()
             
             for element in json {
-                let obj = Post(json: element)
+                let obj = PostBE(json: element)
                 arrayDiscs.append(obj)
             }
             
@@ -29,18 +29,43 @@ class PostWS {
         }
     }
     
-    class func newPost(_ success: @escaping Success, img: String, postBody: String, personId: String, posterName: String) {
+    /*
+     class func doLogin(password: String, username: String, success: @escaping User, error: @escaping ErrorMessage) {
+         
+         let dic: [String: Any] = ["username": username,
+                                   "password": password]
+
+         CSWebServiceManager.shared.request.postRequest(urlString: WebServicesURL.login, parameters: dic) { (response) in
+             
+             if let userws = response.JSON?.array.first, response.errorCode == 200 {
+                 
+                 let objUser = UserBE(json: userws)
+                 UserBE.shared = objUser
+                 success(objUser)
+                 
+             }else{
+                 error(StatusCodeBE.getErrorMessageByStatusCode(response.errorCode))
+             }
+         }
+     }
+     */
+    
+    class func newPost(_ success: @escaping Success, img: String, postBody: String, personId: String, posterName: String, error: @escaping ErrorMessage) {
         
-        let json : WebServiceManager.JSON = ["mainContent"   : postBody,
-                                             "personId"     : personId,
-                                             "posterName"         : posterName,
-                                             "timesLiked"      : "0",
-                                             "timesCommented"      : "0",
-                                             "pictureUrl"      : img]
+        let dic: [String: Any] = ["mainContent"     : postBody,
+                                  "personId"        : personId,
+                                  "posterName"      : posterName,
+                                  "timesLiked"      : "0",
+                                  "timesCommented"  : "0",
+                                  "pictureUrl"      : img]
         
-        WebServiceManager.doRequest(.post, urlString: Constants.api_base_url + "/newpost", bodyParams: json) { (response) in
-            print(response ?? "SIN RESPUESTA")
-            success()
+        CSWebServiceManager.shared.request.postRequest(urlString: WebServicesURL.newPost, parameters: dic) { (response) in
+            
+            if response.errorCode == 201 {
+                success()                
+            }else{
+                error(StatusCodeBE.getErrorMessageByStatusCode(response.errorCode))
+            }
         }
     }
     

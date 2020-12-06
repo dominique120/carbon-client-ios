@@ -9,7 +9,7 @@
 import UIKit
 
 protocol MainPostDelegate {
-    func placeTableViewCell(_ cell: PlaceTableViewCell, deletePlace objPlace: Post)
+    func placeTableViewCell(_ cell: PlaceTableViewCell, deletePlace objPlace: PostBE)
 }
 
 class PlaceTableViewCell: UITableViewCell {
@@ -30,7 +30,7 @@ class PlaceTableViewCell: UITableViewCell {
     
     var poster: Person!
     
-    var objPost: Post! {
+    var objPost: PostBE! {
         didSet {
             self.updateData()
         }
@@ -60,6 +60,7 @@ class PlaceTableViewCell: UITableViewCell {
     
     @IBAction func likePost(_ sender: Any) {
         LikeBL.newLike(postId: objPost.postId, personId: g_personId)
+        //(UIApplication.shared.delegate as! AppDelegate).window.sc
         print("Le diste like a la publicacion!")
         // send some visual alert
     }

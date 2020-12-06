@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias Likes = (_ arrayComments: [Like]) -> Void
+typealias Likes = (_ arrayComments: [LikeBE]) -> Void
 
 class LikeWS {
     
@@ -20,19 +20,26 @@ class LikeWS {
             //let products = json["productos"] as? JSON ?? [:]
             //let discsWS = products["discos"] as? [JSON] ?? []
             
-            var arrayLikes = [Like]()
+            var arrayLikes = [LikeBE]()
             
             for element in json {
-                let obj = Like(json: element)
+                let obj = LikeBE(json: element)
                 arrayLikes.append(obj)
             }
             success(arrayLikes)
         }
     }
     
-    class func newLike(postId: String, personId: String ) {
-    WebServiceManager.doRequest(.post, urlString: Constants.api_base_url + "/likepost?postId=" + postId + "&personId=" + personId) { (responseService) in
+    class func newLike(postId: String, personId: String, success: @escaping Success, error: @escaping ErrorMessage) {
+        CSWebServiceManager.shared.request.postRequest(urlString: WebServicesURL.likePost(postId, personId), parameters: nil) { (response) in
+            
+            if response.errorCode == 201 {
+                success()
+            }else{
+                error(StatusCodeBE.getErrorMessageByStatusCode(response.errorCode))
+            }
+        }
 
     }
 }
-}
+

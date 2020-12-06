@@ -14,7 +14,7 @@ class MainComment: UIViewController{
     
     @IBOutlet weak var commentTable: UITableView!
     
-    var arrayComments = [Comment]()
+    var arrayComments = [CommentBE]()
     
     override func viewDidLoad() {
         super.viewDidLoad()

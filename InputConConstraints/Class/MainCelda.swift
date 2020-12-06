@@ -18,7 +18,7 @@ class MainCelda : UITableViewCell{
     
     var poster: Person!
     
-    var objComment: Comment! {
+    var objComment: CommentBE! {
         didSet {
             self.updateData()
         }
