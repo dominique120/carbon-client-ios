@@ -14,6 +14,11 @@ class MainPost: UIViewController{
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return.lightContent
     }
+    
+    @IBAction func viewComments(_ sender: Any) {
+        performSegue(withIdentifier: "viewPostComments", sender: nil)
+    }
+    
 
     @IBOutlet weak var tableViewPosts: UITableView!
     
@@ -35,14 +40,6 @@ class MainPost: UIViewController{
         }, error: {(errorMessage) in
             print(errorMessage)
         })
-    }
-    
-    func postAComment (_ post: PostBE) {
-        let storyBoard : UIStoryboard = UIStoryboard(name: "PostViewController", bundle:nil)
-        
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "CommentTable") as UIViewController
-        nextViewController.modalPresentationStyle = .fullScreen
-        self.present(nextViewController, animated:true, completion:nil)
     }
 }
 
@@ -70,8 +67,7 @@ extension MainPost: UITableViewDataSource { //number, number, cellfor
 
 
 extension MainPost: MainPostDelegate {    
-    func placeTableViewCell(_ cell: PlaceTableViewCell, deletePlace objPlace: PostBE) {
-        self.postAComment(objPlace)
+    func placeTableViewCell(_ cell: PlaceTableViewCell, deletePlace objPlace: PostBE) {       
     }
 }
 

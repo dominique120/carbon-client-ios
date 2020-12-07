@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8vT-EZ-SD8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lkL-Ai-nj2">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -94,6 +94,7 @@
                                                             </state>
                                                             <connections>
                                                                 <action selector="viewComments:" destination="lcv-PY-85D" eventType="touchUpInside" id="7Ht-ze-nfC"/>
+                                                                <action selector="viewComments:" destination="8vT-EZ-SD8" eventType="touchUpInside" id="a7D-OH-RAc"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -162,7 +163,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableViewPosts" destination="zIl-eC-Ucj" id="gyG-z1-Kec"/>
-                        <segue destination="Lum-IL-IOq" kind="show" id="3mB-Gm-sYG"/>
+                        <segue destination="Lum-IL-IOq" kind="show" identifier="viewPostComments" id="3mB-Gm-sYG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lqp-cG-fCb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -351,7 +352,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="276.81159420289856" y="170.75892857142856"/>
+            <point key="canvasLocation" x="288" y="145"/>
         </scene>
         <!--Main-->
         <scene sceneID="XXi-Xy-iWO">
