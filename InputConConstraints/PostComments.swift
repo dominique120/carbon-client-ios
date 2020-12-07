@@ -52,7 +52,7 @@ class MainComment: UIViewController{
                 // send an alert or something
                 // reload comments maybe
                 Util.showMessage(controller: self, message: "Enviaste un comentario", seconds: 5)
-            }, {(errorMessage) in print(errorMessage)}, postId: g_activePostId, commentText: commentTextBox.text!, personId: PersonBE.shared!.personId)
+            }, {(errorMessage) in print(errorMessage)}, postId: g_activePostId, posterName: PersonBE.shared!.displayName, commentText: commentTextBox.text!, personId: PersonBE.shared!.personId)
         }
     }
     @IBOutlet weak var ConstraintCenterYContent: NSLayoutConstraint!

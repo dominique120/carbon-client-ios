@@ -24,6 +24,10 @@ class SignUpViewController: UIViewController {
         self.view.endEditing(true)
     }
     @IBAction func onClickCreateAccount(_ sender: Any) {
+        /*
+        AccountWS.createAccount(<#T##success: Success##Success##() -> Void#>, <#T##error: ErrorMessage##ErrorMessage##(String) -> Void#>, username: txtUser.text!, password: txtPassword.text!, displayName: txtPasswordConfirm.text!, email: txtEmail, firstName: <#T##String#>, lastName: <#T##String#>)
+        */
+        
         let charset = CharacterSet(charactersIn: "@.")
         
         
