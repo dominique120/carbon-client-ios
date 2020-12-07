@@ -14,6 +14,7 @@ class MainPost: UIViewController{
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return.lightContent
     }
+
     @IBOutlet weak var tableViewPosts: UITableView!
     
     var arrayPosts = [PostBE]()

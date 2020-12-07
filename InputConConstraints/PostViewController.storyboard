@@ -161,7 +161,7 @@
                     <navigationItem key="navigationItem" id="KAf-do-qrn"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="tableVirePosts" destination="zIl-eC-Ucj" id="oXl-eH-ve6"/>
+                        <outlet property="tableViewPosts" destination="zIl-eC-Ucj" id="gyG-z1-Kec"/>
                         <segue destination="Lum-IL-IOq" kind="show" id="3mB-Gm-sYG"/>
                     </connections>
                 </viewController>
