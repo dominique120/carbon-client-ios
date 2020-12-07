@@ -31,11 +31,12 @@ class CommentWS {
     
     
     
-    class func newComment(_ success: @escaping Success, _ error: @escaping ErrorMessage, postId: String, commentText: String, personId: String) {
+    class func newComment(_ success: @escaping Success, _ error: @escaping ErrorMessage, postId: String, posterName: String,  commentText: String, personId: String) {
         
         let dic: [String: Any]  = ["postId"       : postId,
                                    "personId"     : personId,
-                                   "commentText"  : commentText
+                                   "commentText"  : commentText,
+                                   "posterName"   : posterName
         ]
         
         CSWebServiceManager.shared.request.postRequest(urlString: WebServicesURL.newComment, parameters: dic) { (response) in
