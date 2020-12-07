@@ -285,10 +285,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="npG-lR-mVU">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pWW-cW-Ci1" customClass="VUIView" customModule="IsilInsta" customModuleProvider="target">
-                                        <rect key="frame" x="47" y="186" width="320" height="446"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pWW-cW-Ci1" customClass="VUIView" customModule="IsilInsta" customModuleProvider="target">
+                                        <rect key="frame" x="47" y="186" width="320" height="510"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="First Name" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eeS-u5-sg7" customClass="TFUIView" customModule="IsilInsta" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Username" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eeS-u5-sg7" customClass="TFUIView" customModule="IsilInsta" customModuleProvider="target">
                                                 <rect key="frame" x="35" y="147" width="250" height="34"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -322,7 +322,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Last Name" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gCf-Wc-bZW" customClass="TFUIView" customModule="IsilInsta" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gCf-Wc-bZW" customClass="TFUIView" customModule="IsilInsta" customModuleProvider="target">
                                                 <rect key="frame" x="35" y="193" width="250" height="34"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -372,7 +372,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EmE-pV-Xqd" customClass="TFUIView" customModule="IsilInsta" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="DisplayName" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EmE-pV-Xqd" customClass="TFUIView" customModule="IsilInsta" customModuleProvider="target">
                                                 <rect key="frame" x="35" y="239" width="250" height="34"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -407,7 +407,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KuW-Uc-j2y" customClass="TFUIView" customModule="IsilInsta" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KuW-Uc-j2y" customClass="TFUIView" customModule="IsilInsta" customModuleProvider="target">
                                                 <rect key="frame" x="35" y="285" width="250" height="34"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -441,12 +441,12 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Confirm Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rgq-3Z-VZA" customClass="TFUIView" customModule="IsilInsta" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="FirstName" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rgq-3Z-VZA" customClass="TFUIView" customModule="IsilInsta" customModuleProvider="target">
                                                 <rect key="frame" x="35" y="331" width="250" height="34"/>
                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="250" id="0hr-b2-Syv"/>
-                                                    <constraint firstAttribute="height" constant="34" id="zmo-TN-25i"/>
+                                                    <constraint firstAttribute="width" constant="250" id="0Z8-aT-zcL"/>
+                                                    <constraint firstAttribute="height" constant="34" id="5kt-tI-uQu"/>
                                                 </constraints>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -476,7 +476,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Hl-Ch-OPz" customClass="BTUView" customModule="IsilInsta" customModuleProvider="target">
-                                                <rect key="frame" x="52" y="384" width="216" height="40"/>
+                                                <rect key="frame" x="52" y="430" width="216" height="40"/>
                                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="HvN-eo-nf4"/>
@@ -528,20 +528,57 @@
                                                     <action selector="signUpButton:" destination="Lxz-6d-1Ui" eventType="touchUpInside" id="Qx8-u4-OP2"/>
                                                 </connections>
                                             </button>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="LastName" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xVA-co-0Lc" customClass="TFUIView" customModule="IsilInsta" customModuleProvider="target">
+                                                <rect key="frame" x="35" y="377" width="250" height="34"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="250" id="P0J-0s-hGb"/>
+                                                    <constraint firstAttribute="height" constant="34" id="TqI-l8-FEG"/>
+                                                </constraints>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="conerRadius">
+                                                        <real key="value" value="6"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                        <size key="value" width="2" height="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" systemColor="linkColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <color key="value" systemColor="linkColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
                                         </subviews>
                                         <color key="backgroundColor" red="0.2156862745" green="0.2156862745" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstItem="Rgq-3Z-VZA" firstAttribute="centerX" secondItem="pWW-cW-Ci1" secondAttribute="centerX" id="0Aa-a5-GaD"/>
                                             <constraint firstItem="EmE-pV-Xqd" firstAttribute="top" secondItem="gCf-Wc-bZW" secondAttribute="bottom" constant="12" id="6hV-xI-sOA"/>
                                             <constraint firstItem="eeS-u5-sg7" firstAttribute="centerX" secondItem="pWW-cW-Ci1" secondAttribute="centerX" id="8GC-hV-BXe"/>
                                             <constraint firstItem="TNW-rp-r05" firstAttribute="leading" secondItem="Z7s-Vr-B87" secondAttribute="trailing" constant="27" id="E9a-fi-3A9"/>
                                             <constraint firstItem="eeS-u5-sg7" firstAttribute="top" secondItem="Z7s-Vr-B87" secondAttribute="bottom" constant="30" id="M6d-cQ-pKF"/>
                                             <constraint firstAttribute="width" constant="320" id="Mt9-1j-Xbg"/>
+                                            <constraint firstItem="Rgq-3Z-VZA" firstAttribute="top" secondItem="KuW-Uc-j2y" secondAttribute="bottom" constant="12" id="OXQ-Ab-5IZ"/>
                                             <constraint firstItem="Z7s-Vr-B87" firstAttribute="top" secondItem="dYS-el-WEF" secondAttribute="bottom" constant="27" id="OiX-c1-83x"/>
-                                            <constraint firstItem="Rgq-3Z-VZA" firstAttribute="centerX" secondItem="pWW-cW-Ci1" secondAttribute="centerX" id="RbV-4H-nm2"/>
                                             <constraint firstItem="Z7s-Vr-B87" firstAttribute="leading" secondItem="pWW-cW-Ci1" secondAttribute="leading" constant="42" id="TRk-fd-Qw6"/>
+                                            <constraint firstItem="xVA-co-0Lc" firstAttribute="centerX" secondItem="pWW-cW-Ci1" secondAttribute="centerX" id="UAe-Jd-KR7"/>
                                             <constraint firstItem="dYS-el-WEF" firstAttribute="centerX" secondItem="pWW-cW-Ci1" secondAttribute="centerX" id="V36-nP-8R2"/>
                                             <constraint firstItem="gCf-Wc-bZW" firstAttribute="top" secondItem="eeS-u5-sg7" secondAttribute="bottom" constant="12" id="VRW-Zd-6r2"/>
                                             <constraint firstAttribute="bottom" secondItem="9Hl-Ch-OPz" secondAttribute="bottom" constant="22" id="ejV-k6-SN6"/>
+                                            <constraint firstItem="9Hl-Ch-OPz" firstAttribute="top" secondItem="xVA-co-0Lc" secondAttribute="bottom" constant="19" id="fS7-U4-qRy"/>
                                             <constraint firstItem="KuW-Uc-j2y" firstAttribute="top" secondItem="EmE-pV-Xqd" secondAttribute="bottom" constant="12" id="fsQ-MS-puM"/>
                                             <constraint firstItem="gCf-Wc-bZW" firstAttribute="centerX" secondItem="pWW-cW-Ci1" secondAttribute="centerX" id="ize-Jo-QQC"/>
                                             <constraint firstItem="9Hl-Ch-OPz" firstAttribute="centerX" secondItem="pWW-cW-Ci1" secondAttribute="centerX" id="ja2-lq-Qvj"/>
@@ -549,9 +586,8 @@
                                             <constraint firstAttribute="height" constant="446" id="pgZ-n8-TIy"/>
                                             <constraint firstItem="dYS-el-WEF" firstAttribute="top" secondItem="pWW-cW-Ci1" secondAttribute="top" constant="30" id="pvL-Hq-2gz"/>
                                             <constraint firstItem="KuW-Uc-j2y" firstAttribute="centerX" secondItem="pWW-cW-Ci1" secondAttribute="centerX" id="qI8-MO-hvm"/>
+                                            <constraint firstItem="xVA-co-0Lc" firstAttribute="top" secondItem="Rgq-3Z-VZA" secondAttribute="bottom" constant="12" id="w4V-Yk-eQ6"/>
                                             <constraint firstItem="TNW-rp-r05" firstAttribute="top" secondItem="dYS-el-WEF" secondAttribute="bottom" constant="21" id="wBD-OD-z9T"/>
-                                            <constraint firstItem="Rgq-3Z-VZA" firstAttribute="top" secondItem="KuW-Uc-j2y" secondAttribute="bottom" constant="12" id="wum-xd-dQg"/>
-                                            <constraint firstItem="9Hl-Ch-OPz" firstAttribute="top" secondItem="Rgq-3Z-VZA" secondAttribute="bottom" constant="19" id="xP1-nG-Gw6"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="conerRadius">
@@ -635,10 +671,10 @@
         <!--MainHome-->
         <scene sceneID="fMK-XQ-0xU">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f6q-ks-PjX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="TabBarViewController" referencedIdentifier="MainHome" id="ZWi-X7-GW4" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="30S-RD-oYM"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f6q-ks-PjX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3968" y="228"/>
         </scene>
@@ -842,31 +878,34 @@
             <size key="intrinsicContentSize" width="105" height="30"/>
         </designable>
         <designable name="EmE-pV-Xqd">
-            <size key="intrinsicContentSize" width="63" height="34"/>
+            <size key="intrinsicContentSize" width="113" height="34"/>
         </designable>
         <designable name="Kkm-3w-gny">
             <size key="intrinsicContentSize" width="91" height="34"/>
         </designable>
         <designable name="KuW-Uc-j2y">
-            <size key="intrinsicContentSize" width="91" height="34"/>
+            <size key="intrinsicContentSize" width="63" height="34"/>
         </designable>
         <designable name="QXI-vc-X5t">
             <size key="intrinsicContentSize" width="50" height="30"/>
         </designable>
         <designable name="Rgq-3Z-VZA">
-            <size key="intrinsicContentSize" width="146" height="34"/>
+            <size key="intrinsicContentSize" width="94" height="34"/>
         </designable>
         <designable name="WnL-Vq-Kct">
             <size key="intrinsicContentSize" width="94" height="34"/>
         </designable>
         <designable name="eeS-u5-sg7">
-            <size key="intrinsicContentSize" width="98" height="34"/>
+            <size key="intrinsicContentSize" width="94" height="34"/>
         </designable>
         <designable name="gCf-Wc-bZW">
             <size key="intrinsicContentSize" width="97" height="34"/>
         </designable>
         <designable name="neL-bE-9VV">
             <size key="intrinsicContentSize" width="63" height="34"/>
+        </designable>
+        <designable name="xVA-co-0Lc">
+            <size key="intrinsicContentSize" width="94" height="34"/>
         </designable>
     </designables>
     <resources>

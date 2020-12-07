@@ -180,11 +180,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="61N-Fm-O9d">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MWl-HB-9yK">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MWl-HB-9yK">
                                         <rect key="frame" x="0.0" y="88" width="414" height="715"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <color key="separatorColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="commentCell" rowHeight="91" id="oHn-TT-nia" customClass="MainCelda" customModule="IsilInsta" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="414" height="91"/>
@@ -193,12 +191,6 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7QT-fD-FW4">
-                                                            <rect key="frame" x="285.5" y="1" width="32.5" height="18"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uY4-q3-uKT">
                                                             <rect key="frame" x="20" y="47.5" width="298" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -223,19 +215,16 @@
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="mZE-9S-gRh" secondAttribute="trailing" constant="20" id="0GD-Ys-wWn"/>
                                                         <constraint firstItem="mZE-9S-gRh" firstAttribute="top" secondItem="Chr-ma-ZOi" secondAttribute="top" constant="14" id="325-Vj-ggC"/>
-                                                        <constraint firstItem="mZE-9S-gRh" firstAttribute="leading" secondItem="7QT-fD-FW4" secondAttribute="trailing" constant="14" id="CeK-ll-SRC"/>
-                                                        <constraint firstItem="7QT-fD-FW4" firstAttribute="top" secondItem="Chr-ma-ZOi" secondAttribute="top" constant="1" id="LxI-A2-Ycg"/>
                                                         <constraint firstItem="mZE-9S-gRh" firstAttribute="leading" secondItem="UsD-oi-rR1" secondAttribute="trailing" constant="14" id="MZ4-XN-TGr"/>
-                                                        <constraint firstItem="uY4-q3-uKT" firstAttribute="top" secondItem="Chr-ma-ZOi" secondAttribute="top" constant="47.5" id="SSa-KP-m6o"/>
                                                         <constraint firstAttribute="bottom" secondItem="uY4-q3-uKT" secondAttribute="bottom" constant="23" id="ayK-hr-W7E"/>
                                                         <constraint firstItem="uY4-q3-uKT" firstAttribute="leading" secondItem="Chr-ma-ZOi" secondAttribute="leading" constant="20" id="mLl-AC-CDb"/>
                                                         <constraint firstItem="mZE-9S-gRh" firstAttribute="leading" secondItem="uY4-q3-uKT" secondAttribute="trailing" constant="14" id="ojP-1t-d61"/>
+                                                        <constraint firstItem="uY4-q3-uKT" firstAttribute="top" secondItem="Chr-ma-ZOi" secondAttribute="top" constant="47.5" id="uru-A0-T0X"/>
                                                         <constraint firstItem="UsD-oi-rR1" firstAttribute="top" secondItem="Chr-ma-ZOi" secondAttribute="top" constant="14" id="xh8-CZ-gOF"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
-                                                    <outlet property="commentDate" destination="7QT-fD-FW4" id="9l7-Y0-txV"/>
                                                     <outlet property="commentText" destination="uY4-q3-uKT" id="A7u-7o-Eoc"/>
                                                     <outlet property="personName" destination="UsD-oi-rR1" id="SBD-YH-hcb"/>
                                                     <outlet property="personProfilePic" destination="mZE-9S-gRh" id="twO-lH-Ca9"/>

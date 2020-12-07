@@ -47,6 +47,8 @@
 		4E8D72C02536756E00573733 /* VUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8D72BF2536756E00573733 /* VUIView.swift */; };
 		8840F8B42579D68700CD1421 /* TVUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8840F8B32579D68700CD1421 /* TVUIView.swift */; };
 		8840F8B82579DDC700CD1421 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8840F8B72579DDC700CD1421 /* CommentCell.swift */; };
+		8896C8AD257DD6B100750E58 /* MyPostViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8896C8AC257DD6B100750E58 /* MyPostViewController.storyboard */; };
+		8896C8B4257DE55000750E58 /* MyPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8896C8B3257DE55000750E58 /* MyPost.swift */; };
 		88A0556025753CF8009D35CB /* PostViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88A0555F25753CF8009D35CB /* PostViewController.storyboard */; };
 		88A0556325753D0A009D35CB /* NewPostViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88A0556225753D0A009D35CB /* NewPostViewController.storyboard */; };
 		88A0556625753D19009D35CB /* ProfileViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88A0556525753D19009D35CB /* ProfileViewController.storyboard */; };
@@ -102,6 +104,8 @@
 		4E8D72BF2536756E00573733 /* VUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VUIView.swift; sourceTree = "<group>"; };
 		8840F8B32579D68700CD1421 /* TVUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVUIView.swift; sourceTree = "<group>"; };
 		8840F8B72579DDC700CD1421 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		8896C8AC257DD6B100750E58 /* MyPostViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPostViewController.storyboard; sourceTree = "<group>"; };
+		8896C8B3257DE55000750E58 /* MyPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPost.swift; sourceTree = "<group>"; };
 		88A0555F25753CF8009D35CB /* PostViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostViewController.storyboard; sourceTree = "<group>"; };
 		88A0556225753D0A009D35CB /* NewPostViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewPostViewController.storyboard; sourceTree = "<group>"; };
 		88A0556525753D19009D35CB /* ProfileViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileViewController.storyboard; sourceTree = "<group>"; };
@@ -272,6 +276,7 @@
 				88A0556225753D0A009D35CB /* NewPostViewController.storyboard */,
 				15419ACA25793B1E00F7CA1F /* TabBarViewController.storyboard */,
 				88A0556525753D19009D35CB /* ProfileViewController.storyboard */,
+				8896C8AC257DD6B100750E58 /* MyPostViewController.storyboard */,
 			);
 			name = StoryBoards;
 			sourceTree = "<group>";
@@ -285,6 +290,7 @@
 				88A0558025753FBA009D35CB /* PostComments.swift */,
 				15542EC22577E19100252F6F /* StreamCell.swift */,
 				8840F8B72579DDC700CD1421 /* CommentCell.swift */,
+				8896C8B3257DE55000750E58 /* MyPost.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -400,6 +406,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88A0556325753D0A009D35CB /* NewPostViewController.storyboard in Resources */,
+				8896C8AD257DD6B100750E58 /* MyPostViewController.storyboard in Resources */,
 				FBD3D1A7252626110010A094 /* LaunchScreen.storyboard in Resources */,
 				88A0556025753CF8009D35CB /* PostViewController.storyboard in Resources */,
 				FBD3D1A4252626110010A094 /* Assets.xcassets in Resources */,
@@ -461,6 +468,7 @@
 				4E8D72C02536756E00573733 /* VUIView.swift in Sources */,
 				15D1085D256197A600CC6255 /* Constants.swift in Sources */,
 				15419AA525780FFC00F7CA1F /* PostWS.swift in Sources */,
+				8896C8B4257DE55000750E58 /* MyPost.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
