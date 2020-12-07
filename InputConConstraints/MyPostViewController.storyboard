@@ -106,9 +106,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LqP-x7-rRH">
                                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My posts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X6p-XS-3Oi">
-                                                <rect key="frame" x="174" y="15" width="79" height="22"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My posts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X6p-XS-3Oi">
+                                                <rect key="frame" x="167.5" y="11" width="79" height="22"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -116,6 +115,8 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstItem="X6p-XS-3Oi" firstAttribute="centerY" secondItem="LqP-x7-rRH" secondAttribute="centerY" id="XCP-DL-7gD"/>
+                                            <constraint firstItem="X6p-XS-3Oi" firstAttribute="centerX" secondItem="LqP-x7-rRH" secondAttribute="centerX" id="dNX-Wt-zQG"/>
                                             <constraint firstAttribute="height" constant="44" id="pjI-cl-NhU"/>
                                         </constraints>
                                     </view>
