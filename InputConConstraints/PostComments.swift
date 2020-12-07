@@ -36,22 +36,18 @@ class MainComment: UIViewController{
             print(errorMessage)
         })
     }
-    
-    @IBAction func goBack(_ sender: Any) {
-        //navigationviewcontroller pop
-    }
-    
+        
     @IBOutlet weak var commentTextBox: UITextField!
     
     @IBAction func sendComment(_ sender: Any) {
         if (commentTextBox.text!.isEmpty) {
-            Util.showMessage(controller: self, message: "Ingrese un comentario", seconds: 5)
+            Util.showMessage(controller: self, message: "Ingrese un comentario", seconds: 3)
         } else {
             
             CommentWS.newComment({
-                // send an alert or something
-                // reload comments maybe
-                Util.showMessage(controller: self, message: "Enviaste un comentario", seconds: 5)
+                Util.showMessage(controller: self, message: "Enviaste un comentario", seconds: 2)
+                self.commentTextBox.text = ""
+                self.getPostComments()
             }, {(errorMessage) in print(errorMessage)}, postId: g_activePostId, posterName: PersonBE.shared!.displayName, commentText: commentTextBox.text!, personId: PersonBE.shared!.personId)
         }
     }
@@ -60,11 +56,8 @@ class MainComment: UIViewController{
     
     @IBAction  func clickBtnBack(_ sender: Any){
         self.navigationController?.popViewController(animated: true)
-    
-//        self.tabBarController?.navigationController?.popToRootViewController(animated: true)
-        
-        print("xd")
     }
+    
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return.lightContent
     }
