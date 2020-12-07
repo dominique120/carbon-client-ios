@@ -11,12 +11,13 @@ import UIKit
 
 class MainComment: UIViewController{
     
-    
     @IBOutlet weak var commentTable: UITableView!
     
     var arrayComments = [CommentBE]()
     
     override func viewDidLoad() {
+        self.commentTable.dataSource = self
+
         super.viewDidLoad()
     }
     
@@ -36,6 +37,9 @@ class MainComment: UIViewController{
         })
     }
     
+    @IBAction func goBack(_ sender: Any) {
+        //navigationviewcontroller pop
+    }
     
     @IBOutlet weak var commentTextBox: UITextField!
     

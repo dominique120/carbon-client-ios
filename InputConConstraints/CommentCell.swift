@@ -31,7 +31,7 @@ class MainCelda : UITableViewCell{
         self.imgPost.downloadImageInUrlString(Constants.image_fs + self.objPost.pictureUrl) { (image, urlString) in
             self.imgPost.image = image
         }*/
-        self.personName.setTitle(self.poster.displayName, for: .normal)
+        //self.personName.setTitle(self.poster.displayName, for: .normal)
     }
     
     

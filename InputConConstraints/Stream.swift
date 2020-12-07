@@ -14,7 +14,7 @@ class MainPost: UIViewController{
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return.lightContent
     }
-    @IBOutlet weak var tableVirePosts: UITableView!
+    @IBOutlet weak var tableViewPosts: UITableView!
     
     var arrayPosts = [PostBE]()
     
@@ -30,7 +30,7 @@ class MainPost: UIViewController{
     func getAllPosts() {
         PostWS.getAllPosts(success: {(arrayPosts) in
             self.arrayPosts = arrayPosts
-            self.tableVirePosts.reloadData()
+            self.tableViewPosts.reloadData()
         }, error: {(errorMessage) in
             print(errorMessage)
         })
