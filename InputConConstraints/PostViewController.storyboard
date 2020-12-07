@@ -180,9 +180,11 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="61N-Fm-O9d">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MWl-HB-9yK">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MWl-HB-9yK">
                                         <rect key="frame" x="0.0" y="88" width="414" height="715"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="separatorColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="commentCell" rowHeight="91" id="oHn-TT-nia" customClass="MainCelda" customModule="IsilInsta" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="414" height="91"/>
@@ -224,6 +226,7 @@
                                                         <constraint firstItem="mZE-9S-gRh" firstAttribute="leading" secondItem="7QT-fD-FW4" secondAttribute="trailing" constant="14" id="CeK-ll-SRC"/>
                                                         <constraint firstItem="7QT-fD-FW4" firstAttribute="top" secondItem="Chr-ma-ZOi" secondAttribute="top" constant="1" id="LxI-A2-Ycg"/>
                                                         <constraint firstItem="mZE-9S-gRh" firstAttribute="leading" secondItem="UsD-oi-rR1" secondAttribute="trailing" constant="14" id="MZ4-XN-TGr"/>
+                                                        <constraint firstItem="uY4-q3-uKT" firstAttribute="top" secondItem="Chr-ma-ZOi" secondAttribute="top" constant="47.5" id="SSa-KP-m6o"/>
                                                         <constraint firstAttribute="bottom" secondItem="uY4-q3-uKT" secondAttribute="bottom" constant="23" id="ayK-hr-W7E"/>
                                                         <constraint firstItem="uY4-q3-uKT" firstAttribute="leading" secondItem="Chr-ma-ZOi" secondAttribute="leading" constant="20" id="mLl-AC-CDb"/>
                                                         <constraint firstItem="mZE-9S-gRh" firstAttribute="leading" secondItem="uY4-q3-uKT" secondAttribute="trailing" constant="14" id="ojP-1t-d61"/>
