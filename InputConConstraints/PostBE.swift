@@ -16,8 +16,8 @@ class PostBE {
     var posterName: String = "";
     
     // extra types
-    var timesLiked: Int = 0;
-    var timesCommented: Int = 0;
+    var timesLiked: String = "0";
+    var timesCommented: String = "0";
     
     init(json: CSJSON) {
         self.postId             = json.dictionary["postId"]?.stringValue ?? ""
@@ -25,7 +25,7 @@ class PostBE {
         self.mainContent        = json.dictionary["mainContent"]?.stringValue ?? ""
         self.pictureUrl         = json.dictionary["pictureUrl"]?.stringValue ?? ""
         self.posterName         = json.dictionary["posterName"]?.stringValue ?? ""
-        self.timesLiked         = Int(json.dictionary["posterName"]?.stringValue ?? "") ?? 0
-        self.timesCommented     = Int(json.dictionary["timesCommented"]?.stringValue ?? "") ?? 0
+        self.timesLiked         = json.dictionary["posterName"]?.stringValue ?? "0"
+        self.timesCommented     = json.dictionary["timesCommented"]?.stringValue ?? "0"
     }
 }

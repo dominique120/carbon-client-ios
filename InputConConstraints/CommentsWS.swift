@@ -36,7 +36,8 @@ class CommentWS {
         let dic: [String: Any]  = ["postId"       : postId,
                                    "personId"     : personId,
                                    "commentText"  : commentText,
-                                   "posterName"   : posterName
+                                   "posterName"   : posterName,
+                                   "posterProfilePicUrl" : PersonBE.shared!.profilePictureUrl
         ]
         
         CSWebServiceManager.shared.request.postRequest(urlString: WebServicesURL.newComment, parameters: dic) { (response) in

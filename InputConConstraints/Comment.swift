@@ -14,12 +14,14 @@ class CommentBE {
     var personId: String = "";
     var commentText: String = "";
     var posterName: String = "";
+    var posterProfilePicUrl: String = "";
     
     init(json: CSJSON) {
-        self.commentId        = json.dictionary["commentId"]?.stringValue ?? ""
-        self.postId           = json.dictionary["postId"]?.stringValue ?? ""
-        self.personId         = json.dictionary["personId"]?.stringValue ?? ""
-        self.commentText      = json.dictionary["commentText"]?.stringValue ?? ""
-        self.posterName       = json.dictionary["posterName"]?.stringValue ?? ""
+        self.commentId            = json.dictionary["commentId"]?.stringValue ?? ""
+        self.postId               = json.dictionary["postId"]?.stringValue ?? ""
+        self.personId             = json.dictionary["personId"]?.stringValue ?? ""
+        self.commentText          = json.dictionary["commentText"]?.stringValue ?? ""
+        self.posterName           = json.dictionary["posterName"]?.stringValue ?? ""
+        self.posterProfilePicUrl  = json.dictionary["posterProfilePicUrl"]?.stringValue ?? ""
     }
 }

@@ -33,25 +33,22 @@ class LogInViewController: UIViewController {
     }
     
     func getPersonInfo() {
-        
-        //print(UserBE.shared?.personId)
         guard let personId = UserBE.shared?.personId else { return }
         
         PersonWS.getPersonByUserId(personId, success: { (objPerson) in
             PersonBE.shared = objPerson
-            self.setProfileInformation(objPerson)
+                                 
+            ProfileWS.getProfileByPersonId(PersonBE.shared!.profileId, success: { (objProfile) in
+                ProfileBE.shared = objProfile
+            }) { (errorMessage) in
+                print(errorMessage)
+            }
             
         }) { (errorMessage) in
             print(errorMessage)
         }
     }
-    
-    func setProfileInformation(_ objPerson: PersonBE) {
-        //TODO: Asignar los valores de la persona en la UI
-        
-        //self.lblEmail.text = objProfile.email
-    }
-    
+       
     
     @IBAction func onSignIn(_ sender: Any) {
         let usr: String = txtFirstName.text!

@@ -42,6 +42,7 @@
 		15CCC76A257CA96500C21D37 /* AuthBL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CCC769257CA96500C21D37 /* AuthBL.swift */; };
 		15CCC76D257CAF5700C21D37 /* WSUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CCC76C257CAF5700C21D37 /* WSUtil.swift */; };
 		15CCC778257DDA0500C21D37 /* AccountWS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CCC777257DDA0500C21D37 /* AccountWS.swift */; };
+		15CCC77C257E9DAA00C21D37 /* ProfileWS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CCC77B257E9DAA00C21D37 /* ProfileWS.swift */; };
 		15D1085D256197A600CC6255 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D1085C256197A600CC6255 /* Constants.swift */; };
 		4E8D72BA25366E3E00573733 /* TFUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8D72B925366E3E00573733 /* TFUIView.swift */; };
 		4E8D72BD2536716C00573733 /* BTUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8D72BC2536716C00573733 /* BTUIView.swift */; };
@@ -100,6 +101,7 @@
 		15CCC769257CA96500C21D37 /* AuthBL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthBL.swift; sourceTree = "<group>"; };
 		15CCC76C257CAF5700C21D37 /* WSUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSUtil.swift; sourceTree = "<group>"; };
 		15CCC777257DDA0500C21D37 /* AccountWS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountWS.swift; sourceTree = "<group>"; };
+		15CCC77B257E9DAA00C21D37 /* ProfileWS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileWS.swift; sourceTree = "<group>"; };
 		15D1085C256197A600CC6255 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4E8D72B925366E3E00573733 /* TFUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFUIView.swift; sourceTree = "<group>"; };
 		4E8D72BC2536716C00573733 /* BTUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTUIView.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				159BFEFF257952DC00CD5124 /* AuthWS.swift */,
 				15CCC76C257CAF5700C21D37 /* WSUtil.swift */,
 				15CCC777257DDA0500C21D37 /* AccountWS.swift */,
+				15CCC77B257E9DAA00C21D37 /* ProfileWS.swift */,
 			);
 			name = WS;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				157365D5256F37F10081E7E3 /* AlertManager.swift in Sources */,
 				88A0557725753F58009D35CB /* Profile.swift in Sources */,
 				15CCC75D257CA82400C21D37 /* PostBE.swift in Sources */,
+				15CCC77C257E9DAA00C21D37 /* ProfileWS.swift in Sources */,
 				159BFF11257C6A5900CD5124 /* SelectImageViewController.swift in Sources */,
 				15419A9F25780C8800F7CA1F /* WebServicesManager.swift in Sources */,
 				15419AB825787CAB00F7CA1F /* CommentBL.swift in Sources */,

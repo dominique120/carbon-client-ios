@@ -279,6 +279,16 @@
                         <imageReference key="image" image="person.circle.fill" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="profDOB" destination="iL9-Kf-6Ru" id="x5u-vU-tBL"/>
+                        <outlet property="profDistrict" destination="Hxq-TR-ll9" id="ICV-ti-CiY"/>
+                        <outlet property="profFollowersCount" destination="QEO-iR-NhB" id="3Ro-aE-oNy"/>
+                        <outlet property="profFollowingCount" destination="Tug-U2-CXE" id="2mT-ox-fFy"/>
+                        <outlet property="profImage" destination="f2n-UN-P9a" id="vb0-ld-2VD"/>
+                        <outlet property="profName" destination="TTa-DY-4YE" id="SVh-JU-bgi"/>
+                        <outlet property="profPostCount" destination="stD-Y6-bnz" id="cqQ-H5-IzM"/>
+                        <outlet property="profStudyField" destination="n3q-nH-Mzw" id="Ih7-mv-Wa5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vgh-5V-RSz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

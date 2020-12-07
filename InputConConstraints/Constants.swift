@@ -37,7 +37,7 @@ struct WebServicesURL {
     }
     
     static func getProfileByPersonId(_ personId: String) -> String {
-        return Constants.api_base_url + "/personbyid?id=\(personId)"
+        return Constants.api_base_url + "/profilebyperson?id=\(personId)"
     }
     
     static func likePost(_ postId: String, _ personId: String) -> String {

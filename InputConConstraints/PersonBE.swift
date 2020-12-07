@@ -18,7 +18,7 @@ class PersonBE {
     var email: String = "";
     var firstName: String = "";
     var lastName: String = "";
-    var profilePictureURL: String = "";
+    var profilePictureUrl: String = "";
     
     init(json: CSJSON) {
         self.personId             = json.dictionary["personId"]?.stringValue ?? ""
@@ -27,6 +27,6 @@ class PersonBE {
         self.email                = json.dictionary["email"]?.stringValue ?? ""
         self.firstName            = json.dictionary["firstName"]?.stringValue ?? ""
         self.lastName             = json.dictionary["lastName"]?.stringValue ?? ""
-        self.profilePictureURL    = json.dictionary["profilePictureURL"]?.stringValue ?? ""
+        self.profilePictureUrl    = json.dictionary["profilePictureUrl"]?.stringValue ?? ""
     }
 }

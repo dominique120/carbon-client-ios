@@ -10,6 +10,9 @@ import Foundation
 
 
 class ProfileBE {
+    
+    static var shared: ProfileBE?
+    
     var profileId: String = "";
     var profileSummary: String = "";
     var studyField: String = "";
@@ -17,7 +20,9 @@ class ProfileBE {
     var birthDate: String = "";
     
     // extra types
-    var followersCount: Int = 0;
+    var followersCount: String = "0";
+    var followingCount: String = "0";
+    var postCount: String = "0";
     
     init(json: CSJSON) {
         self.profileId          = json.dictionary["profileId"]?.stringValue ?? ""
@@ -25,6 +30,8 @@ class ProfileBE {
         self.studyField         = json.dictionary["studyField"]?.stringValue ?? ""
         self.district           = json.dictionary["district"]?.stringValue ?? ""
         self.birthDate          = json.dictionary["birthDate"]?.stringValue ?? ""
-        self.followersCount     = Int(json.dictionary["followersCount"]?.stringValue ?? "") ?? 0
+        self.followersCount     = json.dictionary["followersCount"]?.stringValue ?? "0"
+        self.followingCount     = json.dictionary["followingCount"]?.stringValue ?? "0"
+        self.postCount          = json.dictionary["postCount"]?.stringValue ?? "0"
     }
 }

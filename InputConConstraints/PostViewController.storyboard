@@ -229,6 +229,7 @@
                                                     <outlet property="commentText" destination="uY4-q3-uKT" id="A7u-7o-Eoc"/>
                                                     <outlet property="personName" destination="UsD-oi-rR1" id="SBD-YH-hcb"/>
                                                     <outlet property="personProfilePic" destination="mZE-9S-gRh" id="twO-lH-Ca9"/>
+                                                    <outlet property="profilePic" destination="mZE-9S-gRh" id="0xa-bk-guE"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
