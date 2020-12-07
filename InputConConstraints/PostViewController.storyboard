@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8vT-EZ-SD8">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -155,27 +155,19 @@
                             <constraint firstItem="Hve-Kl-2OD" firstAttribute="trailing" secondItem="Mul-58-XEW" secondAttribute="trailing" id="nEA-0L-MaY"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Main" id="sOJ-ij-wXf">
+                    <tabBarItem key="tabBarItem" title="Main" id="0Em-8I-gEB">
                         <imageReference key="image" image="globe" catalog="system" symbolScale="large"/>
                     </tabBarItem>
+                    <navigationItem key="navigationItem" id="KAf-do-qrn"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableVirePosts" destination="zIl-eC-Ucj" id="oXl-eH-ve6"/>
+                        <segue destination="Lum-IL-IOq" kind="show" id="3mB-Gm-sYG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lqp-cG-fCb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-336.23188405797106" y="83.705357142857139"/>
-        </scene>
-        <!--PostViewController-->
-        <scene sceneID="TFK-iV-V8b">
-            <objects>
-                <viewControllerPlaceholder referencedIdentifier="PostViewController" id="VbO-16-WQ1" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="UsJ-aG-gIg"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vWX-dN-mKn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="102" y="-243"/>
+            <point key="canvasLocation" x="-520.28985507246375" y="144.64285714285714"/>
         </scene>
         <!--Main Comment-->
         <scene sceneID="bCS-eC-6v5">
@@ -273,7 +265,6 @@
                                                 <state key="normal" image="arrowshape.turn.up.left.fill" catalog="system"/>
                                                 <connections>
                                                     <action selector="clickBtnBack:" destination="Lum-IL-IOq" eventType="touchUpInside" id="3HP-Zv-gdP"/>
-                                                    <segue destination="VbO-16-WQ1" kind="showDetail" id="gSy-LW-Fpl"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -368,7 +359,27 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="624.63768115942037" y="83.705357142857139"/>
+            <point key="canvasLocation" x="276.81159420289856" y="170.75892857142856"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="XXi-Xy-iWO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="lkL-Ai-nj2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Main" id="sOJ-ij-wXf">
+                        <imageReference key="image" image="globe" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dfb-RZ-E75">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8vT-EZ-SD8" kind="relationship" relationship="rootViewController" id="67w-en-n0l"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dhr-14-Zta" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1277" y="145"/>
         </scene>
     </scenes>
     <resources>
