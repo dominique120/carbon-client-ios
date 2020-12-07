@@ -15,9 +15,7 @@ class MainCelda : UITableViewCell{
     @IBOutlet weak var personProfilePic: UIImageView!
     @IBOutlet weak var personName: UIButton!
     @IBOutlet weak var commentText: UILabel!
-    
-    var poster: PersonBE!
-    
+        
     var objComment: CommentBE! {
         didSet {
             self.updateData()
@@ -25,22 +23,14 @@ class MainCelda : UITableViewCell{
     }
         
     private func updateData() {
-        self.getPoster(personId: objComment.personId)
         self.commentText.text = self.objComment.commentText
         /*
         self.imgPost.downloadImageInUrlString(Constants.image_fs + self.objPost.pictureUrl) { (image, urlString) in
             self.imgPost.image = image
         }*/
-        //self.personName.setTitle(self.poster.displayName, for: .normal)
+        self.personName.setTitle(self.objComment.posterName, for: .normal)
     }
     
-    
-    func getPoster(personId: String) {        
-        PersonWS.getPersonByPersonId(personId, success: {(person) in
-            self.poster = person
-        }, error: {(errorMessage) in
-            print(errorMessage)
-        })
-    }
+
 }
 

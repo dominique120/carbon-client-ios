@@ -28,25 +28,13 @@ class PlaceTableViewCell: UITableViewCell {
         
     }
     
-    var poster: PersonBE!
-    
     var objPost: PostBE! {
         didSet {
             self.updateData()
         }
     }
     
-    func getPoster(personId: String) {
-        PersonWS.getPersonByPersonId(personId, success: {
-            (person) in
-            self.poster = person
-        }, error: {(errorMessage) in
-            print(errorMessage)
-        })
-    }
-    
     private func updateData() {
-        self.getPoster(personId: objPost.personId)
         self.postContent.text = self.objPost.mainContent
         
         self.imgPost.downloadImageInUrlString(Constants.image_fs + self.objPost.pictureUrl) { (image, urlString) in
