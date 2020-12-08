@@ -203,20 +203,20 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="559" id="7OZ-mw-ayl"/>
                                             <constraint firstItem="vdT-iK-Rfk" firstAttribute="centerX" secondItem="6wR-Rg-C7l" secondAttribute="centerX" id="8Nc-f8-AGT"/>
                                             <constraint firstItem="lyI-iy-Zeo" firstAttribute="centerX" secondItem="6wR-Rg-C7l" secondAttribute="centerX" id="Dph-ra-qhc"/>
                                             <constraint firstItem="vdT-iK-Rfk" firstAttribute="top" secondItem="KnM-ax-cEa" secondAttribute="bottom" constant="-20" id="FVQ-vs-Ejx"/>
                                             <constraint firstItem="jj7-ha-FBM" firstAttribute="centerX" secondItem="6wR-Rg-C7l" secondAttribute="centerX" id="OOK-hP-xHY"/>
-                                            <constraint firstAttribute="bottom" secondItem="mla-uB-Yr3" secondAttribute="bottom" constant="54" id="PzN-a3-qEC"/>
                                             <constraint firstItem="KnM-ax-cEa" firstAttribute="top" secondItem="6wR-Rg-C7l" secondAttribute="top" constant="18" id="Qgg-4H-yCc"/>
                                             <constraint firstItem="KnM-ax-cEa" firstAttribute="centerX" secondItem="6wR-Rg-C7l" secondAttribute="centerX" id="Yg7-Ea-3N7"/>
                                             <constraint firstItem="lyI-iy-Zeo" firstAttribute="top" secondItem="vdT-iK-Rfk" secondAttribute="bottom" constant="8" symbolic="YES" id="c38-0E-ECn"/>
                                             <constraint firstAttribute="width" constant="414" id="ikU-SM-def"/>
                                             <constraint firstItem="mla-uB-Yr3" firstAttribute="top" secondItem="jj7-ha-FBM" secondAttribute="bottom" constant="19" id="qmr-1B-qwc"/>
                                             <constraint firstItem="mla-uB-Yr3" firstAttribute="centerX" secondItem="6wR-Rg-C7l" secondAttribute="centerX" id="tpn-QS-0VC"/>
+                                            <constraint firstAttribute="bottom" secondItem="mla-uB-Yr3" secondAttribute="bottom" constant="54" id="vSF-oR-f4u"/>
                                             <constraint firstItem="jj7-ha-FBM" firstAttribute="top" secondItem="lyI-iy-Zeo" secondAttribute="bottom" constant="4" id="xID-A0-k5N"/>
                                         </constraints>
                                     </view>
@@ -248,11 +248,11 @@
                                 <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="DTP-Yr-O18" firstAttribute="leading" secondItem="sm7-EL-2IQ" secondAttribute="leading" id="4Dz-pm-KGh"/>
-                                    <constraint firstItem="6wR-Rg-C7l" firstAttribute="centerX" secondItem="sm7-EL-2IQ" secondAttribute="centerX" id="EGq-gi-E4W"/>
+                                    <constraint firstItem="6wR-Rg-C7l" firstAttribute="centerY" secondItem="sm7-EL-2IQ" secondAttribute="centerY" id="5Wm-eS-LKw"/>
+                                    <constraint firstItem="6wR-Rg-C7l" firstAttribute="centerX" secondItem="sm7-EL-2IQ" secondAttribute="centerX" id="CMX-lf-30Y"/>
                                     <constraint firstAttribute="trailing" secondItem="DTP-Yr-O18" secondAttribute="trailing" id="II7-eK-Ldb"/>
                                     <constraint firstItem="DTP-Yr-O18" firstAttribute="top" secondItem="9lX-gI-hhM" secondAttribute="bottom" id="PSy-l2-mqu"/>
                                     <constraint firstItem="9lX-gI-hhM" firstAttribute="top" secondItem="sm7-EL-2IQ" secondAttribute="top" id="Tx0-KR-C2Q"/>
-                                    <constraint firstItem="6wR-Rg-C7l" firstAttribute="centerY" secondItem="sm7-EL-2IQ" secondAttribute="centerY" id="gt0-1j-yVO"/>
                                     <constraint firstItem="DTP-Yr-O18" firstAttribute="top" secondItem="9lX-gI-hhM" secondAttribute="bottom" id="t3u-97-WUH"/>
                                     <constraint firstAttribute="trailing" secondItem="9lX-gI-hhM" secondAttribute="trailing" id="yrM-a1-0Ig"/>
                                     <constraint firstItem="9lX-gI-hhM" firstAttribute="leading" secondItem="sm7-EL-2IQ" secondAttribute="leading" id="z0D-UQ-DCx"/>
@@ -272,6 +272,16 @@
                         <imageReference key="image" image="person.circle.fill" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="profDOB" destination="BUC-eU-YL9" id="6GK-gL-PZt"/>
+                        <outlet property="profDistrict" destination="j3S-Q8-aq6" id="bWB-FU-JQQ"/>
+                        <outlet property="profFollowersCount" destination="2Yg-Hi-ErM" id="4dT-vo-ZoL"/>
+                        <outlet property="profFollowingCount" destination="a43-1U-fNS" id="Tae-yx-ylm"/>
+                        <outlet property="profImge" destination="KnM-ax-cEa" id="1s1-Pv-M3f"/>
+                        <outlet property="profName" destination="lyI-iy-Zeo" id="5ew-GG-1FZ"/>
+                        <outlet property="profPostCount" destination="XpJ-0r-wRL" id="SMz-wF-bXe"/>
+                        <outlet property="profStudyField" destination="31b-ho-9jv" id="5w0-yZ-Scw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vgh-5V-RSz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -304,9 +314,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -11,7 +11,7 @@ import UIKit
 
 class MainProfile: UIViewController{
     
-    @IBOutlet weak var profImage: UIImageView!
+    @IBOutlet weak var profImge: IMGUIview!
     @IBOutlet weak var profName: UILabel!
     @IBOutlet weak var profStudyField: UILabel!
     @IBOutlet weak var profDistrict: UILabel!
@@ -20,6 +20,15 @@ class MainProfile: UIViewController{
     @IBOutlet weak var profFollowersCount: UILabel!
     @IBOutlet weak var profFollowingCount: UILabel!
     
+//    @IBOutlet weak var profImage: UIImageView!
+//    @IBOutlet weak var profName: UILabel!
+//    @IBOutlet weak var profStudyField: UILabel!
+//    @IBOutlet weak var profDistrict: UILabel!
+//    @IBOutlet weak var profDOB: UILabel!
+//    @IBOutlet weak var profPostCount: UILabel!
+//    @IBOutlet weak var profFollowersCount: UILabel!
+//    @IBOutlet weak var profFollowingCount: UILabel!
+//
     
     @IBAction func clickBtnCerrarrSesion(_ sender: Any){
         self.tabBarController?.navigationController?.popToRootViewController(animated: true)
@@ -38,8 +47,8 @@ class MainProfile: UIViewController{
         profFollowersCount.text = ProfileBE.shared!.followersCount
         
         
-        self.profImage.downloadImageInUrlString(Constants.image_fs + PersonBE.shared!.profilePictureUrl) { (image, urlString) in
-            self.profImage.image = image
+        self.profImge.downloadImageInUrlString(Constants.image_fs + PersonBE.shared!.profilePictureUrl) { (image, urlString) in
+            self.profImge.image = image
         }
         
         super.viewDidLoad()
