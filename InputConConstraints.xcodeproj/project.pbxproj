@@ -47,6 +47,10 @@
 		4E8D72BA25366E3E00573733 /* TFUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8D72B925366E3E00573733 /* TFUIView.swift */; };
 		4E8D72BD2536716C00573733 /* BTUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8D72BC2536716C00573733 /* BTUIView.swift */; };
 		4E8D72C02536756E00573733 /* VUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8D72BF2536756E00573733 /* VUIView.swift */; };
+		8810A243257EDDE800AB9B25 /* DeletePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810A242257EDDE800AB9B25 /* DeletePost.swift */; };
+		8810A24B257EE23700AB9B25 /* EditePostBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810A24A257EE23700AB9B25 /* EditePostBtn.swift */; };
+		8810A24E257EE35500AB9B25 /* EditePostVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810A24D257EE35500AB9B25 /* EditePostVc.swift */; };
+		8810A251257EF32900AB9B25 /* IMGUIview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810A250257EF32900AB9B25 /* IMGUIview.swift */; };
 		8840F8B42579D68700CD1421 /* TVUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8840F8B32579D68700CD1421 /* TVUIView.swift */; };
 		8840F8B82579DDC700CD1421 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8840F8B72579DDC700CD1421 /* CommentCell.swift */; };
 		8896C8AD257DD6B100750E58 /* MyPostViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8896C8AC257DD6B100750E58 /* MyPostViewController.storyboard */; };
@@ -106,6 +110,10 @@
 		4E8D72B925366E3E00573733 /* TFUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFUIView.swift; sourceTree = "<group>"; };
 		4E8D72BC2536716C00573733 /* BTUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTUIView.swift; sourceTree = "<group>"; };
 		4E8D72BF2536756E00573733 /* VUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VUIView.swift; sourceTree = "<group>"; };
+		8810A242257EDDE800AB9B25 /* DeletePost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePost.swift; sourceTree = "<group>"; };
+		8810A24A257EE23700AB9B25 /* EditePostBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditePostBtn.swift; sourceTree = "<group>"; };
+		8810A24D257EE35500AB9B25 /* EditePostVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditePostVc.swift; sourceTree = "<group>"; };
+		8810A250257EF32900AB9B25 /* IMGUIview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMGUIview.swift; sourceTree = "<group>"; };
 		8840F8B32579D68700CD1421 /* TVUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVUIView.swift; sourceTree = "<group>"; };
 		8840F8B72579DDC700CD1421 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		8896C8AC257DD6B100750E58 /* MyPostViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPostViewController.storyboard; sourceTree = "<group>"; };
@@ -226,6 +234,7 @@
 				4E8D72BC2536716C00573733 /* BTUIView.swift */,
 				4E8D72BF2536756E00573733 /* VUIView.swift */,
 				8840F8B32579D68700CD1421 /* TVUIView.swift */,
+				8810A250257EF32900AB9B25 /* IMGUIview.swift */,
 			);
 			name = CustomUIClasses;
 			sourceTree = "<group>";
@@ -297,6 +306,9 @@
 				15542EC22577E19100252F6F /* StreamCell.swift */,
 				8840F8B72579DDC700CD1421 /* CommentCell.swift */,
 				8896C8B3257DE55000750E58 /* MyPost.swift */,
+				8810A242257EDDE800AB9B25 /* DeletePost.swift */,
+				8810A24A257EE23700AB9B25 /* EditePostBtn.swift */,
+				8810A24D257EE35500AB9B25 /* EditePostVc.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -432,6 +444,7 @@
 				15419AB525787C1100F7CA1F /* CommentsWS.swift in Sources */,
 				4E8D72BA25366E3E00573733 /* TFUIView.swift in Sources */,
 				157365D5256F37F10081E7E3 /* AlertManager.swift in Sources */,
+				8810A24E257EE35500AB9B25 /* EditePostVc.swift in Sources */,
 				88A0557725753F58009D35CB /* Profile.swift in Sources */,
 				15CCC75D257CA82400C21D37 /* PostBE.swift in Sources */,
 				15CCC77C257E9DAA00C21D37 /* ProfileWS.swift in Sources */,
@@ -471,9 +484,12 @@
 				4E8D72BD2536716C00573733 /* BTUIView.swift in Sources */,
 				15CCC76D257CAF5700C21D37 /* WSUtil.swift in Sources */,
 				159BFF1C257C6B2A00CD5124 /* WebServiceManager.swift in Sources */,
+				8810A24B257EE23700AB9B25 /* EditePostBtn.swift in Sources */,
+				8810A251257EF32900AB9B25 /* IMGUIview.swift in Sources */,
 				88A0556925753D9C009D35CB /* Stream.swift in Sources */,
 				4E8D72C02536756E00573733 /* VUIView.swift in Sources */,
 				15CCC778257DDA0500C21D37 /* AccountWS.swift in Sources */,
+				8810A243257EDDE800AB9B25 /* DeletePost.swift in Sources */,
 				15D1085D256197A600CC6255 /* Constants.swift in Sources */,
 				15419AA525780FFC00F7CA1F /* PostWS.swift in Sources */,
 				8896C8B4257DE55000750E58 /* MyPost.swift in Sources */,
