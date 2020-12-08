@@ -32,8 +32,12 @@ struct WebServicesURL {
         return Constants.api_base_url + "/likes?id=\(postId)"
     }
     
-    static func getProfileByUserId(_ personId: String) -> String {
+    static func getPersonByUserId(_ personId: String) -> String {
         return Constants.api_base_url + "/personbyuser?id=\(personId)"
+    }
+    
+    static func getPersonByPersonId(_ personId: String) -> String {
+        return Constants.api_base_url + "/personbyid?id=\(personId)"
     }
     
     static func getProfileByPersonId(_ personId: String) -> String {
@@ -46,6 +50,10 @@ struct WebServicesURL {
     
     static func getPostsByPerson(_ postId: String) -> String {
         return Constants.api_base_url + "/postsbyperson?id=\(postId)"
+    }
+    
+    static func followSomeone(_ myFollowerId: String, _ theirFollowingId: String) -> String {
+        return Constants.api_base_url + "/follow?followerId=\(myFollowerId)&followedId=\(theirFollowingId)"
     }
     
 }

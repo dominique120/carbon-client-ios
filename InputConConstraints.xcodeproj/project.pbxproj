@@ -10,6 +10,7 @@
 		150B41E92533D6E7007292DB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150B41E82533D6E7007292DB /* SignUpViewController.swift */; };
 		150B41EB2533E76E007292DB /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150B41EA2533E76E007292DB /* LogInViewController.swift */; };
 		150B41ED2533F38D007292DB /* RecoverPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150B41EC2533F38D007292DB /* RecoverPasswordViewController.swift */; };
+		15217428257F4AD900D4BC9E /* FollowerWS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15217427257F4AD900D4BC9E /* FollowerWS.swift */; };
 		15419A9F25780C8800F7CA1F /* WebServicesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15419A9E25780C8800F7CA1F /* WebServicesManager.swift */; };
 		15419AA525780FFC00F7CA1F /* PostWS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15419AA425780FFC00F7CA1F /* PostWS.swift */; };
 		15419AA9257812E400F7CA1F /* PostBL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15419AA8257812E400F7CA1F /* PostBL.swift */; };
@@ -76,6 +77,7 @@
 		150B41E82533D6E7007292DB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		150B41EA2533E76E007292DB /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		150B41EC2533F38D007292DB /* RecoverPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewController.swift; sourceTree = "<group>"; };
+		15217427257F4AD900D4BC9E /* FollowerWS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerWS.swift; sourceTree = "<group>"; };
 		15419A9E25780C8800F7CA1F /* WebServicesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServicesManager.swift; sourceTree = "<group>"; };
 		15419AA425780FFC00F7CA1F /* PostWS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostWS.swift; sourceTree = "<group>"; };
 		15419AA8257812E400F7CA1F /* PostBL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostBL.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				15CCC76C257CAF5700C21D37 /* WSUtil.swift */,
 				15CCC777257DDA0500C21D37 /* AccountWS.swift */,
 				15CCC77B257E9DAA00C21D37 /* ProfileWS.swift */,
+				15217427257F4AD900D4BC9E /* FollowerWS.swift */,
 			);
 			name = WS;
 			sourceTree = "<group>";
@@ -505,6 +508,7 @@
 				15D1085D256197A600CC6255 /* Constants.swift in Sources */,
 				15419AA525780FFC00F7CA1F /* PostWS.swift in Sources */,
 				8896C8B4257DE55000750E58 /* MyPost.swift in Sources */,
+				15217428257F4AD900D4BC9E /* FollowerWS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

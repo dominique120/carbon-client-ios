@@ -19,6 +19,9 @@ class MainPost: UIViewController{
         performSegue(withIdentifier: "viewPostComments", sender: nil)
     }
     
+    @IBAction func viewProfile(_ sender: Any) {
+        performSegue(withIdentifier: "viewPersonProfile", sender: nil)
+    }
 
     @IBOutlet weak var tableViewPosts: UITableView!
     
@@ -29,8 +32,8 @@ class MainPost: UIViewController{
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
         self.getAllPosts();
+        super.viewDidAppear(animated)        
     }
     
     func getAllPosts() {
@@ -58,16 +61,16 @@ extension MainPost: UITableViewDataSource { //number, number, cellfor
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cellIdentidier = "PlaceTableViewCell"
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentidier, for: indexPath) as! PlaceTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentidier, for: indexPath) as! StreamCell
         cell.delegate = self
+        cell.parentViewController = self
         cell.objPost = self.arrayPosts[indexPath.row]
         return cell
     }
 }
 
-
 extension MainPost: MainPostDelegate {    
-    func placeTableViewCell(_ cell: PlaceTableViewCell, deletePlace objPlace: PostBE) {       
+    func targetPost(_ cell: StreamCell, selectedPost objPost: PostBE) {       
     }
 }
 

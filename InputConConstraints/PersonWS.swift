@@ -12,7 +12,7 @@ class PersonWS {
     
     class func getPersonByUserId(_ personId: String, success: @escaping Person, error: @escaping ErrorMessage) {
         
-        CSWebServiceManager.shared.request.getRequest(urlString: WebServicesURL.getProfileByUserId(personId), parameters: nil) { (response) in
+        CSWebServiceManager.shared.request.getRequest(urlString: WebServicesURL.getPersonByUserId(personId), parameters: nil) { (response) in
             
             if let personws = response.JSON?.array.first, response.errorCode == 200 {
                 success(PersonBE(json: personws))
@@ -25,7 +25,7 @@ class PersonWS {
     
     class func getPersonByPersonId(_ personId: String, success: @escaping Person, error: @escaping ErrorMessage) {
         
-        CSWebServiceManager.shared.request.getRequest(urlString: WebServicesURL.getProfileByPersonId(personId), parameters: nil) { (response) in
+        CSWebServiceManager.shared.request.getRequest(urlString: WebServicesURL.getPersonByPersonId(personId), parameters: nil) { (response) in
             
             if let personws = response.JSON?.array.first, response.errorCode == 200 {
                 success(PersonBE(json: personws))

@@ -50,7 +50,7 @@
                                         <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaceTableViewCell" rowHeight="430" id="lcv-PY-85D" customClass="PlaceTableViewCell" customModule="IsilInsta" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaceTableViewCell" rowHeight="430" id="lcv-PY-85D" customClass="StreamCell" customModule="IsilInsta" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="414" height="430"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lcv-PY-85D" id="OLw-Q9-YEk">
@@ -63,6 +63,10 @@
                                                             <state key="normal" title="Name ">
                                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="viewProfile:" destination="8vT-EZ-SD8" eventType="touchUpInside" id="kAK-c3-4z3"/>
+                                                                <action selector="viewProfile:" destination="lcv-PY-85D" eventType="touchUpInside" id="sHH-F4-IdZ"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9nN-Bm-aDc">
                                                             <rect key="frame" x="24" y="391" width="25.5" height="22"/>
@@ -165,6 +169,7 @@
                     <connections>
                         <outlet property="tableViewPosts" destination="zIl-eC-Ucj" id="gyG-z1-Kec"/>
                         <segue destination="Lum-IL-IOq" kind="show" identifier="viewPostComments" id="3mB-Gm-sYG"/>
+                        <segue destination="Lry-Ev-ktL" kind="show" identifier="viewPersonProfile" id="UYw-ac-6ZX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lqp-cG-fCb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -369,7 +374,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="288" y="145"/>
+            <point key="canvasLocation" x="345" y="378"/>
         </scene>
         <!--Main-->
         <scene sceneID="XXi-Xy-iWO">
@@ -394,7 +399,6 @@
         <!--Profile-->
         <scene sceneID="sb7-I8-CgM">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oVF-mP-CCG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="ProfileViewControllerFollow" modalPresentationStyle="fullScreen" id="Lry-Ev-ktL" customClass="ProfileFollow" customModule="IsilInsta" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F5w-aM-XZd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -584,6 +588,9 @@
                                                         <real key="value" value="2"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="followPerson:" destination="Lry-Ev-ktL" eventType="touchUpInside" id="XIK-tz-GLg"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
@@ -652,20 +659,22 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="pfs-2f-KEf"/>
+                    <navigationItem key="navigationItem" id="SP4-Wn-xot"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="profDOB" destination="nkW-aj-TBF" id="7U7-VQ-1Jr"/>
-                        <outlet property="profDistrict" destination="tLZ-co-lZL" id="ojD-lH-hyO"/>
-                        <outlet property="profFollowersCount" destination="Lbt-rS-m7b" id="nFk-1l-D5H"/>
-                        <outlet property="profFollowingCount" destination="nfW-Ln-5Ol" id="Tfb-I6-Dp8"/>
-                        <outlet property="profImge" destination="ysY-bL-Mo5" id="BVU-Fi-6Ki"/>
-                        <outlet property="profName" destination="WIy-rt-Z04" id="9Ce-Yk-GD0"/>
-                        <outlet property="profPostCount" destination="mKF-JF-2ra" id="bg0-dv-rza"/>
-                        <outlet property="profStudyField" destination="gpS-Vz-7qr" id="ZYz-wA-L9a"/>
+                        <outlet property="DOB" destination="nkW-aj-TBF" id="5Gf-2T-ebe"/>
+                        <outlet property="district" destination="tLZ-co-lZL" id="gZW-rC-xbb"/>
+                        <outlet property="followBtn" destination="gsO-bW-eRD" id="eJm-tD-lZZ"/>
+                        <outlet property="followerCount" destination="Lbt-rS-m7b" id="YiL-9v-TxT"/>
+                        <outlet property="followingCount" destination="nfW-Ln-5Ol" id="p4Q-eg-4Fy"/>
+                        <outlet property="postCount" destination="mKF-JF-2ra" id="veC-qY-sE7"/>
+                        <outlet property="profileImg" destination="ysY-bL-Mo5" id="2ph-cE-lLb"/>
+                        <outlet property="studyField" destination="gpS-Vz-7qr" id="XOK-tP-lj5"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oVF-mP-CCG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1077" y="125"/>
+            <point key="canvasLocation" x="413" y="-313"/>
         </scene>
     </scenes>
     <designables>

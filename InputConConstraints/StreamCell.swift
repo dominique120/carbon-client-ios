@@ -8,11 +8,13 @@
 
 import UIKit
 
+
+
 protocol MainPostDelegate {
-    func placeTableViewCell(_ cell: PlaceTableViewCell, deletePlace objPlace: PostBE)
+    func targetPost(_ cell: StreamCell, selectedPost objPlace: PostBE)
 }
 
-class PlaceTableViewCell: UITableViewCell {
+class StreamCell: UITableViewCell {
     
     @IBOutlet weak var personName: UIButton!
     @IBOutlet weak var imgPost: UIImageView!
@@ -20,13 +22,23 @@ class PlaceTableViewCell: UITableViewCell {
     @IBOutlet weak var commentOnPost: UIButton!
     @IBOutlet weak var postContent: UILabel!
     
+    weak var parentViewController : MainPost?
+
+    
     var delegate: MainPostDelegate?
     
     @IBAction func viewComments(_ sender: Any) {
         g_activePostId = objPost.postId
-        self.delegate?.placeTableViewCell(self, deletePlace: self.objPost)
-        
+        g_activePersonId = objPost.personId
+        self.delegate?.targetPost(self, selectedPost: self.objPost)
     }
+    
+    @IBAction func viewProfile(_ sender: Any) {
+        g_activePostId = objPost.postId
+        g_activePersonId = objPost.personId
+        self.delegate?.targetPost(self, selectedPost: self.objPost)
+    }
+    
     
     var objPost: PostBE! {
         didSet {
@@ -49,14 +61,13 @@ class PlaceTableViewCell: UITableViewCell {
     
     @IBAction func likePost(_ sender: Any) {
         LikeWS.newLike(postId: objPost.postId, personId: PersonBE.shared!.personId, success: {
-            // print a message or something
-            // or change button color
-            print("Le diste like a la publicacion!")
-            //(UIApplication.shared.delegate as! AppDelegate).window.sc
+            Util.showMessage(controller: self.parentViewController!, message: "Like!", seconds: 1.5)            
         }, error: {
             (errorMessage) in
             print(errorMessage)
         })
     }
+    
+
 }
 
