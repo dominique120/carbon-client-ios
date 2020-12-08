@@ -31,6 +31,27 @@ class PostWS {
         }
     }
     
+    class func getPostsByPersonId(personId: String ,success: @escaping Posts, error: @escaping ErrorMessage) {
+        
+        
+        CSWebServiceManager.shared.request.getRequest(urlString: WebServicesURL.getPostsByPerson(personId), parameters: nil) { (response) in
+            
+            if response.errorCode == 200 {
+                let postWS = response.JSON?.array ?? []
+                var arrayPosts = [PostBE]()
+                
+                for element in postWS{
+                    let objPost = PostBE(json: element)
+                    arrayPosts.append(objPost)
+                    
+                }
+                success(arrayPosts)
+            }else{
+                error(StatusCodeBE.getErrorMessageByStatusCode(response.errorCode))
+            }
+        }
+    }
+    
     class func newPost(_ success: @escaping Success, img: String, postBody: String, personId: String, posterName: String, error: @escaping ErrorMessage) {
         
         let dic: [String: Any] = ["mainContent"     : postBody,

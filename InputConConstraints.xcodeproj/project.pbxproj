@@ -22,6 +22,8 @@
 		15419ABE2578800500F7CA1F /* LikeBL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15419ABD2578800500F7CA1F /* LikeBL.swift */; };
 		15419AC825793B1E00F7CA1F /* TabBarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15419ACA25793B1E00F7CA1F /* TabBarViewController.storyboard */; };
 		15542EC32577E19100252F6F /* StreamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15542EC22577E19100252F6F /* StreamCell.swift */; };
+		15600356257EFD900070C0F7 /* MyPostsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15600355257EFD900070C0F7 /* MyPostsTable.swift */; };
+		15600359257EFE220070C0F7 /* MyPostsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15600358257EFE220070C0F7 /* MyPostsCell.swift */; };
 		157365D3256F362B0081E7E3 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157365D2256F362B0081E7E3 /* ImageDownloader.swift */; };
 		157365D5256F37F10081E7E3 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157365D4256F37F10081E7E3 /* AlertManager.swift */; };
 		157365D7256F39A60081E7E3 /* FollowerBE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157365D6256F39A60081E7E3 /* FollowerBE.swift */; };
@@ -85,6 +87,8 @@
 		15419ABD2578800500F7CA1F /* LikeBL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeBL.swift; sourceTree = "<group>"; };
 		15419AC925793B1E00F7CA1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TabBarViewController.storyboard; sourceTree = "<group>"; };
 		15542EC22577E19100252F6F /* StreamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamCell.swift; sourceTree = "<group>"; };
+		15600355257EFD900070C0F7 /* MyPostsTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPostsTable.swift; sourceTree = "<group>"; };
+		15600358257EFE220070C0F7 /* MyPostsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPostsCell.swift; sourceTree = "<group>"; };
 		157365D2256F362B0081E7E3 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		157365D4256F37F10081E7E3 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		157365D6256F39A60081E7E3 /* FollowerBE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerBE.swift; sourceTree = "<group>"; };
@@ -309,6 +313,8 @@
 				8810A242257EDDE800AB9B25 /* DeletePost.swift */,
 				8810A24A257EE23700AB9B25 /* EditePostBtn.swift */,
 				8810A24D257EE35500AB9B25 /* EditePostVc.swift */,
+				15600355257EFD900070C0F7 /* MyPostsTable.swift */,
+				15600358257EFE220070C0F7 /* MyPostsCell.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -463,6 +469,7 @@
 				150B41EB2533E76E007292DB /* LogInViewController.swift in Sources */,
 				159BFF00257952DC00CD5124 /* AuthWS.swift in Sources */,
 				150B41ED2533F38D007292DB /* RecoverPasswordViewController.swift in Sources */,
+				15600359257EFE220070C0F7 /* MyPostsCell.swift in Sources */,
 				159BFF19257C6B0D00CD5124 /* CSWebServiceAttachFile.swift in Sources */,
 				159BFF032579534F00CD5124 /* Closures.swift in Sources */,
 				15419AAF2578453100F7CA1F /* PersonWS.swift in Sources */,
@@ -475,6 +482,7 @@
 				15CCC766257CA8D100C21D37 /* Comment.swift in Sources */,
 				15542EC32577E19100252F6F /* StreamCell.swift in Sources */,
 				FBD3D19D2526260F0010A094 /* SceneDelegate.swift in Sources */,
+				15600356257EFD900070C0F7 /* MyPostsTable.swift in Sources */,
 				15419AB225784A6F00F7CA1F /* PersonBL.swift in Sources */,
 				157365D3256F362B0081E7E3 /* ImageDownloader.swift in Sources */,
 				15419AA9257812E400F7CA1F /* PostBL.swift in Sources */,

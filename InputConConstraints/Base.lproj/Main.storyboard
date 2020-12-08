@@ -177,7 +177,6 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="onSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yyh-bK-Lri"/>
-                                                    <segue destination="ZWi-X7-GW4" kind="show" identifier="TabBarApplication" id="RZ0-md-5I9"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -263,6 +262,7 @@
                         <outlet property="mainBox" destination="NbB-WL-Ubk" id="oFt-dE-nHo"/>
                         <outlet property="txtFirstName" destination="WnL-Vq-Kct" id="d1h-8e-Edi"/>
                         <outlet property="txtPssword" destination="Kkm-3w-gny" id="7n8-6U-gTx"/>
+                        <segue destination="ZWi-X7-GW4" kind="show" identifier="TabBarApplication" id="FsM-Io-Y8G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
