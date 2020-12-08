@@ -44,4 +44,8 @@ struct WebServicesURL {
         return Constants.api_base_url + "/likepost?postId=\(postId)&personId=\(personId)"
     }
     
+    static func getPostsByPerson(_ postId: String) -> String {
+        return Constants.api_base_url + "/postsbyperson?id=\(postId)"
+    }
+    
 }

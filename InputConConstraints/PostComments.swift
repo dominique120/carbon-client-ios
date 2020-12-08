@@ -17,7 +17,6 @@ class MainComment: UIViewController{
     
     override func viewDidLoad() {
         self.commentTable.dataSource = self
-
         super.viewDidLoad()
     }
     

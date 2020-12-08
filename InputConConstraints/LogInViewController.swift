@@ -54,9 +54,11 @@ class LogInViewController: UIViewController {
         let usr: String = txtFirstName.text!
         let pwd: String = txtPssword.text!        
          
-        AuthWS.doLogin(password: pwd, username: usr, success: { (_) in
+        AuthWS.doLogin(password: pwd, username: usr, success: { (success) in
+            if success.personId != "0" {
             self.getPersonInfo()
             self.performSegue(withIdentifier: "TabBarApplication", sender: nil)
+            }
             
         }) { (errorMessage) in
             Util.showMessage(controller: self, message: "Credenciales Incorrectas", seconds: 5.0)
