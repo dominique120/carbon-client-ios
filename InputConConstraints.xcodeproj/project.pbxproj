@@ -53,6 +53,7 @@
 		8810A24B257EE23700AB9B25 /* EditePostBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810A24A257EE23700AB9B25 /* EditePostBtn.swift */; };
 		8810A24E257EE35500AB9B25 /* EditePostVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810A24D257EE35500AB9B25 /* EditePostVc.swift */; };
 		8810A251257EF32900AB9B25 /* IMGUIview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810A250257EF32900AB9B25 /* IMGUIview.swift */; };
+		8810A256257F304900AB9B25 /* ProfileFollow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8810A255257F304900AB9B25 /* ProfileFollow.swift */; };
 		8840F8B42579D68700CD1421 /* TVUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8840F8B32579D68700CD1421 /* TVUIView.swift */; };
 		8840F8B82579DDC700CD1421 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8840F8B72579DDC700CD1421 /* CommentCell.swift */; };
 		8896C8AD257DD6B100750E58 /* MyPostViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8896C8AC257DD6B100750E58 /* MyPostViewController.storyboard */; };
@@ -118,6 +119,7 @@
 		8810A24A257EE23700AB9B25 /* EditePostBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditePostBtn.swift; sourceTree = "<group>"; };
 		8810A24D257EE35500AB9B25 /* EditePostVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditePostVc.swift; sourceTree = "<group>"; };
 		8810A250257EF32900AB9B25 /* IMGUIview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMGUIview.swift; sourceTree = "<group>"; };
+		8810A255257F304900AB9B25 /* ProfileFollow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFollow.swift; sourceTree = "<group>"; };
 		8840F8B32579D68700CD1421 /* TVUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVUIView.swift; sourceTree = "<group>"; };
 		8840F8B72579DDC700CD1421 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		8896C8AC257DD6B100750E58 /* MyPostViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPostViewController.storyboard; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 				8810A24D257EE35500AB9B25 /* EditePostVc.swift */,
 				15600355257EFD900070C0F7 /* MyPostsTable.swift */,
 				15600358257EFE220070C0F7 /* MyPostsCell.swift */,
+				8810A255257F304900AB9B25 /* ProfileFollow.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 				159BFF19257C6B0D00CD5124 /* CSWebServiceAttachFile.swift in Sources */,
 				159BFF032579534F00CD5124 /* Closures.swift in Sources */,
 				15419AAF2578453100F7CA1F /* PersonWS.swift in Sources */,
+				8810A256257F304900AB9B25 /* ProfileFollow.swift in Sources */,
 				15CCC76A257CA96500C21D37 /* AuthBL.swift in Sources */,
 				157365D7256F39A60081E7E3 /* FollowerBE.swift in Sources */,
 				159BFF0E257C6A0700CD5124 /* ImagePicker.swift in Sources */,
