@@ -225,13 +225,19 @@
                                     <constraint firstAttribute="width" constant="414" id="XxF-Lj-fht"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPG-V3-fWQ">
-                                <rect key="frame" x="0.0" y="299.5" width="414" height="297"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gra-B6-zsc" customClass="BTUView" customModule="IsilInsta" customModuleProvider="target">
+                                <rect key="frame" x="196" y="261" width="22" height="22"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="297" id="Qau-MZ-K2R"/>
-                                    <constraint firstAttribute="width" constant="414" id="pLX-bl-E0L"/>
+                                    <constraint firstAttribute="width" constant="22" id="exA-gx-uqH"/>
+                                    <constraint firstAttribute="height" constant="22" id="moV-Ji-s5D"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="pencil" catalog="system"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="conerRadius">
+                                        <real key="value" value="11"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LHu-hG-vcy"/>
@@ -241,13 +247,13 @@
                             <constraint firstItem="BHa-rh-aUb" firstAttribute="centerY" secondItem="B4r-wC-bFn" secondAttribute="centerY" id="KEV-sY-cPb"/>
                             <constraint firstItem="03X-9P-awN" firstAttribute="leading" secondItem="LHu-hG-vcy" secondAttribute="leading" id="LME-ka-IJp"/>
                             <constraint firstItem="03X-9P-awN" firstAttribute="top" secondItem="Qx5-EL-Str" secondAttribute="bottom" id="O0f-cd-exe"/>
-                            <constraint firstItem="XPG-V3-fWQ" firstAttribute="centerX" secondItem="B4r-wC-bFn" secondAttribute="centerX" id="QVB-LL-f97"/>
-                            <constraint firstItem="XPG-V3-fWQ" firstAttribute="centerY" secondItem="B4r-wC-bFn" secondAttribute="centerY" id="Y53-ZI-7Ur"/>
                             <constraint firstItem="Qx5-EL-Str" firstAttribute="top" secondItem="B4r-wC-bFn" secondAttribute="top" id="ar8-0E-gXE"/>
                             <constraint firstItem="Qx5-EL-Str" firstAttribute="leading" secondItem="B4r-wC-bFn" secondAttribute="leading" id="bwi-0H-GXs"/>
                             <constraint firstItem="BHa-rh-aUb" firstAttribute="centerX" secondItem="B4r-wC-bFn" secondAttribute="centerX" id="ck9-Ei-JVi"/>
                             <constraint firstItem="03X-9P-awN" firstAttribute="top" secondItem="Qx5-EL-Str" secondAttribute="bottom" id="gWm-ZC-Ru6"/>
+                            <constraint firstItem="Gra-B6-zsc" firstAttribute="centerX" secondItem="B4r-wC-bFn" secondAttribute="centerX" id="sGO-lw-4aM"/>
                             <constraint firstAttribute="trailing" secondItem="Qx5-EL-Str" secondAttribute="trailing" id="viW-4l-goA"/>
+                            <constraint firstItem="BHa-rh-aUb" firstAttribute="top" secondItem="Gra-B6-zsc" secondAttribute="bottom" constant="16.5" id="vol-4b-IWS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fy6-pb-vJj"/>
@@ -260,8 +266,14 @@
             <point key="canvasLocation" x="1198.5507246376812" y="89.732142857142847"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="Gra-B6-zsc">
+            <size key="intrinsicContentSize" width="21.5" height="19.5"/>
+        </designable>
+    </designables>
     <resources>
         <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="photo" catalog="system" width="128" height="93"/>
         <image name="plus.app.fill" catalog="system" width="128" height="114"/>
         <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>

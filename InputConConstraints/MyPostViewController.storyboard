@@ -36,7 +36,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZuB-nD-Pur">
-                                        <rect key="frame" x="0.0" y="88" width="414" height="767"/>
+                                        <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                         <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -94,20 +94,11 @@
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
                                                             </state>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3DS-ze-ucd" customClass="EditePostBtn" customModule="IsilInsta" customModuleProvider="target">
-                                                            <rect key="frame" x="349" y="18" width="22" height="17"/>
-                                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <state key="normal" image="highlighter" catalog="system">
-                                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17"/>
-                                                            </state>
-                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="xLI-6j-kwR" firstAttribute="top" secondItem="a7e-xM-jxJ" secondAttribute="topMargin" id="9wU-l8-vdq"/>
-                                                        <constraint firstItem="3DS-ze-ucd" firstAttribute="top" secondItem="a7e-xM-jxJ" secondAttribute="top" constant="18" id="AEy-IZ-Puz"/>
                                                         <constraint firstItem="4VP-am-9BE" firstAttribute="leading" secondItem="a7e-xM-jxJ" secondAttribute="leading" constant="20" id="AZg-he-CSr"/>
-                                                        <constraint firstItem="Ga4-3T-Hmg" firstAttribute="leading" secondItem="3DS-ze-ucd" secondAttribute="trailing" constant="4" id="BFa-J6-GU0"/>
                                                         <constraint firstAttribute="bottom" secondItem="k0n-Rn-LoJ" secondAttribute="bottom" constant="14.5" id="E6h-FF-O4G"/>
                                                         <constraint firstAttribute="trailing" secondItem="4VP-am-9BE" secondAttribute="trailing" constant="20" id="Et8-by-iKZ"/>
                                                         <constraint firstItem="Ga4-3T-Hmg" firstAttribute="top" secondItem="a7e-xM-jxJ" secondAttribute="top" constant="17" id="FWX-JX-cdJ"/>
@@ -161,7 +152,6 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="ZuB-nD-Pur" secondAttribute="bottom" constant="41" id="8dz-r3-ufQ"/>
                                     <constraint firstAttribute="trailing" secondItem="ZuB-nD-Pur" secondAttribute="trailing" id="B3A-8Q-4wf"/>
                                     <constraint firstAttribute="trailing" secondItem="uga-qQ-2b9" secondAttribute="trailing" id="Bfx-xl-jXc"/>
                                     <constraint firstItem="uga-qQ-2b9" firstAttribute="leading" secondItem="LAZ-UF-h8J" secondAttribute="leading" id="H6c-Sd-azA"/>
@@ -171,6 +161,7 @@
                                     <constraint firstItem="uga-qQ-2b9" firstAttribute="top" secondItem="LAZ-UF-h8J" secondAttribute="top" id="W8c-hZ-DUT"/>
                                     <constraint firstItem="LqP-x7-rRH" firstAttribute="top" secondItem="uga-qQ-2b9" secondAttribute="bottom" id="grZ-Fj-46n"/>
                                     <constraint firstItem="ZuB-nD-Pur" firstAttribute="leading" secondItem="LAZ-UF-h8J" secondAttribute="leading" id="lwk-Yg-SDA"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZuB-nD-Pur" secondAttribute="bottom" id="zxs-72-pbW"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -195,7 +186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yyU-UU-gdF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="277" y="74"/>
+            <point key="canvasLocation" x="276.81159420289856" y="73.660714285714278"/>
         </scene>
         <!--Main Comment-->
         <scene sceneID="ddZ-aB-nh2">
@@ -460,7 +451,6 @@
         <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
         <image name="book.closed.fill" catalog="system" width="115" height="128"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
-        <image name="highlighter" catalog="system" width="128" height="119"/>
         <image name="message.fill" catalog="system" width="128" height="113"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
