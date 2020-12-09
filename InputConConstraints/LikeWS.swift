@@ -36,8 +36,7 @@ class LikeWS {
             }else{
                 error(StatusCodeBE.getErrorMessageByStatusCode(response.errorCode))
             }
-        }
-        
+        }        
     }
 }
 

@@ -20,6 +20,7 @@ class imageSelectViewController: UIViewController {
     var imagePicker: ImagePicker!
 
     override func viewDidLoad() {
+     
         super.viewDidLoad()
 
         self.imagePicker = ImagePicker(presentationController: self, delegate: self)
@@ -38,6 +39,7 @@ class imageSelectViewController: UIViewController {
     }
     
     @IBAction func selectImage(_ sender: Any) {
+        print("In selectImage button")
         self.postDelegate?.selectedImage(imageView.image!, true)
         self.navigationController?.popViewController(animated: true)
     }
@@ -47,6 +49,7 @@ class imageSelectViewController: UIViewController {
 extension imageSelectViewController: ImagePickerDelegate {
 
     func didSelect(image: UIImage?) {
+        print("In didSelect delegate method")
         self.imageView.image = image
         self.postDelegate?.selectedImage(image!, true)
     }

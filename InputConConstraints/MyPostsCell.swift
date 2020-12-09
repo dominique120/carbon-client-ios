@@ -19,12 +19,25 @@ class MyPostsCell: UITableViewCell {
     @IBOutlet weak var commentText: UILabel!
     @IBOutlet weak var btnLike: UIButton!
     
-    weak var parentViewController : MyPost?
+    weak var parentViewController : MyPostsTable?
     
     @IBAction func viewCommentsButton(_ sender: Any) {
         g_activePostId = objPost.postId
         self.delegate?.placeTableViewCell(self, deletePlace: self.objPost)
     }
+    
+    @IBAction func deletePost(_ sender: Any) {
+        g_activePostId = objPost.postId
+        parentViewController?.showAlert(title: "IsilInsta", message: "Desea eliminar su post", acceptButton: "Confirmar", cancelButton: "Cancelar", pressAccept: {
+            PostWS.deletePost(postId: g_activePostId, success: {() in
+                Util.showMessage(controller: self.parentViewController!, message: "Eliminaste el post", seconds: 3.0)
+                self.parentViewController?.getAllPosts()
+            }, error: {(errorMessage)in print(errorMessage)})
+        }, pressCancel: {
+            // dismiss or something
+        })
+    }
+    
     
     
     var delegate: MyPostsDelegate?
@@ -50,7 +63,6 @@ class MyPostsCell: UITableViewCell {
     
     @IBAction func likePost(_ sender: Any) {
         LikeWS.newLike(postId: objPost.postId, personId: PersonBE.shared!.personId, success: {
-            self.btnLike.tintColor = UIColor.red
             Util.showMessage(controller: self.parentViewController!, message: "Like!", seconds: 1.5)
         }, error: {
             (errorMessage) in

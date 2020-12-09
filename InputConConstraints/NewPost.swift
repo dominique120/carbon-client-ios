@@ -25,12 +25,12 @@ class MainNewPost: UIViewController{
         
         var imageId = ""
         
-        if isImageSelected {
+        //if isImageSelected {
             imageId = UUID().uuidString
             ImageWS.sendIamge(imageId: imageId, image: imageForUpload!, {()}, error: {(errorMessate) in
                 print(errorMessate)
             })
-        }
+        //}
         
         
         if (newPostBox.text!.isEmpty) {

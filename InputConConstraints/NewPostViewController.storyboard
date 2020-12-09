@@ -204,7 +204,6 @@
                                         </state>
                                         <connections>
                                             <action selector="selectImage:" destination="WPc-2c-xzg" eventType="touchUpInside" id="m34-TR-sfC"/>
-                                            <action selector="sendNewPost:" destination="yja-ji-fet" eventType="touchUpInside" id="51Z-3b-Af3"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -239,6 +238,9 @@
                                         <real key="value" value="11"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="showImagePicker:" destination="WPc-2c-xzg" eventType="touchUpInside" id="su9-Ha-jHC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LHu-hG-vcy"/>

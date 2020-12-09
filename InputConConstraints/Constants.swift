@@ -57,4 +57,8 @@ struct WebServicesURL {
         return Constants.api_base_url + "/follow?followerId=\(myFollowerId)&followedId=\(theirFollowingId)"
     }
     
+    static func deletePost(_ postId: String) -> String {
+        return Constants.api_base_url + "/deletepost?id=\(postId)"
+    }
+    
 }

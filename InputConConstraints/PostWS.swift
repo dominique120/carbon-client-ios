@@ -71,4 +71,15 @@ class PostWS {
         }
     }
     
+    
+    class func deletePost(postId: String, success: @escaping Success, error: @escaping ErrorMessage) {
+        CSWebServiceManager.shared.request.deleteRequest(urlString: WebServicesURL.deletePost(postId), parameters: nil) { (response) in
+            if response.errorCode == 200 {
+                success()
+            }else{
+                error(StatusCodeBE.getErrorMessageByStatusCode(response.errorCode))
+            }
+        }
+    }
+    
 }

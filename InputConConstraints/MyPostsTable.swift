@@ -15,14 +15,17 @@ class MyPostsTable: UIViewController{
         return.lightContent
     }
     
-    
     @IBOutlet weak var myPostsTable: UITableView!
+    
     @IBAction func viewComments(_ sender: Any) {
     performSegue(withIdentifier: "viewCommentsOnMyPosts", sender: nil)
     }
+    @IBAction func deletePost(_ sender: Any) {
+        
+    }
     
-
     
+        
     var arrayPosts = [PostBE]()
     
     override func viewDidLoad() {
@@ -62,6 +65,7 @@ extension MyPostsTable: UITableViewDataSource { //number, number, cellfor
         let cellIdentidier = "MyPostsCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentidier, for: indexPath) as! MyPostsCell
         cell.delegate = self
+        cell.parentViewController = self
         cell.objPost = self.arrayPosts[indexPath.row]
         return cell
     }

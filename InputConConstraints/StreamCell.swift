@@ -56,8 +56,7 @@ class StreamCell: UITableViewCell {
     }
     
     @IBAction func likePost(_ sender: Any) {
-        LikeWS.newLike(postId: objPost.postId, personId: PersonBE.shared!.personId, success: {
-            self.likePost.tintColor = UIColor.red
+        LikeWS.newLike(postId: objPost.postId, personId: PersonBE.shared!.personId, success: {            
             Util.showMessage(controller: self.parentViewController!, message: "Like!", seconds: 1.5)            
         }, error: {
             (errorMessage) in
