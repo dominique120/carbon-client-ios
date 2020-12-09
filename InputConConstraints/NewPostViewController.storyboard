@@ -216,10 +216,10 @@
                                     <constraint firstItem="cnX-CJ-6rk" firstAttribute="top" secondItem="03X-9P-awN" secondAttribute="top" constant="15" id="p6H-gB-4xv"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="BHa-rh-aUb">
-                                <rect key="frame" x="0.0" y="300.5" width="414" height="294.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.on.rectangle.angled" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="BHa-rh-aUb">
+                                <rect key="frame" x="0.0" y="298.5" width="414" height="298"/>
+                                <color key="backgroundColor" red="0.14509803921568626" green="0.14509803921568626" blue="0.14509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="297" id="CBE-EP-HxP"/>
                                     <constraint firstAttribute="width" constant="414" id="XxF-Lj-fht"/>
@@ -278,6 +278,7 @@
         <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="photo" catalog="system" width="128" height="93"/>
+        <image name="photo.on.rectangle.angled" catalog="system" width="128" height="101"/>
         <image name="plus.app.fill" catalog="system" width="128" height="114"/>
         <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
         <systemColor name="linkColor">
