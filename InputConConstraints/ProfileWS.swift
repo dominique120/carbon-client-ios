@@ -20,4 +20,23 @@ class ProfileWS {
             }
         }
     }
+    
+    
+    class func editProfile(profileId: String, studyField: String, district: String, birthDate: String, profileSummary: String, _ success: @escaping Success, error: @escaping ErrorMessage) {
+        
+        let dic: [String: Any] = ["profileSummary"     : profileSummary,
+                                  "studyField"        : studyField,
+                                  "district"      : district,
+                                  "birthDate"      : birthDate
+                                    ]
+        
+        CSWebServiceManager.shared.request.postRequest(urlString: WebServicesURL.editprofile(profileId), parameters: dic) { (response) in
+            
+            if response.errorCode == 201 {
+                success()
+            }else{
+                error(StatusCodeBE.getErrorMessageByStatusCode(response.errorCode))
+            }
+        }
+    }
 }

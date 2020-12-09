@@ -6,9 +6,7 @@
 //  Copyright © 2020 Kenyi Rodriguez. All rights reserved.
 //
 
-import Foundation
 import UIKit
-import SwiftUI
 
 class MainNewPost: UIViewController{
     override var preferredStatusBarStyle: UIStatusBarStyle{
@@ -25,12 +23,12 @@ class MainNewPost: UIViewController{
         
         var imageId = ""
         
-        //if isImageSelected {
+        if isImageSelected {
             imageId = UUID().uuidString
             ImageWS.sendIamge(imageId: imageId, image: imageForUpload!, {()}, error: {(errorMessate) in
                 print(errorMessate)
             })
-        //}
+        }
         
         
         if (newPostBox.text!.isEmpty) {
@@ -46,7 +44,7 @@ class MainNewPost: UIViewController{
     @IBAction func TapCloseKeyboard(_ sender: Any) {
         self.view.endEditing(true)
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -65,7 +63,7 @@ class MainNewPost: UIViewController{
         
         _ = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect ?? .zero
         _ = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double ?? 0
-
+        
     }
     
     @objc func keyboardWillHide(_ notification: Notification) {
@@ -77,8 +75,6 @@ extension MainNewPost: NewPostDelegate {
         self.imageForUpload = image
         self.isImageSelected = isImageSelected
     }
-    
-    
 }
 
 

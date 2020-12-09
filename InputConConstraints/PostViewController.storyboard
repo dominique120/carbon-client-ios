@@ -647,7 +647,7 @@
                                                     <imageReference key="image" image="arrowshape.turn.up.left.fill" catalog="system" symbolScale="large"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="clickBtnBack:" destination="Lry-Ev-ktL" eventType="touchUpOutside" id="jUw-z1-0pg"/>
+                                                    <action selector="clickBtnBack:" destination="Lry-Ev-ktL" eventType="touchUpInside" id="EO2-5c-zb4"/>
                                                 </connections>
                                             </button>
                                         </subviews>

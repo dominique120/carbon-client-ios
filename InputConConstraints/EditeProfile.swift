@@ -19,6 +19,7 @@ class EditeProfile : UIViewController{
     @IBOutlet weak var district: UITextField!
     @IBOutlet weak var DOB: UITextField!
     @IBOutlet weak var name: UITextField!
+    @IBOutlet weak var profileImage: IMGUIview!
     
     // Add image outlet and loader
     
@@ -27,12 +28,24 @@ class EditeProfile : UIViewController{
         self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func confirmChanges(_ sender: Any) {
+        ProfileWS.editProfile(profileId: g_activePersonId, studyField: studyField.text!, district: district.text!, birthDate: DOB.text!, profileSummary: "", {()}, error: {(errorMessage) in print(errorMessage)})
+        
+        PersonWS.editPerson(personId: g_activePersonId, firstName: "", lastName: "", displayName: "", {()}, error: {(errorMessage) in print(errorMessage)})
+        
+        self.navigationController?.popViewController(animated: true)
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         studyField.text = ProfileBE.shared?.studyField
         district.text = ProfileBE.shared?.district
         DOB.text = ProfileBE.shared?.birthDate
         name.text = PersonBE.shared!.firstName + " " + PersonBE.shared!.lastName
+        
+        profileImage.downloadImageInUrlString(Constants.image_fs + PersonBE.shared!.profilePictureUrl) { (image, urlString) in
+            self.profileImage.image = image
+        }
+        
         super.viewWillAppear(animated)
     }
     

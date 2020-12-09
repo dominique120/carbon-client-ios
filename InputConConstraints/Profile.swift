@@ -21,6 +21,11 @@ class MainProfile: UIViewController{
     @IBOutlet weak var profFollowingCount: UILabel!
         
     @IBAction func clickBtnCerrarrSesion(_ sender: Any){
+        PersonBE.shared = nil
+        UserBE.shared = nil
+        ProfileBE.shared = nil
+        g_activePersonId = "-1"
+        g_activePostId = "-1"
         self.tabBarController?.navigationController?.popToRootViewController(animated: true)
     }
     override var preferredStatusBarStyle: UIStatusBarStyle{

@@ -35,4 +35,21 @@ class PersonWS {
         }
     }
     
+    class func editPerson(personId: String, firstName: String, lastName: String, displayName: String, _ success: @escaping Success, error: @escaping ErrorMessage) {
+        
+        let dic: [String: Any] = ["firstName"     : firstName,
+                                  "lastName"        : lastName,
+                                  "displayName"      : displayName
+                                    ]
+        
+        CSWebServiceManager.shared.request.postRequest(urlString: WebServicesURL.editPerson(personId), parameters: dic) { (response) in
+            
+            if response.errorCode == 201 {
+                success()
+            }else{
+                error(StatusCodeBE.getErrorMessageByStatusCode(response.errorCode))
+            }
+        }
+    }
+    
 }

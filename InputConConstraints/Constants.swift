@@ -61,4 +61,12 @@ struct WebServicesURL {
         return Constants.api_base_url + "/deletepost?id=\(postId)"
     }
     
+    static func editprofile(_ profileId: String) -> String {
+        return Constants.api_base_url + "/editprofile?id=\(profileId)"
+    }
+    
+    static func editPerson(_ personId: String) -> String {
+        return Constants.api_base_url + "/editperson?id=\(personId)"
+    }
+    
 }

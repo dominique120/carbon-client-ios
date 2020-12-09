@@ -212,6 +212,9 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="clickBtnCerrarrSesion:" destination="3fN-Bc-pE8" eventType="touchUpInside" id="EQv-Ev-FA6"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
@@ -358,6 +361,9 @@
                                                 </constraints>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" image="square.and.arrow.up" catalog="system"/>
+                                                <connections>
+                                                    <action selector="confirmChanges:" destination="TfB-BP-AGH" eventType="touchUpInside" id="g4e-tP-soi"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.090196078430000007" green="0.090196078430000007" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
@@ -525,6 +531,7 @@
                         <outlet property="DOB" destination="6nE-nE-S8U" id="fDE-UK-Ouy"/>
                         <outlet property="district" destination="ufu-ps-0se" id="Pz5-j9-5nx"/>
                         <outlet property="name" destination="Xjt-Hv-pGA" id="6C1-Sl-42z"/>
+                        <outlet property="profileImage" destination="8wW-f2-f7m" id="LNM-RG-Erc"/>
                         <outlet property="studyField" destination="9gP-Bn-Zds" id="K6X-jg-Obt"/>
                     </connections>
                 </viewController>
