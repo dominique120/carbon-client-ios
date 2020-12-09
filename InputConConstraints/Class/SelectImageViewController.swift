@@ -8,14 +8,16 @@
 
 import UIKit
 
+protocol NewPostDelegate {
+    func selectedImage(_ image: UIImage, _ isImageSelected: Bool)
+}
+
 class imageSelectViewController: UIViewController {
 
-
+    var postDelegate: NewPostDelegate?
+    
     @IBOutlet weak var imageView: UIImageView!
-    
     var imagePicker: ImagePicker!
-    
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,12 +36,19 @@ class imageSelectViewController: UIViewController {
     @IBAction  func clickBtnBack(_ sender: Any){
         self.navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func selectImage(_ sender: Any) {
+        self.postDelegate?.selectedImage(imageView.image!, true)
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 }
 
 extension imageSelectViewController: ImagePickerDelegate {
 
     func didSelect(image: UIImage?) {
         self.imageView.image = image
+        self.postDelegate?.selectedImage(image!, true)
     }
     
 }

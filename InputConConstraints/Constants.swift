@@ -22,7 +22,8 @@ struct WebServicesURL {
     static let newPost = Constants.api_base_url + "/newpost"
     static let getPosts = Constants.api_base_url + "/getposts"
     static let newComment = Constants.api_base_url + "/newcomment"
-    static let newUser = Constants.api_base_url + "/new_user"  
+    static let newUser = Constants.api_base_url + "/new_user"
+    static let uploadImage = Constants.api_base_url + "/img_uploader"
     
     static func getCommentsByPost(_ postId: String) -> String {
         return Constants.api_base_url + "/getpostcomments?id=\(postId)"

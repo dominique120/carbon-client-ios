@@ -17,9 +17,9 @@ class MyPostsCell: UITableViewCell {
     @IBOutlet weak var posterName: UIButton!
     @IBOutlet weak var postImage: UIImageView!
     @IBOutlet weak var commentText: UILabel!
+    @IBOutlet weak var btnLike: UIButton!
     
-    @IBAction func likePostButton(_ sender: Any) {
-    }
+    weak var parentViewController : MyPost?
     
     @IBAction func viewCommentsButton(_ sender: Any) {
         g_activePostId = objPost.postId
@@ -50,10 +50,8 @@ class MyPostsCell: UITableViewCell {
     
     @IBAction func likePost(_ sender: Any) {
         LikeWS.newLike(postId: objPost.postId, personId: PersonBE.shared!.personId, success: {
-            // print a message or something
-            // or change button color
-            print("Le diste like a la publicacion!")
-            //(UIApplication.shared.delegate as! AppDelegate).window.sc
+            self.btnLike.tintColor = UIColor.red
+            Util.showMessage(controller: self.parentViewController!, message: "Like!", seconds: 1.5)
         }, error: {
             (errorMessage) in
             print(errorMessage)

@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-
 protocol MainPostDelegate {
     func targetPost(_ cell: StreamCell, selectedPost objPlace: PostBE)
 }
@@ -23,7 +21,6 @@ class StreamCell: UITableViewCell {
     @IBOutlet weak var postContent: UILabel!
     
     weak var parentViewController : MainPost?
-
     
     var delegate: MainPostDelegate?
     
@@ -38,7 +35,6 @@ class StreamCell: UITableViewCell {
         g_activePersonId = objPost.personId
         self.delegate?.targetPost(self, selectedPost: self.objPost)
     }
-    
     
     var objPost: PostBE! {
         didSet {
@@ -61,13 +57,12 @@ class StreamCell: UITableViewCell {
     
     @IBAction func likePost(_ sender: Any) {
         LikeWS.newLike(postId: objPost.postId, personId: PersonBE.shared!.personId, success: {
+            self.likePost.tintColor = UIColor.red
             Util.showMessage(controller: self.parentViewController!, message: "Like!", seconds: 1.5)            
         }, error: {
             (errorMessage) in
             print(errorMessage)
         })
     }
-    
-
 }
 

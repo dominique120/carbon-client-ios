@@ -15,7 +15,26 @@ class EditeProfile : UIViewController{
         return.lightContent
     }
     
+    @IBOutlet weak var studyField: UITextField!
+    @IBOutlet weak var district: UITextField!
+    @IBOutlet weak var DOB: UITextField!
+    @IBOutlet weak var name: UITextField!
+    
+    // Add image outlet and loader
+    
+    
     @IBAction  func clickBtnBack(_ sender: Any){
         self.navigationController?.popViewController(animated: true)
     }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        studyField.text = ProfileBE.shared?.studyField
+        district.text = ProfileBE.shared?.district
+        DOB.text = ProfileBE.shared?.birthDate
+        name.text = PersonBE.shared!.firstName + " " + PersonBE.shared!.lastName
+        super.viewWillAppear(animated)
+    }
+    
+    
 }

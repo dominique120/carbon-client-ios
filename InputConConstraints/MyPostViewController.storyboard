@@ -62,7 +62,7 @@
                                                                 <imageReference key="image" image="heart.fill" catalog="system" symbolScale="large"/>
                                                             </state>
                                                             <connections>
-                                                                <action selector="likePostButton:" destination="y8U-EJ-5Wh" eventType="touchUpInside" id="rq6-md-9Gt"/>
+                                                                <action selector="likePost:" destination="y8U-EJ-5Wh" eventType="touchUpInside" id="aC9-ax-lYj"/>
                                                             </connections>
                                                         </button>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u7n-Jb-uhr">
@@ -118,6 +118,7 @@
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
+                                                    <outlet property="btnLike" destination="ARc-4n-fgA" id="EbI-sx-GjX"/>
                                                     <outlet property="commentText" destination="4VP-am-9BE" id="jt8-Uo-Hs1"/>
                                                     <outlet property="postImage" destination="u7n-Jb-uhr" id="KEM-M9-mGy"/>
                                                     <outlet property="posterName" destination="xLI-6j-kwR" id="5KE-Q9-8O9"/>

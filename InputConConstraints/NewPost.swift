@@ -15,17 +15,31 @@ class MainNewPost: UIViewController{
         return.lightContent
     }
     
+    var imageForUpload: UIImage?
+    var isImageSelected: Bool = false
+    
     @IBOutlet weak var newPostBox: TVUIView!
     @IBOutlet weak var newPost: UIButton!
     
     @IBAction func sendNewPost(_ sender: Any) {
+        
+        var imageId = ""
+        
+        if isImageSelected {
+            imageId = UUID().uuidString
+            ImageWS.sendIamge(imageId: imageId, image: imageForUpload!, {()}, error: {(errorMessate) in
+                print(errorMessate)
+            })
+        }
+        
+        
         if (newPostBox.text!.isEmpty) {
             Util.showMessage(controller: self, message: "Ingrese un texto", seconds: 5)
         } else {
             PostWS.newPost({() in
                 Util.showMessage(controller: self, message: "Enviaste un mensaje!", seconds: 3.0)
-                // pop view controller
-            }, img: "/img.jpg", postBody: newPostBox.text!, personId: PersonBE.shared!.personId, posterName: PersonBE.shared!.displayName, error: {(errorMessage) in print(errorMessage)})
+                
+            }, img: imageId, postBody: newPostBox.text!, personId: PersonBE.shared!.personId, posterName: PersonBE.shared!.displayName, error: {(errorMessage) in print(errorMessage)})
         }
     }
     
@@ -49,13 +63,22 @@ class MainNewPost: UIViewController{
     
     @objc func keyboardWillShow(_ notification: Notification) {
         
-        let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect ?? .zero
-        let animationDuration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double ?? 0
+        _ = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect ?? .zero
+        _ = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double ?? 0
 
     }
     
     @objc func keyboardWillHide(_ notification: Notification) {
     }
+}
+
+extension MainNewPost: NewPostDelegate {
+    func selectedImage(_ image: UIImage, _ isImageSelected: Bool) {
+        self.imageForUpload = image
+        self.isImageSelected = isImageSelected
+    }
+    
+    
 }
 
 

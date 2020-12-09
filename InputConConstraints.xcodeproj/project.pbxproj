@@ -25,6 +25,7 @@
 		15542EC32577E19100252F6F /* StreamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15542EC22577E19100252F6F /* StreamCell.swift */; };
 		15600356257EFD900070C0F7 /* MyPostsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15600355257EFD900070C0F7 /* MyPostsTable.swift */; };
 		15600359257EFE220070C0F7 /* MyPostsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15600358257EFE220070C0F7 /* MyPostsCell.swift */; };
+		1571FCDB2580946100350571 /* ImageWS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1571FCDA2580946100350571 /* ImageWS.swift */; };
 		157365D3256F362B0081E7E3 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157365D2256F362B0081E7E3 /* ImageDownloader.swift */; };
 		157365D5256F37F10081E7E3 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157365D4256F37F10081E7E3 /* AlertManager.swift */; };
 		157365D7256F39A60081E7E3 /* FollowerBE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157365D6256F39A60081E7E3 /* FollowerBE.swift */; };
@@ -93,6 +94,7 @@
 		15542EC22577E19100252F6F /* StreamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamCell.swift; sourceTree = "<group>"; };
 		15600355257EFD900070C0F7 /* MyPostsTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPostsTable.swift; sourceTree = "<group>"; };
 		15600358257EFE220070C0F7 /* MyPostsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPostsCell.swift; sourceTree = "<group>"; };
+		1571FCDA2580946100350571 /* ImageWS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWS.swift; sourceTree = "<group>"; };
 		157365D2256F362B0081E7E3 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		157365D4256F37F10081E7E3 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		157365D6256F39A60081E7E3 /* FollowerBE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerBE.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				15CCC777257DDA0500C21D37 /* AccountWS.swift */,
 				15CCC77B257E9DAA00C21D37 /* ProfileWS.swift */,
 				15217427257F4AD900D4BC9E /* FollowerWS.swift */,
+				1571FCDA2580946100350571 /* ImageWS.swift */,
 			);
 			name = WS;
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 				15CCC763257CA8AB00C21D37 /* ProfileBE.swift in Sources */,
 				15419AAC257843DC00F7CA1F /* Globals.swift in Sources */,
 				4E8D72BD2536716C00573733 /* BTUIView.swift in Sources */,
+				1571FCDB2580946100350571 /* ImageWS.swift in Sources */,
 				15CCC76D257CAF5700C21D37 /* WSUtil.swift in Sources */,
 				159BFF1C257C6B2A00CD5124 /* WebServiceManager.swift in Sources */,
 				8810A24B257EE23700AB9B25 /* EditePostBtn.swift in Sources */,
