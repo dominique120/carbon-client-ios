@@ -37,7 +37,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.090196078431372548" green="0.090196078431372548" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="4ME-9n-Z0n" firstAttribute="centerY" secondItem="mnI-AP-SGu" secondAttribute="centerY" id="hUC-5r-ckP"/>
                                             <constraint firstAttribute="height" constant="44" id="udk-HZ-ql2"/>
@@ -83,6 +83,17 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="6a6-oK-GhS" secondAttribute="height" multiplier="46:33" id="NFc-Qi-Sf6"/>
                                                             </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="conerRadius">
+                                                                    <real key="value" value="10"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="0.0"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7EY-Wy-6nk">
                                                             <rect key="frame" x="20" y="358.5" width="374" height="20.5"/>
@@ -612,7 +623,7 @@
                                     </view>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FEH-BM-CY0">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                        <color key="backgroundColor" red="0.090196078430000007" green="0.090196078430000007" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="Lzs-vw-iwR"/>
                                         </constraints>
@@ -626,12 +637,27 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tkW-fb-gQo">
+                                                <rect key="frame" x="8" y="11.5" width="34" height="21.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="34" id="96d-CT-cSf"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="arrowshape.turn.up.left.fill" catalog="system" symbolScale="large"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="clickBtnBack:" destination="Lry-Ev-ktL" eventType="touchUpOutside" id="jUw-z1-0pg"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.090196078430000007" green="0.090196078430000007" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstItem="tkW-fb-gQo" firstAttribute="top" secondItem="X40-Kc-zL3" secondAttribute="top" constant="11.5" id="4Vm-Bf-u7Q"/>
                                             <constraint firstItem="hti-VD-avb" firstAttribute="centerX" secondItem="X40-Kc-zL3" secondAttribute="centerX" id="8Gt-ok-A7t"/>
                                             <constraint firstItem="hti-VD-avb" firstAttribute="centerY" secondItem="X40-Kc-zL3" secondAttribute="centerY" id="VPe-Ix-a5D"/>
                                             <constraint firstAttribute="height" constant="44" id="YmB-yZ-7pP"/>
+                                            <constraint firstItem="tkW-fb-gQo" firstAttribute="leading" secondItem="X40-Kc-zL3" secondAttribute="leading" constant="8" id="hNa-aB-F0O"/>
                                         </constraints>
                                     </view>
                                 </subviews>

@@ -19,6 +19,12 @@ class ProfileFollow: UIViewController{
     @IBOutlet weak var followerCount: UILabel!
     @IBOutlet weak var followingCount: UILabel!
     
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return.lightContent
+    }
+    @IBAction  func clickBtnBack(_ sender: Any){
+        self.navigationController?.popViewController(animated: true)
+    }
     @IBAction func followPerson(_ sender: Any) {
         FollowerWS.followSomeone(followerId: g_activePersonId, followingId: thisPerson!.personId, success: { () in
             Util.showMessage(controller: self , message: "Followed!", seconds: 1.5)

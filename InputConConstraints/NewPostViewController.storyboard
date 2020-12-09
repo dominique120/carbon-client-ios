@@ -47,13 +47,13 @@
                                                     <constraint firstAttribute="width" constant="77" id="Q4x-Oy-6zF"/>
                                                 </constraints>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Send" image="square.and.arrow.up" catalog="system"/>
+                                                <state key="normal" title="Send" image="square.and.arrow.up.fill" catalog="system"/>
                                                 <connections>
                                                     <action selector="sendNewPost:" destination="yja-ji-fet" eventType="touchUpInside" id="HvT-bC-4bv"/>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.090196078431372548" green="0.090196078431372548" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="BFA-s7-GrW"/>
                                             <constraint firstAttribute="trailing" secondItem="jds-mr-xBS" secondAttribute="trailing" constant="14" id="Qix-0B-tyO"/>
@@ -186,6 +186,10 @@
                                         <state key="normal">
                                             <imageReference key="image" image="arrowshape.turn.up.left.fill" catalog="system" symbolScale="large"/>
                                         </state>
+                                        <connections>
+                                            <action selector="clickBtnBack:" destination="WPc-2c-xzg" eventType="touchUpInside" id="6sP-KA-wvZ"/>
+                                            <action selector="showImagePicker:" destination="WPc-2c-xzg" eventType="touchUpOutside" id="yZr-gQ-KIA"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnX-CJ-6rk">
                                         <rect key="frame" x="376" y="15" width="30" height="22"/>
@@ -196,14 +200,14 @@
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal">
-                                            <imageReference key="image" image="photo.fill" catalog="system" symbolScale="large"/>
+                                            <imageReference key="image" image="square.and.arrow.up.fill" catalog="system" symbolScale="large"/>
                                         </state>
                                         <connections>
                                             <action selector="sendNewPost:" destination="yja-ji-fet" eventType="touchUpInside" id="51Z-3b-Af3"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.10980392160000001" green="0.1019607843" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="GGN-1c-e8c"/>
                                     <constraint firstItem="AuL-zD-nc4" firstAttribute="top" secondItem="03X-9P-awN" secondAttribute="top" constant="15" id="KLB-NL-dug"/>
@@ -212,34 +216,38 @@
                                     <constraint firstItem="cnX-CJ-6rk" firstAttribute="top" secondItem="03X-9P-awN" secondAttribute="top" constant="15" id="p6H-gB-4xv"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPG-V3-fWQ">
-                                <rect key="frame" x="184" y="310" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="showImagePicker:" destination="WPc-2c-xzg" eventType="touchUpInside" id="mF5-9C-ZxX"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BHa-rh-aUb">
-                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="BHa-rh-aUb">
+                                <rect key="frame" x="0.0" y="300.5" width="414" height="294.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="YbR-sc-aOh"/>
-                                    <constraint firstAttribute="width" constant="240" id="kff-7P-0QY"/>
+                                    <constraint firstAttribute="height" constant="297" id="CBE-EP-HxP"/>
+                                    <constraint firstAttribute="width" constant="414" id="XxF-Lj-fht"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPG-V3-fWQ">
+                                <rect key="frame" x="0.0" y="299.5" width="414" height="297"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="297" id="Qau-MZ-K2R"/>
+                                    <constraint firstAttribute="width" constant="414" id="pLX-bl-E0L"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LHu-hG-vcy"/>
                         <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="03X-9P-awN" firstAttribute="trailing" secondItem="LHu-hG-vcy" secondAttribute="trailing" id="CRB-eP-1yq"/>
+                            <constraint firstItem="BHa-rh-aUb" firstAttribute="centerY" secondItem="B4r-wC-bFn" secondAttribute="centerY" id="KEV-sY-cPb"/>
                             <constraint firstItem="03X-9P-awN" firstAttribute="leading" secondItem="LHu-hG-vcy" secondAttribute="leading" id="LME-ka-IJp"/>
                             <constraint firstItem="03X-9P-awN" firstAttribute="top" secondItem="Qx5-EL-Str" secondAttribute="bottom" id="O0f-cd-exe"/>
+                            <constraint firstItem="XPG-V3-fWQ" firstAttribute="centerX" secondItem="B4r-wC-bFn" secondAttribute="centerX" id="QVB-LL-f97"/>
+                            <constraint firstItem="XPG-V3-fWQ" firstAttribute="centerY" secondItem="B4r-wC-bFn" secondAttribute="centerY" id="Y53-ZI-7Ur"/>
                             <constraint firstItem="Qx5-EL-Str" firstAttribute="top" secondItem="B4r-wC-bFn" secondAttribute="top" id="ar8-0E-gXE"/>
                             <constraint firstItem="Qx5-EL-Str" firstAttribute="leading" secondItem="B4r-wC-bFn" secondAttribute="leading" id="bwi-0H-GXs"/>
+                            <constraint firstItem="BHa-rh-aUb" firstAttribute="centerX" secondItem="B4r-wC-bFn" secondAttribute="centerX" id="ck9-Ei-JVi"/>
                             <constraint firstItem="03X-9P-awN" firstAttribute="top" secondItem="Qx5-EL-Str" secondAttribute="bottom" id="gWm-ZC-Ru6"/>
-                            <constraint firstItem="BHa-rh-aUb" firstAttribute="centerX" secondItem="B4r-wC-bFn" secondAttribute="centerX" id="i5j-Bk-psk"/>
                             <constraint firstAttribute="trailing" secondItem="Qx5-EL-Str" secondAttribute="trailing" id="viW-4l-goA"/>
-                            <constraint firstItem="BHa-rh-aUb" firstAttribute="centerY" secondItem="B4r-wC-bFn" secondAttribute="centerY" id="yY7-QW-Lf1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fy6-pb-vJj"/>
@@ -255,9 +263,8 @@
     <resources>
         <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
         <image name="photo" catalog="system" width="128" height="93"/>
-        <image name="photo.fill" catalog="system" width="128" height="93"/>
         <image name="plus.app.fill" catalog="system" width="128" height="114"/>
-        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
