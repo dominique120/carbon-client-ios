@@ -6,7 +6,9 @@
 //  Copyright © 2020 Kenyi Rodriguez. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 var g_activePostId: String = ""
 var g_activePersonId: String = ""
+var g_imageSet: Bool = false
+var g_selectedImage: UIImage?

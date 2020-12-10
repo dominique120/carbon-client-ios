@@ -21,30 +21,34 @@ class MainNewPost: UIViewController{
     
     @IBAction func sendNewPost(_ sender: Any) {
         
-        var imageId = ""
-        
-        if isImageSelected {
+        if !g_imageSet {
+            Util.showMessage(controller: self, message: "Seleccione una imagen", seconds: 2.0)
+            
+        } else {
+            var imageId: String?
             imageId = UUID().uuidString
-            ImageWS.sendIamge(imageId: imageId, image: imageForUpload!, {()}, error: {(errorMessate) in
+            ImageWS.sendIamge(imageId: imageId!, image: g_selectedImage!, {() in
+                g_imageSet = false
+            }, error: {(errorMessate) in
                 print(errorMessate)
             })
-        }
-        
-        
-        if (newPostBox.text!.isEmpty) {
-            Util.showMessage(controller: self, message: "Ingrese un texto", seconds: 5)
-        } else {
-            PostWS.newPost({() in
-                Util.showMessage(controller: self, message: "Enviaste un mensaje!", seconds: 3.0)
-                
-            }, img: imageId, postBody: newPostBox.text!, personId: PersonBE.shared!.personId, posterName: PersonBE.shared!.displayName, error: {(errorMessage) in print(errorMessage)})
+            
+            
+            if (newPostBox.text!.isEmpty) {
+                Util.showMessage(controller: self, message: "Ingrese un texto", seconds: 2.0)
+            } else {
+                PostWS.newPost({() in
+                    Util.showMessage(controller: self, message: "Enviaste un mensaje!", seconds: 2.0)
+                    self.newPostBox.text = ""
+                }, img: "/" + imageId! + ".jpg", postBody: newPostBox.text!, personId: PersonBE.shared!.personId, posterName: PersonBE.shared!.displayName, error: {(errorMessage) in print(errorMessage)})
+            }
         }
     }
     
     @IBAction func TapCloseKeyboard(_ sender: Any) {
         self.view.endEditing(true)
     }
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         

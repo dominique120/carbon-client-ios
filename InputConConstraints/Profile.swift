@@ -26,6 +26,8 @@ class MainProfile: UIViewController{
         ProfileBE.shared = nil
         g_activePersonId = "-1"
         g_activePostId = "-1"
+        g_imageSet = false
+        g_selectedImage = nil
         self.tabBarController?.navigationController?.popToRootViewController(animated: true)
     }
     override var preferredStatusBarStyle: UIStatusBarStyle{

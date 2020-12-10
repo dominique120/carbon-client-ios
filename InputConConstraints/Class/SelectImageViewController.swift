@@ -40,6 +40,8 @@ class imageSelectViewController: UIViewController {
     
     @IBAction func selectImage(_ sender: Any) {
         print("In selectImage button")
+        g_selectedImage = imageView.image!
+        g_imageSet = true
         self.postDelegate?.selectedImage(imageView.image!, true)
         self.navigationController?.popViewController(animated: true)
     }
@@ -50,6 +52,7 @@ extension imageSelectViewController: ImagePickerDelegate {
 
     func didSelect(image: UIImage?) {
         print("In didSelect delegate method")
+        g_selectedImage = imageView.image!
         self.imageView.image = image
         self.postDelegate?.selectedImage(image!, true)
     }

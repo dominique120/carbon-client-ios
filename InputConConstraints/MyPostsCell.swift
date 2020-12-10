@@ -30,7 +30,7 @@ class MyPostsCell: UITableViewCell {
         g_activePostId = objPost.postId
         parentViewController?.showAlert(title: "IsilInsta", message: "Desea eliminar su post", acceptButton: "Confirmar", cancelButton: "Cancelar", pressAccept: {
             PostWS.deletePost(postId: g_activePostId, success: {() in
-                Util.showMessage(controller: self.parentViewController!, message: "Eliminaste el post", seconds: 3.0)
+                Util.showMessage(controller: self.parentViewController!, message: "Eliminaste el post", seconds: 2.0)
                 self.parentViewController?.getAllPosts()
             }, error: {(errorMessage)in print(errorMessage)})
         }, pressCancel: {

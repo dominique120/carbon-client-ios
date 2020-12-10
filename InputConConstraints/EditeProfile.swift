@@ -20,8 +20,9 @@ class EditeProfile : UIViewController{
     @IBOutlet weak var DOB: UITextField!
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var profileImage: IMGUIview!
-    
-    // Add image outlet and loader
+    @IBOutlet weak var lastName: UITextField!
+    @IBOutlet weak var displayName: UITextField!
+    @IBOutlet weak var aboutMe: UITextField!
     
     
     @IBAction  func clickBtnBack(_ sender: Any){
@@ -29,9 +30,9 @@ class EditeProfile : UIViewController{
     }
     
     @IBAction func confirmChanges(_ sender: Any) {
-        ProfileWS.editProfile(profileId: g_activePersonId, studyField: studyField.text!, district: district.text!, birthDate: DOB.text!, profileSummary: "", {()}, error: {(errorMessage) in print(errorMessage)})
+        ProfileWS.editProfile(profileId: ProfileBE.shared!.profileId, studyField: studyField.text!, district: district.text!, birthDate: DOB.text!, profileSummary: aboutMe.text!, {()}, error: {(errorMessage) in print(errorMessage)})
         
-        PersonWS.editPerson(personId: g_activePersonId, firstName: "", lastName: "", displayName: "", {()}, error: {(errorMessage) in print(errorMessage)})
+        PersonWS.editPerson(personId: PersonBE.shared!.personId, firstName: name.text!, lastName: lastName.text!, displayName: displayName.text!, {()}, error: {(errorMessage) in print(errorMessage)})
         
         self.navigationController?.popViewController(animated: true)
     }
@@ -40,7 +41,11 @@ class EditeProfile : UIViewController{
         studyField.text = ProfileBE.shared?.studyField
         district.text = ProfileBE.shared?.district
         DOB.text = ProfileBE.shared?.birthDate
-        name.text = PersonBE.shared!.firstName + " " + PersonBE.shared!.lastName
+        name.text = PersonBE.shared!.firstName
+        lastName.text = PersonBE.shared!.lastName
+        displayName.text = PersonBE.shared!.displayName
+        aboutMe.text = ProfileBE.shared!.profileSummary
+        
         
         profileImage.downloadImageInUrlString(Constants.image_fs + PersonBE.shared!.profilePictureUrl) { (image, urlString) in
             self.profileImage.image = image

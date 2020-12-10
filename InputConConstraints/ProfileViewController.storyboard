@@ -556,7 +556,10 @@
                     <navigationItem key="navigationItem" id="hXE-ER-zkJ"/>
                     <connections>
                         <outlet property="DOB" destination="6nE-nE-S8U" id="fDE-UK-Ouy"/>
+                        <outlet property="aboutMe" destination="XCO-yE-8HT" id="o49-Y5-bTH"/>
+                        <outlet property="displayName" destination="oyY-ap-yPP" id="tHF-rK-qqH"/>
                         <outlet property="district" destination="ufu-ps-0se" id="Pz5-j9-5nx"/>
+                        <outlet property="lastName" destination="eOE-AS-fZk" id="ITX-VW-spp"/>
                         <outlet property="name" destination="Xjt-Hv-pGA" id="6C1-Sl-42z"/>
                         <outlet property="profileImage" destination="8wW-f2-f7m" id="LNM-RG-Erc"/>
                         <outlet property="studyField" destination="9gP-Bn-Zds" id="K6X-jg-Obt"/>

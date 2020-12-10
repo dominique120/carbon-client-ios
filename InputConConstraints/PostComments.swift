@@ -40,7 +40,7 @@ class MainComment: UIViewController{
     
     @IBAction func sendComment(_ sender: Any) {
         if (commentTextBox.text!.isEmpty) {
-            Util.showMessage(controller: self, message: "Ingrese un comentario", seconds: 3)
+            Util.showMessage(controller: self, message: "Ingrese un comentario", seconds: 2)
         } else {
             
             CommentWS.newComment({
