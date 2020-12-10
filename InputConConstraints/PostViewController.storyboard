@@ -354,6 +354,7 @@
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="OKZ-gz-ZFr" appends="YES" id="zJR-PF-jzC"/>
+                                    <outletCollection property="gestureRecognizers" destination="Krk-OI-HQm" appends="YES" id="rI2-UZ-bP6"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -384,8 +385,13 @@
                         <action selector="clickBtnCloseKeyboard:" destination="Lum-IL-IOq" id="2mM-fB-z7k"/>
                     </connections>
                 </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="Krk-OI-HQm">
+                    <connections>
+                        <action selector="swipeRecognizer:" destination="Lum-IL-IOq" id="z3a-Lf-5qt"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="345" y="378"/>
+            <point key="canvasLocation" x="412" y="372"/>
         </scene>
         <!--Main-->
         <scene sceneID="XXi-Xy-iWO">
@@ -662,6 +668,7 @@
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="X40-Kc-zL3" firstAttribute="top" secondItem="FEH-BM-CY0" secondAttribute="bottom" id="01V-bN-NEl"/>
                                     <constraint firstItem="X40-Kc-zL3" firstAttribute="leading" secondItem="gLb-As-QbD" secondAttribute="leading" id="C2u-yO-xgG"/>
@@ -673,6 +680,9 @@
                                     <constraint firstItem="X40-Kc-zL3" firstAttribute="top" secondItem="FEH-BM-CY0" secondAttribute="bottom" id="lqm-Oq-OWO"/>
                                     <constraint firstItem="24A-s3-TGl" firstAttribute="centerX" secondItem="gLb-As-QbD" secondAttribute="centerX" id="rDK-Tj-cNf"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="nf9-47-FRl" appends="YES" id="J9a-x0-k5y"/>
+                                </connections>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yoL-2v-YBa"/>
@@ -699,6 +709,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oVF-mP-CCG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="nf9-47-FRl">
+                    <connections>
+                        <action selector="swipeRecognizer:" destination="Lry-Ev-ktL" id="mfY-gm-U2r"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="413" y="-313"/>
         </scene>

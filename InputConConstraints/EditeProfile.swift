@@ -31,6 +31,12 @@ class EditeProfile : UIViewController{
         self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func swipeRecognizer(_ sender: UISwipeGestureRecognizer) {
+        if (sender.direction == .right) {          
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
+    
     @IBAction func confirmChanges(_ sender: Any) {
         ProfileWS.editProfile(profileId: ProfileBE.shared!.profileId, studyField: studyField.text!, district: district.text!, birthDate: DOB.text!, profileSummary: aboutMe.text!, {()}, error: {(errorMessage) in print(errorMessage)})
         
@@ -40,10 +46,6 @@ class EditeProfile : UIViewController{
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
-        
-        
-        
         studyField.text = ProfileBE.shared?.studyField
         district.text = ProfileBE.shared?.district
         DOB.text = ProfileBE.shared?.birthDate

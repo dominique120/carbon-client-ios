@@ -11,6 +11,12 @@ import UIKit
 
 class MainComment: UIViewController{
     
+    @IBAction func swipeRecognizer(_ sender: UISwipeGestureRecognizer) {
+        if (sender.direction == .right) {
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
+    
     @IBOutlet weak var commentTable: UITableView!
     
     var arrayComments = [CommentBE]()

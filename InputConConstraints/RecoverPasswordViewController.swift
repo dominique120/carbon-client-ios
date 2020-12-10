@@ -39,9 +39,8 @@ class RecoverPaswordViewController: UIViewController {
     
     
     @IBAction func swipeRecognizer(_ sender: UISwipeGestureRecognizer) {
-        if (sender.direction == .right) {
-            print("Swiped right")
-            self.dismiss(animated: true, completion: nil)
+        if (sender.direction == .right) {           
+            self.navigationController?.popViewController(animated: true)
         }
     }
     

@@ -54,6 +54,7 @@ extension imageSelectViewController: ImagePickerDelegate {
         print("In didSelect delegate method")
         g_selectedImage = imageView.image!
         self.imageView.image = image
+        g_imageSet = true
         self.postDelegate?.selectedImage(image!, true)
     }
     

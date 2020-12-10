@@ -358,6 +358,7 @@
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="IKQ-vL-Cq2" appends="YES" id="ALT-Bp-TlE"/>
+                                    <outletCollection property="gestureRecognizers" destination="C0j-6P-RNH" appends="YES" id="o2o-kn-3tv"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -388,6 +389,11 @@
                         <action selector="clickBtnCloseKeyboard:" destination="onX-Uj-Wqj" id="qJg-S6-Y0s"/>
                     </connections>
                 </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="C0j-6P-RNH">
+                    <connections>
+                        <action selector="swipeRecognizer:" destination="onX-Uj-Wqj" id="wbv-Cg-rLA"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1122" y="74"/>
         </scene>

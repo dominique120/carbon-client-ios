@@ -133,7 +133,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="HBS-F1-wnk" kind="modal" modalPresentationStyle="fullScreen" id="KZJ-Sm-pzx"/>
+                                                    <segue destination="HBS-F1-wnk" kind="show" id="KZJ-Sm-pzx"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMW-Oe-Lim">
@@ -143,7 +143,7 @@
                                                     <color key="titleColor" systemColor="systemBlueColor"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="Lxz-6d-1Ui" kind="modal" modalPresentationStyle="fullScreen" id="0mo-wp-PRN"/>
+                                                    <segue destination="Lxz-6d-1Ui" kind="show" id="0mo-wp-PRN"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXI-vc-X5t" customClass="BTUView" customModule="IsilInsta" customModuleProvider="target">

@@ -245,6 +245,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="LHu-hG-vcy"/>
                         <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="03X-9P-awN" firstAttribute="trailing" secondItem="LHu-hG-vcy" secondAttribute="trailing" id="CRB-eP-1yq"/>
                             <constraint firstItem="BHa-rh-aUb" firstAttribute="centerY" secondItem="B4r-wC-bFn" secondAttribute="centerY" id="KEV-sY-cPb"/>

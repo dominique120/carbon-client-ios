@@ -10,6 +10,12 @@ import UIKit
 
 class ProfileFollow: UIViewController{
     
+    @IBAction func swipeRecognizer(_ sender: UISwipeGestureRecognizer) {
+        if (sender.direction == .right) {
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
+    
     @IBOutlet weak var profileImg: IMGUIview!
     @IBOutlet weak var followBtn: BTUView!
     @IBOutlet weak var studyField: UILabel!
