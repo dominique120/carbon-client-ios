@@ -14,7 +14,6 @@ class EditeProfile : UIViewController{
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return.lightContent
     }
-    
     @IBOutlet weak var studyField: UITextField!
     @IBOutlet weak var district: UITextField!
     @IBOutlet weak var DOB: UITextField!
@@ -24,6 +23,9 @@ class EditeProfile : UIViewController{
     @IBOutlet weak var displayName: UITextField!
     @IBOutlet weak var aboutMe: UITextField!
     
+    @IBOutlet weak var ScrollHeight: NSLayoutConstraint!
+    @IBOutlet weak var ConstraintCenter: NSLayoutConstraint!
+
     
     @IBAction  func clickBtnBack(_ sender: Any){
         self.navigationController?.popViewController(animated: true)
@@ -38,6 +40,10 @@ class EditeProfile : UIViewController{
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        
+        
+        
         studyField.text = ProfileBE.shared?.studyField
         district.text = ProfileBE.shared?.district
         DOB.text = ProfileBE.shared?.birthDate
@@ -75,12 +81,26 @@ class EditeProfile : UIViewController{
     
     @objc func keyboardWillShow(_ notification: Notification) {
         
-        _ = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect ?? .zero
-        _ = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double ?? 0
+        let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect ?? .zero
+        let animationDuration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double ?? 0
+        
+        UIView.animate(withDuration: animationDuration) {
+            
+            self.ConstraintCenter.constant = -keyboardFrame.height
+            self.ScrollHeight.constant=self.ScrollHeight.constant+400
+            self.view.layoutIfNeeded()
+        }
         
     }
     
     @objc func keyboardWillHide(_ notification: Notification) {
+        let animationDuration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double ?? 0
+        
+        UIView.animate(withDuration: animationDuration) {
+            
+            self.ConstraintCenter.constant = 0
+            self.view.layoutIfNeeded()
+        }
     }
 }
 
