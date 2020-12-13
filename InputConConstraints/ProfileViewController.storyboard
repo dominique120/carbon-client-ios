@@ -474,6 +474,9 @@
                                                         <state key="normal">
                                                             <imageReference key="image" image="pencil" catalog="system" symbolScale="large"/>
                                                         </state>
+                                                        <connections>
+                                                            <segue destination="grC-zw-gA3" kind="show" id="wt0-31-p3n"/>
+                                                        </connections>
                                                     </button>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Last Name" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dXm-nr-Bxy">
                                                         <rect key="frame" x="55" y="308" width="304" height="34"/>
@@ -635,6 +638,16 @@
                 </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="958" y="88"/>
+        </scene>
+        <!--imagePicker-->
+        <scene sceneID="n3f-TD-Twg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NewPostViewController" referencedIdentifier="imagePicker" id="grC-zw-gA3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="E0T-FZ-Fhg"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lx9-1h-7no" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1539" y="-67"/>
         </scene>
     </scenes>
     <designables>

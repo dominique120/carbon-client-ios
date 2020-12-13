@@ -34,7 +34,12 @@ class MainProfile: UIViewController{
         return.lightContent
     }
     
-    override func viewDidLoad() {
+    override func viewWillAppear(_ animated: Bool) {
+        self.loadProfileData()
+        super.viewWillAppear(animated)
+    }
+    
+    func loadProfileData() {
         profDOB.text = ProfileBE.shared!.birthDate
         profName.text = PersonBE.shared!.firstName + " " + PersonBE.shared!.lastName
         profStudyField.text = ProfileBE.shared!.studyField
@@ -48,6 +53,5 @@ class MainProfile: UIViewController{
             self.profImge.image = image
         }
         
-        super.viewDidLoad()
     }
 }

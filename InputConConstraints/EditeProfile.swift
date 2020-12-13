@@ -30,7 +30,7 @@ class EditeProfile : UIViewController{
     @IBAction  func clickBtnBack(_ sender: Any){
         self.navigationController?.popViewController(animated: true)
     }
-    
+        
     @IBAction func swipeRecognizer(_ sender: UISwipeGestureRecognizer) {
         if (sender.direction == .right) {          
             self.navigationController?.popViewController(animated: true)
@@ -41,6 +41,13 @@ class EditeProfile : UIViewController{
         ProfileWS.editProfile(profileId: ProfileBE.shared!.profileId, studyField: studyField.text!, district: district.text!, birthDate: DOB.text!, profileSummary: aboutMe.text!, {()}, error: {(errorMessage) in print(errorMessage)})
         
         PersonWS.editPerson(personId: PersonBE.shared!.personId, firstName: name.text!, lastName: lastName.text!, displayName: displayName.text!, {()}, error: {(errorMessage) in print(errorMessage)})
+        
+        
+        ProfileWS.getProfileByPersonId(PersonBE.shared!.profileId, success: { (objProfile) in
+            ProfileBE.shared = objProfile
+        }) { (errorMessage) in
+            print(errorMessage)
+        }
         
         self.navigationController?.popViewController(animated: true)
     }

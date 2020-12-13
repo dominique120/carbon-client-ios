@@ -672,6 +672,8 @@
                     <connections>
                         <outlet property="btnCreateAccount" destination="9Hl-Ch-OPz" id="bO1-2p-s7e"/>
                         <outlet property="mainBox" destination="pWW-cW-Ci1" id="NMk-LN-2X0"/>
+                        <outlet property="txtDisplayName" destination="EmE-pV-Xqd" id="oNX-jX-ln0"/>
+                        <outlet property="txtEmail" destination="KuW-Uc-j2y" id="JQ7-Nr-HzX"/>
                         <outlet property="txtFirstName" destination="eeS-u5-sg7" id="M6C-Yc-XgV"/>
                         <outlet property="txtLastName" destination="gCf-Wc-bZW" id="dQZ-ND-brU"/>
                         <outlet property="txtPassword" destination="KuW-Uc-j2y" id="AWH-kp-oyE"/>

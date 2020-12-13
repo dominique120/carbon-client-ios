@@ -154,7 +154,7 @@
         <!--Image Select View Controller-->
         <scene sceneID="dbu-R9-bWh">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="WPc-2c-xzg" customClass="imageSelectViewController" customModule="IsilInsta" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="imagePicker" modalPresentationStyle="fullScreen" id="WPc-2c-xzg" customClass="imageSelectViewController" customModule="IsilInsta" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B4r-wC-bFn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

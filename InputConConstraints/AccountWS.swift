@@ -10,7 +10,7 @@ import Foundation
 class AccountWS{
     class func createAccount(_ success: @escaping Success, _ error: @escaping ErrorMessage, username: String, password: String,  displayName: String, email: String, firstName: String, lastName: String) {
         
-        let dic: [String: Any]  = ["username"       : username,
+        let dic: [String: Any]  = ["userName"       : username,
                                    "password"       : password,
                                    "displayName"    : displayName,
                                    "email"          : email,

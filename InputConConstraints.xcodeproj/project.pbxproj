@@ -13,14 +13,10 @@
 		15217428257F4AD900D4BC9E /* FollowerWS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15217427257F4AD900D4BC9E /* FollowerWS.swift */; };
 		15419A9F25780C8800F7CA1F /* WebServicesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15419A9E25780C8800F7CA1F /* WebServicesManager.swift */; };
 		15419AA525780FFC00F7CA1F /* PostWS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15419AA425780FFC00F7CA1F /* PostWS.swift */; };
-		15419AA9257812E400F7CA1F /* PostBL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15419AA8257812E400F7CA1F /* PostBL.swift */; };
 		15419AAC257843DC00F7CA1F /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15419AAB257843DC00F7CA1F /* Globals.swift */; };
 		15419AAF2578453100F7CA1F /* PersonWS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15419AAE2578453100F7CA1F /* PersonWS.swift */; };
-		15419AB225784A6F00F7CA1F /* PersonBL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15419AB125784A6F00F7CA1F /* PersonBL.swift */; };
 		15419AB525787C1100F7CA1F /* CommentsWS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15419AB425787C1100F7CA1F /* CommentsWS.swift */; };
-		15419AB825787CAB00F7CA1F /* CommentBL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15419AB725787CAB00F7CA1F /* CommentBL.swift */; };
 		15419ABB25787DEF00F7CA1F /* LikeWS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15419ABA25787DEF00F7CA1F /* LikeWS.swift */; };
-		15419ABE2578800500F7CA1F /* LikeBL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15419ABD2578800500F7CA1F /* LikeBL.swift */; };
 		15419AC825793B1E00F7CA1F /* TabBarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15419ACA25793B1E00F7CA1F /* TabBarViewController.storyboard */; };
 		15542EC32577E19100252F6F /* StreamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15542EC22577E19100252F6F /* StreamCell.swift */; };
 		15600356257EFD900070C0F7 /* MyPostsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15600355257EFD900070C0F7 /* MyPostsTable.swift */; };
@@ -43,7 +39,6 @@
 		15CCC760257CA83400C21D37 /* LikeBE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CCC75F257CA83400C21D37 /* LikeBE.swift */; };
 		15CCC763257CA8AB00C21D37 /* ProfileBE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CCC762257CA8AB00C21D37 /* ProfileBE.swift */; };
 		15CCC766257CA8D100C21D37 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CCC765257CA8D100C21D37 /* Comment.swift */; };
-		15CCC76A257CA96500C21D37 /* AuthBL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CCC769257CA96500C21D37 /* AuthBL.swift */; };
 		15CCC76D257CAF5700C21D37 /* WSUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CCC76C257CAF5700C21D37 /* WSUtil.swift */; };
 		15CCC778257DDA0500C21D37 /* AccountWS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CCC777257DDA0500C21D37 /* AccountWS.swift */; };
 		15CCC77C257E9DAA00C21D37 /* ProfileWS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CCC77B257E9DAA00C21D37 /* ProfileWS.swift */; };
@@ -82,14 +77,10 @@
 		15217427257F4AD900D4BC9E /* FollowerWS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerWS.swift; sourceTree = "<group>"; };
 		15419A9E25780C8800F7CA1F /* WebServicesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServicesManager.swift; sourceTree = "<group>"; };
 		15419AA425780FFC00F7CA1F /* PostWS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostWS.swift; sourceTree = "<group>"; };
-		15419AA8257812E400F7CA1F /* PostBL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostBL.swift; sourceTree = "<group>"; };
 		15419AAB257843DC00F7CA1F /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		15419AAE2578453100F7CA1F /* PersonWS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonWS.swift; sourceTree = "<group>"; };
-		15419AB125784A6F00F7CA1F /* PersonBL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonBL.swift; sourceTree = "<group>"; };
 		15419AB425787C1100F7CA1F /* CommentsWS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsWS.swift; sourceTree = "<group>"; };
-		15419AB725787CAB00F7CA1F /* CommentBL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentBL.swift; sourceTree = "<group>"; };
 		15419ABA25787DEF00F7CA1F /* LikeWS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeWS.swift; sourceTree = "<group>"; };
-		15419ABD2578800500F7CA1F /* LikeBL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeBL.swift; sourceTree = "<group>"; };
 		15419AC925793B1E00F7CA1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TabBarViewController.storyboard; sourceTree = "<group>"; };
 		15542EC22577E19100252F6F /* StreamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamCell.swift; sourceTree = "<group>"; };
 		15600355257EFD900070C0F7 /* MyPostsTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPostsTable.swift; sourceTree = "<group>"; };
@@ -112,7 +103,6 @@
 		15CCC75F257CA83400C21D37 /* LikeBE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeBE.swift; sourceTree = "<group>"; };
 		15CCC762257CA8AB00C21D37 /* ProfileBE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileBE.swift; sourceTree = "<group>"; };
 		15CCC765257CA8D100C21D37 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
-		15CCC769257CA96500C21D37 /* AuthBL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthBL.swift; sourceTree = "<group>"; };
 		15CCC76C257CAF5700C21D37 /* WSUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSUtil.swift; sourceTree = "<group>"; };
 		15CCC777257DDA0500C21D37 /* AccountWS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountWS.swift; sourceTree = "<group>"; };
 		15CCC77B257E9DAA00C21D37 /* ProfileWS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileWS.swift; sourceTree = "<group>"; };
@@ -209,18 +199,6 @@
 				1571FCDA2580946100350571 /* ImageWS.swift */,
 			);
 			name = WS;
-			sourceTree = "<group>";
-		};
-		15419AA7257812D100F7CA1F /* BL */ = {
-			isa = PBXGroup;
-			children = (
-				15419AA8257812E400F7CA1F /* PostBL.swift */,
-				15419AB125784A6F00F7CA1F /* PersonBL.swift */,
-				15419AB725787CAB00F7CA1F /* CommentBL.swift */,
-				15419ABD2578800500F7CA1F /* LikeBL.swift */,
-				15CCC769257CA96500C21D37 /* AuthBL.swift */,
-			);
-			name = BL;
 			sourceTree = "<group>";
 		};
 		159BFF13257C6ACA00CD5124 /* nCore */ = {
@@ -370,7 +348,6 @@
 				15CCC74C257CA6C300C21D37 /* Flows */,
 				15CCC74B257CA69900C21D37 /* CustomUIClasses */,
 				15CCC749257CA5AA00C21D37 /* Assets */,
-				15419AA7257812D100F7CA1F /* BL */,
 				15419AA325780F9000F7CA1F /* WS */,
 				15419AA225780CB200F7CA1F /* BE */,
 				15419A9C25780C6000F7CA1F /* General */,
@@ -468,7 +445,6 @@
 				15CCC77C257E9DAA00C21D37 /* ProfileWS.swift in Sources */,
 				159BFF11257C6A5900CD5124 /* SelectImageViewController.swift in Sources */,
 				15419A9F25780C8800F7CA1F /* WebServicesManager.swift in Sources */,
-				15419AB825787CAB00F7CA1F /* CommentBL.swift in Sources */,
 				FBD3D19B2526260F0010A094 /* AppDelegate.swift in Sources */,
 				159BFF07257972D200CD5124 /* Util.swift in Sources */,
 				15CCC760257CA83400C21D37 /* LikeBE.swift in Sources */,
@@ -478,7 +454,6 @@
 				150B41E92533D6E7007292DB /* SignUpViewController.swift in Sources */,
 				88B46FEA258061D7007A8C6F /* EditeProfile.swift in Sources */,
 				159BFF15257C6AF100CD5124 /* CSJSON.swift in Sources */,
-				15419ABE2578800500F7CA1F /* LikeBL.swift in Sources */,
 				150B41EB2533E76E007292DB /* LogInViewController.swift in Sources */,
 				159BFF00257952DC00CD5124 /* AuthWS.swift in Sources */,
 				150B41ED2533F38D007292DB /* RecoverPasswordViewController.swift in Sources */,
@@ -487,7 +462,6 @@
 				159BFF032579534F00CD5124 /* Closures.swift in Sources */,
 				15419AAF2578453100F7CA1F /* PersonWS.swift in Sources */,
 				8810A256257F304900AB9B25 /* ProfileFollow.swift in Sources */,
-				15CCC76A257CA96500C21D37 /* AuthBL.swift in Sources */,
 				157365D7256F39A60081E7E3 /* FollowerBE.swift in Sources */,
 				159BFF0E257C6A0700CD5124 /* ImagePicker.swift in Sources */,
 				8840F8B42579D68700CD1421 /* TVUIView.swift in Sources */,
@@ -497,9 +471,7 @@
 				15542EC32577E19100252F6F /* StreamCell.swift in Sources */,
 				FBD3D19D2526260F0010A094 /* SceneDelegate.swift in Sources */,
 				15600356257EFD900070C0F7 /* MyPostsTable.swift in Sources */,
-				15419AB225784A6F00F7CA1F /* PersonBL.swift in Sources */,
 				157365D3256F362B0081E7E3 /* ImageDownloader.swift in Sources */,
-				15419AA9257812E400F7CA1F /* PostBL.swift in Sources */,
 				88A0556F25753F05009D35CB /* NewPost.swift in Sources */,
 				15CCC763257CA8AB00C21D37 /* ProfileBE.swift in Sources */,
 				15419AAC257843DC00F7CA1F /* Globals.swift in Sources */,

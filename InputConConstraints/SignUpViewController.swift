@@ -18,37 +18,46 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var txtUser: UITextField!
     @IBOutlet weak var txtLastName: UITextField!
     @IBOutlet weak var mainBox: UIView!
+    @IBOutlet weak var txtDisplayName: TFUIView!
+    @IBOutlet weak var txtEmail: TFUIView!
     
     /* SignUp Actions */
     @IBAction func editingHasEnded(_ sender: Any) {
         self.view.endEditing(true)
     }
     @IBAction func onClickCreateAccount(_ sender: Any) {
-        /*
-        AccountWS.createAccount(<#T##success: Success##Success##() -> Void#>, <#T##error: ErrorMessage##ErrorMessage##(String) -> Void#>, username: txtUser.text!, password: txtPassword.text!, displayName: txtPasswordConfirm.text!, email: txtEmail, firstName: <#T##String#>, lastName: <#T##String#>)
-        */
         
-        let charset = CharacterSet(charactersIn: "@.")
-        
-        
-        if txtUser.text?.rangeOfCharacter(from: charset) != nil  && txtPassword.text == txtPasswordConfirm.text {
-            showMessage(controller: self, message: "Account created! Please verify the account with the link in your email.", seconds: 5.0)
-        } else if txtUser.text?.rangeOfCharacter(from: charset) != nil {
-            showMessage(controller: self, message: "Please enter a valid email", seconds: 5.0)
-        } else if txtPassword.text == txtPasswordConfirm.text {
-            showMessage(controller: self, message: "Passwords do not match.", seconds: 5.0)
+        if txtUser.text!.isEmpty {
+            Util.showMessage(controller: self, message: "Ingrese un usuario.", seconds: 3.0)
+        } else if txtPassword.text!.isEmpty {
+            Util.showMessage(controller: self, message: "Ingrese una clave.", seconds: 3.0)
+        } else if txtDisplayName.text!.isEmpty {
+            Util.showMessage(controller: self, message: "Ingrese un displayname.", seconds: 3.0)
+        } else if txtEmail.text!.isEmpty {
+            Util.showMessage(controller: self, message: "Ingrese un correo", seconds: 3.0)
+        } else if txtFirstName.text!.isEmpty {
+            Util.showMessage(controller: self, message: "Ingrese un nombre", seconds: 3.0)
+        } else if txtLastName.text!.isEmpty {
+            Util.showMessage(controller: self, message: "Ingerse un apellido", seconds: 3.0)
+        } else {
+            AccountWS.createAccount({() in
+                Util.showMessage(controller: self, message: "Se creo tu cuenta! No olvides editar tu perfil.", seconds: 3.0)
+            }, {(errorMessage) in
+                print(errorMessage)
+            }, username: txtUser.text!, password: txtPassword.text!, displayName: txtPasswordConfirm.text!, email: txtEmail.text!, firstName: txtFirstName.text!, lastName: txtLastName.text!)
         }
     }
     
     @IBAction func swipeRecognizer(_ sender: UISwipeGestureRecognizer) {
-        if (sender.direction == .right) {          
+        if (sender.direction == .right) {
+          
             self.navigationController?.popViewController(animated: true)
         }
     }
     
     
     @IBAction func signUpButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     
