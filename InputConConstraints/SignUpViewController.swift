@@ -25,6 +25,7 @@ class SignUpViewController: UIViewController {
     @IBAction func editingHasEnded(_ sender: Any) {
         self.view.endEditing(true)
     }
+    
     @IBAction func onClickCreateAccount(_ sender: Any) {
         
         if txtUser.text!.isEmpty {
@@ -84,6 +85,10 @@ class SignUpViewController: UIViewController {
                                                selector: #selector(self.keyboardWillHide(_:)),
                                                name: UIResponder.keyboardWillHideNotification,
                                                object: nil)
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return.lightContent
     }
     
     

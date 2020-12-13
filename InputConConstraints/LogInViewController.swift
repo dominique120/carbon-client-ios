@@ -28,8 +28,10 @@ class LogInViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .darkContent
+        return .lightContent
     }
     
     func getPersonInfo() {

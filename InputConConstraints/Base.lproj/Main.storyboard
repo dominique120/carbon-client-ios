@@ -283,16 +283,16 @@
         <!--Sign Up View Controller-->
         <scene sceneID="hPx-Zr-unz">
             <objects>
-                <viewController id="Lxz-6d-1Ui" customClass="SignUpViewController" customModule="IsilInsta" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Lxz-6d-1Ui" customClass="SignUpViewController" customModule="IsilInsta" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B33-Lw-zUm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="npG-lR-mVU">
+                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="npG-lR-mVU">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pWW-cW-Ci1" customClass="VUIView" customModule="IsilInsta" customModuleProvider="target">
-                                        <rect key="frame" x="47" y="186" width="320" height="510"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pWW-cW-Ci1" customClass="VUIView" customModule="IsilInsta" customModuleProvider="target">
+                                        <rect key="frame" x="47" y="148" width="320" height="540"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eeS-u5-sg7" customClass="TFUIView" customModule="IsilInsta" customModuleProvider="target">
                                                 <rect key="frame" x="35" y="147" width="250" height="34"/>
@@ -514,10 +514,8 @@
                                                 <rect key="frame" x="35" y="377" width="250" height="34"/>
                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="0Jt-aH-SjE"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="9x0-aR-0Yd"/>
-                                                    <constraint firstAttribute="width" constant="250" id="P0J-0s-hGb"/>
-                                                    <constraint firstAttribute="height" constant="34" id="TqI-l8-FEG"/>
+                                                    <constraint firstAttribute="height" constant="34" id="4f1-AP-SQX"/>
+                                                    <constraint firstAttribute="width" constant="250" id="Po3-lQ-1yC"/>
                                                 </constraints>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -550,11 +548,11 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Hl-Ch-OPz" customClass="BTUView" customModule="IsilInsta" customModuleProvider="target">
-                                                <rect key="frame" x="52" y="428" width="216" height="40"/>
+                                                <rect key="frame" x="52" y="478" width="216" height="30"/>
                                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="216" id="QaQ-Jt-Yrb"/>
-                                                    <constraint firstAttribute="height" constant="40" id="sxe-l4-pa4"/>
+                                                    <constraint firstAttribute="height" constant="30" id="IIY-3Y-Ucc"/>
+                                                    <constraint firstAttribute="width" constant="216" id="SXO-ti-Weu"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <state key="normal" title="Create Acount">
@@ -563,7 +561,7 @@
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="conerRadius">
-                                                        <real key="value" value="20"/>
+                                                        <real key="value" value="8"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                         <real key="value" value="2"/>
@@ -588,10 +586,48 @@
                                                     <action selector="onClickCreateAccount:" destination="Lxz-6d-1Ui" eventType="touchUpInside" id="5qa-W2-QJm"/>
                                                 </connections>
                                             </button>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="District" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4vi-NT-aWC" customClass="TFUIView" customModule="IsilInsta" customModuleProvider="target">
+                                                <rect key="frame" x="35" y="426" width="250" height="34"/>
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="bPD-3N-5vZ"/>
+                                                    <constraint firstAttribute="width" constant="250" id="l70-Zv-D91"/>
+                                                </constraints>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="conerRadius">
+                                                        <real key="value" value="6"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                                        <size key="value" width="2" height="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" systemColor="linkColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <color key="value" systemColor="linkColor"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                        <color key="value" systemColor="systemGray4Color"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
                                         </subviews>
                                         <color key="backgroundColor" red="0.2156862745" green="0.2156862745" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="Rgq-3Z-VZA" firstAttribute="centerX" secondItem="pWW-cW-Ci1" secondAttribute="centerX" id="0Aa-a5-GaD"/>
+                                            <constraint firstItem="xVA-co-0Lc" firstAttribute="top" secondItem="Rgq-3Z-VZA" secondAttribute="bottom" constant="12" id="30m-R3-Cbf"/>
                                             <constraint firstItem="EmE-pV-Xqd" firstAttribute="top" secondItem="gCf-Wc-bZW" secondAttribute="bottom" constant="12" id="6hV-xI-sOA"/>
                                             <constraint firstItem="eeS-u5-sg7" firstAttribute="centerX" secondItem="pWW-cW-Ci1" secondAttribute="centerX" id="8GC-hV-BXe"/>
                                             <constraint firstItem="TNW-rp-r05" firstAttribute="leading" secondItem="Z7s-Vr-B87" secondAttribute="trailing" constant="27" id="E9a-fi-3A9"/>
@@ -599,21 +635,22 @@
                                             <constraint firstAttribute="width" constant="320" id="Mt9-1j-Xbg"/>
                                             <constraint firstItem="Rgq-3Z-VZA" firstAttribute="top" secondItem="KuW-Uc-j2y" secondAttribute="bottom" constant="12" id="OXQ-Ab-5IZ"/>
                                             <constraint firstItem="Z7s-Vr-B87" firstAttribute="top" secondItem="dYS-el-WEF" secondAttribute="bottom" constant="27" id="OiX-c1-83x"/>
-                                            <constraint firstItem="xVA-co-0Lc" firstAttribute="top" secondItem="Rgq-3Z-VZA" secondAttribute="bottom" constant="12" id="Qhz-Br-W0x"/>
                                             <constraint firstItem="Z7s-Vr-B87" firstAttribute="leading" secondItem="pWW-cW-Ci1" secondAttribute="leading" constant="42" id="TRk-fd-Qw6"/>
-                                            <constraint firstItem="xVA-co-0Lc" firstAttribute="centerX" secondItem="pWW-cW-Ci1" secondAttribute="centerX" id="UAe-Jd-KR7"/>
                                             <constraint firstItem="dYS-el-WEF" firstAttribute="centerX" secondItem="pWW-cW-Ci1" secondAttribute="centerX" id="V36-nP-8R2"/>
                                             <constraint firstItem="gCf-Wc-bZW" firstAttribute="top" secondItem="eeS-u5-sg7" secondAttribute="bottom" constant="12" id="VRW-Zd-6r2"/>
+                                            <constraint firstItem="9Hl-Ch-OPz" firstAttribute="top" secondItem="4vi-NT-aWC" secondAttribute="bottom" constant="18" id="aZf-aF-wsB"/>
+                                            <constraint firstItem="9Hl-Ch-OPz" firstAttribute="centerX" secondItem="pWW-cW-Ci1" secondAttribute="centerX" id="bLf-yZ-baF"/>
+                                            <constraint firstItem="xVA-co-0Lc" firstAttribute="centerX" secondItem="pWW-cW-Ci1" secondAttribute="centerX" id="duZ-hX-eWQ"/>
                                             <constraint firstItem="KuW-Uc-j2y" firstAttribute="top" secondItem="EmE-pV-Xqd" secondAttribute="bottom" constant="12" id="fsQ-MS-puM"/>
                                             <constraint firstItem="gCf-Wc-bZW" firstAttribute="centerX" secondItem="pWW-cW-Ci1" secondAttribute="centerX" id="ize-Jo-QQC"/>
-                                            <constraint firstItem="9Hl-Ch-OPz" firstAttribute="centerX" secondItem="pWW-cW-Ci1" secondAttribute="centerX" id="kpt-df-q9b"/>
+                                            <constraint firstItem="4vi-NT-aWC" firstAttribute="top" secondItem="xVA-co-0Lc" secondAttribute="bottom" constant="15" id="jhf-Ia-4gr"/>
+                                            <constraint firstItem="4vi-NT-aWC" firstAttribute="centerX" secondItem="pWW-cW-Ci1" secondAttribute="centerX" id="kUR-Uo-fIv"/>
                                             <constraint firstItem="EmE-pV-Xqd" firstAttribute="centerX" secondItem="pWW-cW-Ci1" secondAttribute="centerX" id="oIz-ld-ofA"/>
-                                            <constraint firstAttribute="height" constant="510" id="pgZ-n8-TIy"/>
+                                            <constraint firstAttribute="height" constant="540" id="pgZ-n8-TIy"/>
                                             <constraint firstItem="dYS-el-WEF" firstAttribute="top" secondItem="pWW-cW-Ci1" secondAttribute="top" constant="30" id="pvL-Hq-2gz"/>
                                             <constraint firstItem="KuW-Uc-j2y" firstAttribute="centerX" secondItem="pWW-cW-Ci1" secondAttribute="centerX" id="qI8-MO-hvm"/>
-                                            <constraint firstItem="9Hl-Ch-OPz" firstAttribute="top" secondItem="xVA-co-0Lc" secondAttribute="bottom" constant="17" id="vXO-k0-Gnw"/>
-                                            <constraint firstItem="xVA-co-0Lc" firstAttribute="top" secondItem="Rgq-3Z-VZA" secondAttribute="bottom" constant="12" id="w4V-Yk-eQ6"/>
                                             <constraint firstItem="TNW-rp-r05" firstAttribute="top" secondItem="dYS-el-WEF" secondAttribute="bottom" constant="21" id="wBD-OD-z9T"/>
+                                            <constraint firstAttribute="bottom" secondItem="9Hl-Ch-OPz" secondAttribute="bottom" constant="32" id="xo9-FX-mAo"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="conerRadius">
@@ -643,7 +680,7 @@
                                 <color key="backgroundColor" red="0.17094343349999999" green="0.17263594269999999" blue="0.17263594269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstItem="pWW-cW-Ci1" firstAttribute="centerY" secondItem="npG-lR-mVU" secondAttribute="centerY" constant="-39" id="bZY-fH-PJN"/>
+                                    <constraint firstItem="pWW-cW-Ci1" firstAttribute="centerY" secondItem="npG-lR-mVU" secondAttribute="centerY" constant="-30" id="bZY-fH-PJN"/>
                                     <constraint firstItem="pWW-cW-Ci1" firstAttribute="centerX" secondItem="npG-lR-mVU" secondAttribute="centerX" id="ot2-Am-nhI"/>
                                 </constraints>
                                 <connections>
@@ -653,7 +690,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="irI-Yz-DRK"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.17254901960784313" green="0.17254901960784313" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="npG-lR-mVU" firstAttribute="top" secondItem="irI-Yz-DRK" secondAttribute="top" constant="-44" id="6eG-75-PgG"/>
                             <constraint firstItem="npG-lR-mVU" firstAttribute="leading" secondItem="irI-Yz-DRK" secondAttribute="leading" id="A8H-QK-TaM"/>
@@ -789,7 +826,7 @@
                                                     <action selector="onClickSubmit:" destination="HBS-F1-wnk" eventType="touchUpInside" id="28Z-m1-1yK"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Passowrd?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXM-Yx-XrV">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXM-Yx-XrV">
                                                 <rect key="frame" x="52.666666666666686" y="30" width="215" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="WlQ-4s-2OF"/>
@@ -853,7 +890,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Nbp-IO-NJz"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="po9-fk-aam" firstAttribute="bottom" secondItem="Nbp-IO-NJz" secondAttribute="bottom" constant="34" id="3AL-It-uiR"/>
                             <constraint firstItem="po9-fk-aam" firstAttribute="centerY" secondItem="Qdo-Ea-tY3" secondAttribute="centerY" id="7PN-uA-KlD"/>
@@ -908,6 +945,9 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="4vi-NT-aWC">
+            <size key="intrinsicContentSize" width="74.666666666666671" height="34"/>
+        </designable>
         <designable name="9Hl-Ch-OPz">
             <size key="intrinsicContentSize" width="105" height="30"/>
         </designable>

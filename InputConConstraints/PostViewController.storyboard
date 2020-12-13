@@ -425,7 +425,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="24A-s3-TGl">
-                                        <rect key="frame" x="0.0" y="168.5" width="414" height="559"/>
+                                        <rect key="frame" x="0.0" y="98" width="414" height="559"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ysY-bL-Mo5" customClass="IMGUIview" customModule="IsilInsta" customModuleProvider="target">
                                                 <rect key="frame" x="107" y="18" width="200" height="200"/>
@@ -672,11 +672,11 @@
                                 <constraints>
                                     <constraint firstItem="X40-Kc-zL3" firstAttribute="top" secondItem="FEH-BM-CY0" secondAttribute="bottom" id="01V-bN-NEl"/>
                                     <constraint firstItem="X40-Kc-zL3" firstAttribute="leading" secondItem="gLb-As-QbD" secondAttribute="leading" id="C2u-yO-xgG"/>
+                                    <constraint firstItem="24A-s3-TGl" firstAttribute="top" secondItem="X40-Kc-zL3" secondAttribute="bottom" constant="10" id="Wur-Qe-t2W"/>
                                     <constraint firstAttribute="trailing" secondItem="X40-Kc-zL3" secondAttribute="trailing" id="Yaz-ms-y5e"/>
                                     <constraint firstAttribute="trailing" secondItem="FEH-BM-CY0" secondAttribute="trailing" id="bL2-QM-akn"/>
                                     <constraint firstItem="FEH-BM-CY0" firstAttribute="top" secondItem="gLb-As-QbD" secondAttribute="top" id="cdS-yU-6q1"/>
                                     <constraint firstItem="FEH-BM-CY0" firstAttribute="leading" secondItem="gLb-As-QbD" secondAttribute="leading" id="en2-Co-ctY"/>
-                                    <constraint firstItem="24A-s3-TGl" firstAttribute="centerY" secondItem="gLb-As-QbD" secondAttribute="centerY" id="loz-Tm-kOC"/>
                                     <constraint firstItem="X40-Kc-zL3" firstAttribute="top" secondItem="FEH-BM-CY0" secondAttribute="bottom" id="lqm-Oq-OWO"/>
                                     <constraint firstItem="24A-s3-TGl" firstAttribute="centerX" secondItem="gLb-As-QbD" secondAttribute="centerX" id="rDK-Tj-cNf"/>
                                 </constraints>
