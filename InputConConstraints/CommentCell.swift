@@ -27,10 +27,17 @@ class MainCelda : UITableViewCell{
     private func updateData() {
         self.commentText.text = self.objComment.commentText
         
-        self.profilePic.downloadImageInUrlString(Constants.image_fs + self.objComment.posterProfilePicUrl) { (image, urlString) in
-            self.profilePic.image = image
-        }
-        self.personName.setTitle(self.objComment.posterName, for: .normal)
+        PersonWS.getPersonByPersonId(objComment.personId, success: {(objPerson) in
+            self.profilePic.downloadImageInUrlString(Constants.image_fs + objPerson.profilePictureUrl) { (image, urlString) in
+                self.profilePic.image = image
+                
+            self.personName.setTitle(objPerson.displayName , for: .normal)
+            }
+        }, error: {(errorMessage) in
+            print(errorMessage)
+        })
+        
+        
     }
     
 

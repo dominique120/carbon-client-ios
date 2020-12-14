@@ -31,17 +31,22 @@ class ProfileFollow: UIViewController{
     @IBAction  func clickBtnBack(_ sender: Any){
         self.navigationController?.popViewController(animated: true)
     }
-    @IBAction func followPerson(_ sender: Any) {
-        FollowerWS.followSomeone(followerId: g_activePersonId, followingId: thisPerson!.personId, success: { () in
-            Util.showMessage(controller: self , message: "Followed!", seconds: 1.5)
-        }) { (errorMessage) in
-            print(errorMessage)
-        }
-    }
+    
     
     var thisPerson: PersonBE?
     var thisProfile: ProfileBE?
     
+    @IBAction func followPerson(_ sender: Any) {
+        if g_activePersonId == thisPerson!.personId {
+            Util.showMessage(controller: self , message: "No te puedes seguir a ti mismo!", seconds: 1.5)
+        } else {
+            FollowerWS.followSomeone(followerId: g_activePersonId, followingId: thisPerson!.personId, success: { () in
+                Util.showMessage(controller: self , message: "Followed!", seconds: 1.5)
+            }) { (errorMessage) in
+                print(errorMessage)
+            }
+        }
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         

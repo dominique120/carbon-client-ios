@@ -202,7 +202,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <segue destination="TfB-BP-AGH" kind="show" id="4e0-eZ-SBe"/>
+                                                    <action selector="btnEdit:" destination="3fN-Bc-pE8" eventType="touchUpInside" id="keC-4O-ceW"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHQ-xM-RDc">
@@ -297,6 +297,7 @@
                         <outlet property="profName" destination="lyI-iy-Zeo" id="5ew-GG-1FZ"/>
                         <outlet property="profPostCount" destination="XpJ-0r-wRL" id="SMz-wF-bXe"/>
                         <outlet property="profStudyField" destination="31b-ho-9jv" id="5w0-yZ-Scw"/>
+                        <segue destination="TfB-BP-AGH" kind="show" identifier="openProfileEditor" id="9R8-vn-1jx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vgh-5V-RSz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -484,7 +485,7 @@
                                                             <imageReference key="image" image="pencil" catalog="system" symbolScale="large"/>
                                                         </state>
                                                         <connections>
-                                                            <segue destination="grC-zw-gA3" kind="show" id="wt0-31-p3n"/>
+                                                            <segue destination="grC-zw-gA3" kind="show" identifier="goToImageSelection" id="wt0-31-p3n"/>
                                                         </connections>
                                                     </button>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dXm-nr-Bxy" customClass="TFUIView" customModule="IsilInsta" customModuleProvider="target">
@@ -557,6 +558,9 @@
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
                                                                 <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                                <color key="value" systemColor="systemGray4Color"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
@@ -660,7 +664,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1125" y="95"/>
+            <point key="canvasLocation" x="1126" y="88"/>
         </scene>
         <!--imagePicker-->
         <scene sceneID="n3f-TD-Twg">
@@ -670,7 +674,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lx9-1h-7no" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1539" y="-67"/>
+            <point key="canvasLocation" x="1757" y="88"/>
         </scene>
     </scenes>
     <designables>

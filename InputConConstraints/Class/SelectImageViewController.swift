@@ -13,19 +13,19 @@ protocol NewPostDelegate {
 }
 
 class imageSelectViewController: UIViewController {
-
+    
     var postDelegate: NewPostDelegate?
+    
     
     @IBOutlet weak var imageView: UIImageView!
     var imagePicker: ImagePicker!
-
+    
+    
     override func viewDidLoad() {
-     
         super.viewDidLoad()
-
         self.imagePicker = ImagePicker(presentationController: self, delegate: self)
     }
-
+    
     @IBAction func showImagePicker(_ sender: UIButton) {
         self.imagePicker.present(from: sender)
     }
@@ -34,12 +34,11 @@ class imageSelectViewController: UIViewController {
         return.lightContent
     }
     
-    @IBAction  func clickBtnBack(_ sender: Any){
+    @IBAction func clickBtnBack(_ sender: Any){
         self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func selectImage(_ sender: Any) {
-        print("In selectImage button")
         g_selectedImage = imageView.image!
         g_imageSet = true
         self.postDelegate?.selectedImage(imageView.image!, true)
@@ -49,9 +48,7 @@ class imageSelectViewController: UIViewController {
 }
 
 extension imageSelectViewController: ImagePickerDelegate {
-
     func didSelect(image: UIImage?) {
-        print("In didSelect delegate method")
         g_selectedImage = imageView.image!
         self.imageView.image = image
         g_imageSet = true
