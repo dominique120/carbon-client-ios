@@ -16,7 +16,7 @@ class MainCelda : UITableViewCell{
     @IBOutlet weak var personName: UIButton!
     @IBOutlet weak var commentText: UILabel!
     @IBOutlet weak var profilePic: UIImageView!
-    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
         
     var objComment: CommentBE! {
         didSet {
@@ -25,21 +25,18 @@ class MainCelda : UITableViewCell{
     }
         
     private func updateData() {
+        activityIndicator.startAnimating()
         self.commentText.text = self.objComment.commentText
         
         PersonWS.getPersonByPersonId(objComment.personId, success: {(objPerson) in
             self.profilePic.downloadImageInUrlString(Constants.image_fs + objPerson.profilePictureUrl) { (image, urlString) in
                 self.profilePic.image = image
-                
-            self.personName.setTitle(objPerson.displayName , for: .normal)
+                self.activityIndicator.stopAnimating()
             }
+            self.personName.setTitle(objPerson.displayName , for: .normal)
         }, error: {(errorMessage) in
             print(errorMessage)
         })
-        
-        
     }
-    
-
 }
 

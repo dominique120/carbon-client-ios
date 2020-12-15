@@ -241,27 +241,35 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="headTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZs-Aq-WSF">
-                                                            <rect key="frame" x="272" y="14" width="46" height="32"/>
+                                                            <rect key="frame" x="288" y="14" width="30" height="32"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                                            <state key="normal" title="Name">
+                                                            <state key="normal">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
                                                         </button>
+                                                        <activityIndicatorView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Ls6-1v-jsk">
+                                                            <rect key="frame" x="353" y="35" width="20" height="20"/>
+                                                        </activityIndicatorView>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.17254901960784313" green="0.17254901960784313" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="fN4-o2-Ho4" firstAttribute="leading" secondItem="5vo-F5-IUp" secondAttribute="leading" constant="20" id="7IS-QJ-Bix"/>
                                                         <constraint firstItem="Er3-bj-2mX" firstAttribute="leading" secondItem="gZs-Aq-WSF" secondAttribute="trailing" constant="14" id="7vP-zF-FsN"/>
                                                         <constraint firstAttribute="trailing" secondItem="Er3-bj-2mX" secondAttribute="trailing" constant="20" id="9X0-Sz-gXZ"/>
+                                                        <constraint firstItem="Ls6-1v-jsk" firstAttribute="top" secondItem="5vo-F5-IUp" secondAttribute="topMargin" constant="24" id="GIW-fV-u9w"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="Ls6-1v-jsk" secondAttribute="bottom" constant="25" id="VGP-Fw-8ft"/>
                                                         <constraint firstAttribute="bottom" secondItem="fN4-o2-Ho4" secondAttribute="bottom" constant="23" id="XVr-rz-pEE"/>
                                                         <constraint firstItem="gZs-Aq-WSF" firstAttribute="top" secondItem="5vo-F5-IUp" secondAttribute="top" constant="14" id="d01-gJ-QGK"/>
+                                                        <constraint firstItem="Ls6-1v-jsk" firstAttribute="leading" secondItem="fN4-o2-Ho4" secondAttribute="trailing" constant="35" id="f2M-AL-EnD"/>
                                                         <constraint firstItem="Er3-bj-2mX" firstAttribute="leading" secondItem="fN4-o2-Ho4" secondAttribute="trailing" constant="14" id="g3n-lq-jV1"/>
                                                         <constraint firstItem="Er3-bj-2mX" firstAttribute="top" secondItem="5vo-F5-IUp" secondAttribute="top" constant="14" id="gcG-YN-JB8"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="Ls6-1v-jsk" secondAttribute="trailing" constant="21" id="igW-nu-cSH"/>
                                                         <constraint firstItem="fN4-o2-Ho4" firstAttribute="top" secondItem="5vo-F5-IUp" secondAttribute="top" constant="47.5" id="j36-YJ-IPe"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" red="0.17254901960784313" green="0.17254901960784313" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
+                                                    <outlet property="activityIndicator" destination="Ls6-1v-jsk" id="Ava-aw-eQy"/>
                                                     <outlet property="commentText" destination="fN4-o2-Ho4" id="gdT-1B-6QU"/>
                                                     <outlet property="personName" destination="gZs-Aq-WSF" id="8FE-hZ-Kxb"/>
                                                     <outlet property="personProfilePic" destination="Er3-bj-2mX" id="DV2-h2-ymT"/>
@@ -395,7 +403,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1122" y="74"/>
+            <point key="canvasLocation" x="1217" y="175"/>
         </scene>
     </scenes>
     <resources>
