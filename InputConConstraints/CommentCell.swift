@@ -23,6 +23,11 @@ class MainCelda : UITableViewCell{
             self.updateData()
         }
     }
+    
+    @IBAction func viewProfileOfPoster(_ sender: Any) {
+        g_activePersonId = objComment.personId
+    }
+    
         
     private func updateData() {
         activityIndicator.startAnimating()

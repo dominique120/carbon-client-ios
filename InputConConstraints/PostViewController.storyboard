@@ -244,6 +244,10 @@
                                                             <state key="normal">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="viewCommentProfile:" destination="Lum-IL-IOq" eventType="touchUpInside" id="12D-fa-MJr"/>
+                                                                <action selector="viewProfileOfPoster:" destination="oHn-TT-nia" eventType="touchUpInside" id="tk5-P1-0Bz"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.12941176470588234" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
@@ -385,6 +389,7 @@
                         <outlet property="ViewContent" destination="l0L-qg-iWN" id="C3D-xN-7Ao"/>
                         <outlet property="commentTable" destination="MWl-HB-9yK" id="C4P-hq-a0h"/>
                         <outlet property="commentTextBox" destination="oVF-mo-okQ" id="Boy-Qn-HCT"/>
+                        <segue destination="Lry-Ev-ktL" kind="show" identifier="viewProfileFromComment" id="cn1-sd-hZF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lHy-lr-CGr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -399,7 +404,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="412" y="372"/>
+            <point key="canvasLocation" x="264" y="-228"/>
         </scene>
         <!--Main-->
         <scene sceneID="XXi-Xy-iWO">
@@ -723,7 +728,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="413" y="-313"/>
+            <point key="canvasLocation" x="1057" y="145"/>
         </scene>
     </scenes>
     <designables>
@@ -731,6 +736,9 @@
             <size key="intrinsicContentSize" width="61" height="36"/>
         </designable>
     </designables>
+    <inferredMetricsTieBreakers>
+        <segue reference="cn1-sd-hZF"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.backward" catalog="system" width="128" height="98"/>
         <image name="globe" catalog="system" width="128" height="121"/>

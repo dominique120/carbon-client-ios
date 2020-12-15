@@ -41,6 +41,11 @@ class MainComment: UIViewController{
             print(errorMessage)
         })
     }
+    
+    @IBAction func viewCommentProfile(_ sender: Any) {
+        performSegue(withIdentifier: "viewProfileFromComment", sender: sender)
+    }
+    
         
     @IBOutlet weak var commentTextBox: UITextField!
     
@@ -50,7 +55,7 @@ class MainComment: UIViewController{
         } else {
             
             CommentWS.newComment({
-                Util.showMessage(controller: self, message: "Enviaste un comentario", seconds: 2)
+                //Util.showMessage(controller: self, message: "Enviaste un comentario", seconds: 2)
                 self.commentTextBox.text = ""
                 self.getPostComments()
             }, {(errorMessage) in print(errorMessage)}, postId: g_activePostId, posterName: PersonBE.shared!.displayName, commentText: commentTextBox.text!, personId: PersonBE.shared!.personId)

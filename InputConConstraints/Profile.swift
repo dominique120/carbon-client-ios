@@ -86,10 +86,8 @@ class MainProfile: UIViewController, editProfileDelegate{
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("in prepare segue")
-            let vc = segue.destination as! EditeProfile
-            vc.delegate = self
-        
+        let vc = segue.destination as! EditeProfile
+        vc.delegate = self
     }
     
 }
