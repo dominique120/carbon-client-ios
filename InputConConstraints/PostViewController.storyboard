@@ -596,6 +596,18 @@
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Pvd-3F-gSR" customClass="ActivityUIView" customModule="IsilInsta" customModuleProvider="target">
+                                                <rect key="frame" x="107" y="18" width="200" height="200"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="conerRadius">
+                                                        <real key="value" value="100"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </activityIndicatorView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsO-bW-eRD" customClass="BTUView" customModule="IsilInsta" customModuleProvider="target">
                                                 <rect key="frame" x="127.5" y="198" width="159" height="36"/>
                                                 <color key="backgroundColor" systemColor="linkColor"/>
@@ -625,8 +637,10 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstItem="Pvd-3F-gSR" firstAttribute="top" secondItem="24A-s3-TGl" secondAttribute="top" constant="18" id="0xv-UO-Wjg"/>
                                             <constraint firstItem="WIy-rt-Z04" firstAttribute="top" secondItem="gsO-bW-eRD" secondAttribute="bottom" constant="8" symbolic="YES" id="17K-AT-YWh"/>
                                             <constraint firstItem="xnJ-c1-q6c" firstAttribute="centerX" secondItem="24A-s3-TGl" secondAttribute="centerX" id="8vG-i5-dlz"/>
+                                            <constraint firstItem="Pvd-3F-gSR" firstAttribute="leading" secondItem="24A-s3-TGl" secondAttribute="leading" constant="107" id="FC8-w1-fPf"/>
                                             <constraint firstItem="AVk-tt-hAN" firstAttribute="top" secondItem="WIy-rt-Z04" secondAttribute="bottom" constant="4" id="H7L-Xt-dox"/>
                                             <constraint firstItem="WIy-rt-Z04" firstAttribute="centerX" secondItem="24A-s3-TGl" secondAttribute="centerX" id="M7A-mD-N7O"/>
                                             <constraint firstItem="xnJ-c1-q6c" firstAttribute="top" secondItem="AVk-tt-hAN" secondAttribute="bottom" constant="19" id="Ygp-yR-Ti3"/>
@@ -635,8 +649,10 @@
                                             <constraint firstItem="gsO-bW-eRD" firstAttribute="top" secondItem="ysY-bL-Mo5" secondAttribute="bottom" constant="-20" id="ZhN-qo-7Vz"/>
                                             <constraint firstAttribute="width" constant="414" id="bOT-oz-W1D"/>
                                             <constraint firstItem="gsO-bW-eRD" firstAttribute="centerX" secondItem="24A-s3-TGl" secondAttribute="centerX" id="eRH-CO-2iR"/>
+                                            <constraint firstItem="WIy-rt-Z04" firstAttribute="top" secondItem="Pvd-3F-gSR" secondAttribute="bottom" constant="24" id="h0j-CJ-gVL"/>
                                             <constraint firstItem="AVk-tt-hAN" firstAttribute="centerX" secondItem="24A-s3-TGl" secondAttribute="centerX" id="h4J-ty-lyj"/>
                                             <constraint firstAttribute="bottom" secondItem="xnJ-c1-q6c" secondAttribute="bottom" constant="54" id="t3B-Tm-DYH"/>
+                                            <constraint firstAttribute="trailing" secondItem="Pvd-3F-gSR" secondAttribute="trailing" constant="107" id="x3H-FQ-gAT"/>
                                             <constraint firstItem="ysY-bL-Mo5" firstAttribute="centerX" secondItem="24A-s3-TGl" secondAttribute="centerX" id="zXS-Ty-DMN"/>
                                         </constraints>
                                     </view>
@@ -716,6 +732,8 @@
                         <outlet property="followBtn" destination="gsO-bW-eRD" id="eJm-tD-lZZ"/>
                         <outlet property="followerCount" destination="Lbt-rS-m7b" id="YiL-9v-TxT"/>
                         <outlet property="followingCount" destination="nfW-Ln-5Ol" id="p4Q-eg-4Fy"/>
+                        <outlet property="loaderAnim" destination="Pvd-3F-gSR" id="HuT-Ut-U3Y"/>
+                        <outlet property="personName" destination="WIy-rt-Z04" id="6Lh-ac-WfX"/>
                         <outlet property="postCount" destination="mKF-JF-2ra" id="veC-qY-sE7"/>
                         <outlet property="profileImg" destination="ysY-bL-Mo5" id="2ph-cE-lLb"/>
                         <outlet property="studyField" destination="gpS-Vz-7qr" id="XOK-tP-lj5"/>
@@ -728,10 +746,13 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1057" y="145"/>
+            <point key="canvasLocation" x="1055.072463768116" y="144.64285714285714"/>
         </scene>
     </scenes>
     <designables>
+        <designable name="Pvd-3F-gSR">
+            <size key="intrinsicContentSize" width="20" height="20"/>
+        </designable>
         <designable name="gsO-bW-eRD">
             <size key="intrinsicContentSize" width="61" height="36"/>
         </designable>

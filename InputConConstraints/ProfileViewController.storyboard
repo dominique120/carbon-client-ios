@@ -42,6 +42,22 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="yc2-V5-Y4M" customClass="ActivityUIView" customModule="IsilInsta" customModuleProvider="target">
+                                                <rect key="frame" x="107" y="18" width="200" height="200"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="conerRadius">
+                                                        <real key="value" value="100"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </activityIndicatorView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jj7-ha-FBM" customClass="VUIView" customModule="IsilInsta" customModuleProvider="target">
                                                 <rect key="frame" x="47" y="289" width="320" height="108"/>
                                                 <subviews>
@@ -291,6 +307,7 @@
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="loadingIndicator" destination="yc2-V5-Y4M" id="Urj-T1-8bK"/>
                         <outlet property="profDOB" destination="BUC-eU-YL9" id="6GK-gL-PZt"/>
                         <outlet property="profDistrict" destination="j3S-Q8-aq6" id="bWB-FU-JQQ"/>
                         <outlet property="profFollowersCount" destination="2Yg-Hi-ErM" id="4dT-vo-ZoL"/>
@@ -703,6 +720,9 @@
         </designable>
         <designable name="vdT-iK-Rfk">
             <size key="intrinsicContentSize" width="37" height="36"/>
+        </designable>
+        <designable name="yc2-V5-Y4M">
+            <size key="intrinsicContentSize" width="20" height="20"/>
         </designable>
         <designable name="zuO-vi-Oko">
             <size key="intrinsicContentSize" width="109.5" height="34"/>

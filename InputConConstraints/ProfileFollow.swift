@@ -24,6 +24,8 @@ class ProfileFollow: UIViewController{
     @IBOutlet weak var postCount: UILabel!
     @IBOutlet weak var followerCount: UILabel!
     @IBOutlet weak var followingCount: UILabel!
+    @IBOutlet weak var personName: UILabel!
+    
     
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return.lightContent
@@ -47,13 +49,16 @@ class ProfileFollow: UIViewController{
             }
         }
     }
+    @IBOutlet weak var loaderAnim: UIActivityIndicatorView!
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        loaderAnim.startAnimating()
         PersonWS.getPersonByPersonId(g_activePersonId, success: { (objPerson) in
             self.thisPerson = objPerson
+            self.personName.text = objPerson.firstName + " " + objPerson.lastName
             self.profileImg.downloadImageInUrlString(Constants.image_fs + objPerson.profilePictureUrl) { (image, urlString) in
                 self.profileImg.image = image
+                self.loaderAnim.stopAnimating()
             }
         }) { (errorMessage) in
             print(errorMessage)

@@ -48,9 +48,10 @@ class MainProfile: UIViewController, editProfileDelegate{
         self.loadProfileData()
         super.viewDidLoad()
     }
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
     func loadProfileData() {
-        
+        loadingIndicator.startAnimating()
         PersonWS.getPersonByUserId(UserBE.shared!.personId, success: { (objPerson) in
             PersonBE.shared = objPerson
                                  
@@ -66,6 +67,7 @@ class MainProfile: UIViewController, editProfileDelegate{
                 profFollowersCount.text = ProfileBE.shared!.followersCount
                 
                 self.profImge.downloadImageInUrlString(Constants.image_fs + PersonBE.shared!.profilePictureUrl) { (image, urlString) in
+                    self.loadingIndicator.stopAnimating()
                     self.profImge.image = image
                 }
                 
