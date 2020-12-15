@@ -9,12 +9,7 @@
 import Foundation
 import UIKit
 
-class MainProfile: UIViewController, editProfileDelegate{
-    
-    func reloadProfile(){
-        loadProfileData()
-    }
-    
+class MainProfile: UIViewController{
     @IBOutlet weak var profImge: IMGUIview!
     @IBOutlet weak var profName: UILabel!
     @IBOutlet weak var profStudyField: UILabel!
@@ -41,7 +36,6 @@ class MainProfile: UIViewController, editProfileDelegate{
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.loadProfileData()
     }
     
     override func viewDidLoad() {
@@ -54,22 +48,8 @@ class MainProfile: UIViewController, editProfileDelegate{
         PersonWS.getPersonByUserId(UserBE.shared!.personId, success: { (objPerson) in
             PersonBE.shared = objPerson
                                  
-            ProfileWS.getProfileByPersonId(PersonBE.shared!.profileId, success: { [self] (objProfile) in
+            ProfileWS.getProfileByPersonId(PersonBE.shared!.profileId, success: { (objProfile) in
                 ProfileBE.shared = objProfile
-                
-                profDOB.text = ProfileBE.shared!.birthDate
-                profName.text = PersonBE.shared!.firstName + " " + PersonBE.shared!.lastName
-                profStudyField.text = ProfileBE.shared!.studyField
-                profDistrict.text = ProfileBE.shared!.district
-                profPostCount.text = ProfileBE.shared!.postCount
-                profFollowingCount.text = ProfileBE.shared!.followingCount
-                profFollowersCount.text = ProfileBE.shared!.followersCount
-                
-                self.profImge.downloadImageInUrlString(Constants.image_fs + PersonBE.shared!.profilePictureUrl) { (image, urlString) in
-                    self.profImge.image = image
-                }
-                
-                
             }) { (errorMessage) in
                 print(errorMessage)
             }
@@ -78,18 +58,22 @@ class MainProfile: UIViewController, editProfileDelegate{
             print(errorMessage)
         }
         
-
+        profDOB.text = ProfileBE.shared!.birthDate
+        profName.text = PersonBE.shared!.firstName + " " + PersonBE.shared!.lastName
+        profStudyField.text = ProfileBE.shared!.studyField
+        profDistrict.text = ProfileBE.shared!.district
+        profPostCount.text = ProfileBE.shared!.postCount
+        profFollowingCount.text = ProfileBE.shared!.followingCount
+        profFollowersCount.text = ProfileBE.shared!.followersCount        
+        
+        self.profImge.downloadImageInUrlString(Constants.image_fs + PersonBE.shared!.profilePictureUrl) { (image, urlString) in
+            self.profImge.image = image
+        }
+        
     }
     
     @IBAction func btnEdit(_ sender: Any) {
         performSegue(withIdentifier: "openProfileEditor", sender: sender)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("in prepare segue")
-            let vc = segue.destination as! EditeProfile
-            vc.delegate = self
-        
     }
     
 }

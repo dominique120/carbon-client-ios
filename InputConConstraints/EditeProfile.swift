@@ -9,14 +9,7 @@
 import Foundation
 import UIKit
 
-
-protocol editProfileDelegate: MainProfile {
-    func reloadProfile()
-}
-
 class EditeProfile : UIViewController{
-    
-    weak var delegate: editProfileDelegate?
     
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return.lightContent
@@ -48,27 +41,26 @@ class EditeProfile : UIViewController{
     }
     
     @IBAction func confirmChanges(_ sender: Any) {
+        
         var imageId: String = PersonBE.shared!.profilePictureUrl
        
-
+        if g_imageSet {
+            let uuid: String = UUID().uuidString
+            imageId = uuid
+            ImageWS.sendIamge(imageId: imageId, image: g_selectedImage!, {() in
+                g_imageSet = false
+            }, error: {(errorMessate) in
+                print(errorMessate)
+            })
+            imageId = "/" + uuid + ".jpg"
+        }
         
-        ProfileWS.editProfile(profileId: ProfileBE.shared!.profileId, studyField: studyField.text!, district: district.text!, birthDate: DOB.text!, profileSummary: aboutMe.text!, { [self]() in
-            
-            if g_imageSet {
-                let uuid: String = UUID().uuidString
-                imageId = uuid
-                ImageWS.sendIamge(imageId: imageId, image: g_selectedImage!, {() in
-                    g_imageSet = false
-                }, error: {(errorMessate) in
-                    print(errorMessate)
-                })
-                imageId = "/" + uuid + ".jpg"
-            }
-            
-            PersonWS.editPerson(personId: PersonBE.shared!.personId, firstName: name.text!, lastName: lastName.text!, displayName: displayName.text!, profilePictureUrl: imageId, {() in
-                self.delegate?.loadProfileData()
-            }, error: {(errorMessage) in print(errorMessage)})
-        }, error: {(errorMessage) in print(errorMessage)})
+        ProfileWS.editProfile(profileId: ProfileBE.shared!.profileId, studyField: studyField.text!, district: district.text!, birthDate: DOB.text!, profileSummary: aboutMe.text!, {()}, error: {(errorMessage) in print(errorMessage)})
+        
+        PersonWS.editPerson(personId: PersonBE.shared!.personId, firstName: name.text!, lastName: lastName.text!, displayName: displayName.text!, profilePictureUrl: imageId, {()}, error: {(errorMessage) in print(errorMessage)})
+        
+        
+        
         self.navigationController?.popViewController(animated: true)
     }
         

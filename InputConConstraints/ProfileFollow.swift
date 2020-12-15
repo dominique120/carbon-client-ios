@@ -37,7 +37,7 @@ class ProfileFollow: UIViewController{
     var thisProfile: ProfileBE?
     
     @IBAction func followPerson(_ sender: Any) {
-        if PersonBE.shared?.personId == thisPerson!.personId {
+        if g_activePersonId == thisPerson!.personId {
             Util.showMessage(controller: self , message: "No te puedes seguir a ti mismo!", seconds: 1.5)
         } else {
             FollowerWS.followSomeone(followerId: g_activePersonId, followingId: thisPerson!.personId, success: { () in
