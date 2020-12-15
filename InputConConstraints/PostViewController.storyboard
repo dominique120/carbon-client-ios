@@ -283,12 +283,12 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="REP-nz-A8o">
-                                                <rect key="frame" x="0.0" y="11" width="44" height="22"/>
+                                                <rect key="frame" x="0.0" y="11" width="44" height="19"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="44" id="rdn-fZ-gTn"/>
                                                 </constraints>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" image="arrowshape.turn.up.left.fill" catalog="system"/>
+                                                <color key="tintColor" systemColor="systemBlueColor"/>
+                                                <state key="normal" image="arrow.backward" catalog="system"/>
                                                 <connections>
                                                     <action selector="clickBtnBack:" destination="Lum-IL-IOq" eventType="touchUpInside" id="3HP-Zv-gdP"/>
                                                 </connections>
@@ -644,13 +644,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tkW-fb-gQo">
-                                                <rect key="frame" x="8" y="11.5" width="34" height="21.5"/>
+                                                <rect key="frame" x="8" y="11.5" width="34" height="19"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="34" id="96d-CT-cSf"/>
                                                 </constraints>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" systemColor="systemBlueColor"/>
                                                 <state key="normal">
-                                                    <imageReference key="image" image="arrowshape.turn.up.left.fill" catalog="system" symbolScale="large"/>
+                                                    <imageReference key="image" image="arrow.backward" catalog="system" symbolScale="large"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="clickBtnBack:" destination="Lry-Ev-ktL" eventType="touchUpInside" id="EO2-5c-zb4"/>
@@ -724,7 +724,7 @@
         </designable>
     </designables>
     <resources>
-        <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
+        <image name="arrow.backward" catalog="system" width="128" height="98"/>
         <image name="globe" catalog="system" width="128" height="121"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="message.fill" catalog="system" width="128" height="113"/>
@@ -733,6 +733,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

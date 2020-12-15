@@ -287,12 +287,12 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Xg-v2-7QF">
-                                                <rect key="frame" x="0.0" y="11" width="44" height="22"/>
+                                                <rect key="frame" x="0.0" y="11" width="44" height="19"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="44" id="gny-0Q-Wjd"/>
                                                 </constraints>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" image="arrowshape.turn.up.left.fill" catalog="system"/>
+                                                <color key="tintColor" systemColor="systemBlueColor"/>
+                                                <state key="normal" image="arrow.backward" catalog="system"/>
                                                 <connections>
                                                     <action selector="clickBtnBack:" destination="onX-Uj-Wqj" eventType="touchUpInside" id="Rb9-B0-SFT"/>
                                                 </connections>
@@ -400,7 +400,7 @@
     </scenes>
     <resources>
         <image name="archivebox.fill" catalog="system" width="128" height="106"/>
-        <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
+        <image name="arrow.backward" catalog="system" width="128" height="98"/>
         <image name="book.closed.fill" catalog="system" width="115" height="128"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="message.fill" catalog="system" width="128" height="113"/>
@@ -409,6 +409,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

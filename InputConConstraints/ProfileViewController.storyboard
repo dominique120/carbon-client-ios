@@ -205,17 +205,6 @@
                                                     <action selector="btnEdit:" destination="3fN-Bc-pE8" eventType="touchUpInside" id="keC-4O-ceW"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHQ-xM-RDc">
-                                                <rect key="frame" x="326" y="18" width="55" height="30"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                <state key="normal" title="Log out">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="clickBtnCerrarrSesion:" destination="3fN-Bc-pE8" eventType="touchUpInside" id="EQv-Ev-FA6"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.17254901960784313" green="0.17254901960784313" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -228,8 +217,6 @@
                                             <constraint firstItem="KnM-ax-cEa" firstAttribute="top" secondItem="6wR-Rg-C7l" secondAttribute="top" constant="18" id="Qgg-4H-yCc"/>
                                             <constraint firstItem="KnM-ax-cEa" firstAttribute="centerX" secondItem="6wR-Rg-C7l" secondAttribute="centerX" id="Yg7-Ea-3N7"/>
                                             <constraint firstItem="lyI-iy-Zeo" firstAttribute="top" secondItem="vdT-iK-Rfk" secondAttribute="bottom" constant="8" symbolic="YES" id="c38-0E-ECn"/>
-                                            <constraint firstItem="fHQ-xM-RDc" firstAttribute="top" secondItem="6wR-Rg-C7l" secondAttribute="top" constant="18" id="eZa-RS-anW"/>
-                                            <constraint firstAttribute="trailing" secondItem="fHQ-xM-RDc" secondAttribute="trailing" constant="33" id="fBS-uq-Msd"/>
                                             <constraint firstAttribute="width" constant="414" id="ikU-SM-def"/>
                                             <constraint firstItem="mla-uB-Yr3" firstAttribute="top" secondItem="jj7-ha-FBM" secondAttribute="bottom" constant="19" id="qmr-1B-qwc"/>
                                             <constraint firstItem="mla-uB-Yr3" firstAttribute="centerX" secondItem="6wR-Rg-C7l" secondAttribute="centerX" id="tpn-QS-0VC"/>
@@ -252,12 +239,27 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHQ-xM-RDc">
+                                                <rect key="frame" x="337" y="8" width="57" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <state key="normal" title="Sign out">
+                                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="clickBtnCerrarrSesion:" destination="3fN-Bc-pE8" eventType="touchUpInside" id="EQv-Ev-FA6"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.090196078431372548" green="0.090196078431372548" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstItem="fHQ-xM-RDc" firstAttribute="top" secondItem="DTP-Yr-O18" secondAttribute="top" constant="8" id="8aW-XA-ZqD"/>
                                             <constraint firstAttribute="height" constant="44" id="FJ8-jn-DYO"/>
                                             <constraint firstItem="gYb-CK-ce0" firstAttribute="centerX" secondItem="DTP-Yr-O18" secondAttribute="centerX" id="P8f-zT-EbA"/>
+                                            <constraint firstAttribute="trailing" secondItem="fHQ-xM-RDc" secondAttribute="trailing" constant="20" symbolic="YES" id="Toe-e9-PuQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="fHQ-xM-RDc" secondAttribute="trailing" constant="20" id="Uop-mP-Hur"/>
                                             <constraint firstItem="gYb-CK-ce0" firstAttribute="centerY" secondItem="DTP-Yr-O18" secondAttribute="centerY" id="XwG-Lt-Z3I"/>
+                                            <constraint firstItem="fHQ-xM-RDc" firstAttribute="top" secondItem="DTP-Yr-O18" secondAttribute="top" constant="8" id="hKU-2P-R91"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -334,25 +336,28 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cs3-Bc-Bc8">
-                                                <rect key="frame" x="8" y="11.5" width="44" height="21.5"/>
+                                                <rect key="frame" x="8" y="11.5" width="44" height="19"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="44" id="rVk-hH-BWz"/>
                                                 </constraints>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" systemColor="systemBlueColor"/>
                                                 <state key="normal">
-                                                    <imageReference key="image" image="arrowshape.turn.up.left.fill" catalog="system" symbolScale="large"/>
+                                                    <color key="titleColor" systemColor="systemBlueColor"/>
+                                                    <imageReference key="image" image="arrow.backward" catalog="system" symbolScale="large"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="clickBtnBack:" destination="TfB-BP-AGH" eventType="touchUpInside" id="OTf-mB-wkp"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="feh-8L-YCW">
-                                                <rect key="frame" x="351" y="9" width="44" height="26"/>
+                                                <rect key="frame" x="340" y="7" width="60" height="30"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="44" id="qQx-tq-WX8"/>
+                                                    <constraint firstAttribute="width" constant="60" id="qQx-tq-WX8"/>
                                                 </constraints>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" image="square.and.arrow.up" catalog="system"/>
+                                                <state key="normal" title="Confirm">
+                                                    <color key="titleColor" systemColor="systemBlueColor"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="confirmChanges:" destination="TfB-BP-AGH" eventType="touchUpInside" id="g4e-tP-soi"/>
                                                 </connections>
@@ -362,8 +367,8 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="8pq-jI-dfI"/>
                                             <constraint firstItem="Cs3-Bc-Bc8" firstAttribute="top" secondItem="WnD-hH-GGO" secondAttribute="top" constant="11.5" id="Hbn-1P-cnd"/>
-                                            <constraint firstItem="feh-8L-YCW" firstAttribute="top" secondItem="WnD-hH-GGO" secondAttribute="top" constant="9" id="OOg-nK-WEn"/>
-                                            <constraint firstAttribute="trailing" secondItem="feh-8L-YCW" secondAttribute="trailing" constant="19" id="WsS-lp-OWS"/>
+                                            <constraint firstItem="feh-8L-YCW" firstAttribute="top" secondItem="WnD-hH-GGO" secondAttribute="top" constant="7" id="OOg-nK-WEn"/>
+                                            <constraint firstAttribute="trailing" secondItem="feh-8L-YCW" secondAttribute="trailing" constant="14" id="WsS-lp-OWS"/>
                                             <constraint firstItem="Cs3-Bc-Bc8" firstAttribute="leading" secondItem="WnD-hH-GGO" secondAttribute="leading" constant="8" id="rgS-u5-jCn"/>
                                         </constraints>
                                     </view>
@@ -475,13 +480,13 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXP-iv-DIh">
-                                                        <rect key="frame" x="196" y="15" width="22" height="22"/>
+                                                        <rect key="frame" x="170.5" y="15" width="73" height="22"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="22" id="hed-1m-eBa"/>
+                                                            <constraint firstAttribute="width" constant="73" id="hed-1m-eBa"/>
                                                             <constraint firstAttribute="height" constant="22" id="zeD-WU-yCb"/>
                                                         </constraints>
                                                         <color key="tintColor" systemColor="linkColor"/>
-                                                        <state key="normal">
+                                                        <state key="normal" title=" Edit">
                                                             <imageReference key="image" image="pencil" catalog="system" symbolScale="large"/>
                                                         </state>
                                                         <connections>
@@ -664,7 +669,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1126" y="88"/>
+            <point key="canvasLocation" x="1124.6376811594205" y="87.723214285714278"/>
         </scene>
         <!--imagePicker-->
         <scene sceneID="n3f-TD-Twg">
@@ -704,18 +709,23 @@
         </designable>
     </designables>
     <resources>
-        <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
+        <image name="arrow.backward" catalog="system" width="128" height="98"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

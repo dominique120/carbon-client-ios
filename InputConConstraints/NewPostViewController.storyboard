@@ -29,25 +29,27 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LkU-u4-VG2">
-                                                <rect key="frame" x="0.0" y="11" width="44" height="22"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LkU-u4-VG2">
+                                                <rect key="frame" x="8" y="9" width="96" height="22"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="44" id="9rC-a8-6RM"/>
+                                                    <constraint firstAttribute="width" constant="96" id="9rC-a8-6RM"/>
                                                 </constraints>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" image="photo" catalog="system"/>
+                                                <color key="tintColor" systemColor="systemBlueColor"/>
+                                                <state key="normal" title=" Image " image="photo.on.rectangle.fill" catalog="system">
+                                                    <color key="titleColor" systemColor="systemBlueColor"/>
+                                                </state>
                                                 <connections>
                                                     <segue destination="WPc-2c-xzg" kind="show" id="PNf-96-RAY"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jds-mr-xBS">
-                                                <rect key="frame" x="323" y="7" width="77" height="26"/>
+                                                <rect key="frame" x="329" y="6" width="77" height="30"/>
                                                 <accessibility key="accessibilityConfiguration" label="Send"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="77" id="Q4x-Oy-6zF"/>
                                                 </constraints>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <state key="normal" title="Send" image="square.and.arrow.up.fill" catalog="system"/>
+                                                <color key="tintColor" systemColor="systemBlueColor"/>
+                                                <state key="normal" title="Publish"/>
                                                 <connections>
                                                     <action selector="sendNewPost:" destination="yja-ji-fet" eventType="touchUpInside" id="HvT-bC-4bv"/>
                                                 </connections>
@@ -56,10 +58,10 @@
                                         <color key="backgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="BFA-s7-GrW"/>
-                                            <constraint firstAttribute="trailing" secondItem="jds-mr-xBS" secondAttribute="trailing" constant="14" id="Qix-0B-tyO"/>
-                                            <constraint firstItem="LkU-u4-VG2" firstAttribute="top" secondItem="ZhX-1b-FTP" secondAttribute="top" constant="11" id="TGH-VH-VjH"/>
-                                            <constraint firstItem="jds-mr-xBS" firstAttribute="top" secondItem="ZhX-1b-FTP" secondAttribute="top" constant="7" id="TQL-GJ-Vf4"/>
-                                            <constraint firstItem="LkU-u4-VG2" firstAttribute="leading" secondItem="ZhX-1b-FTP" secondAttribute="leading" id="dFz-ye-FmF"/>
+                                            <constraint firstAttribute="trailing" secondItem="jds-mr-xBS" secondAttribute="trailing" constant="8" id="Qix-0B-tyO"/>
+                                            <constraint firstItem="LkU-u4-VG2" firstAttribute="top" secondItem="ZhX-1b-FTP" secondAttribute="top" constant="9" id="TGH-VH-VjH"/>
+                                            <constraint firstItem="jds-mr-xBS" firstAttribute="top" secondItem="ZhX-1b-FTP" secondAttribute="top" constant="6" id="TQL-GJ-Vf4"/>
+                                            <constraint firstItem="LkU-u4-VG2" firstAttribute="leading" secondItem="ZhX-1b-FTP" secondAttribute="leading" constant="8" id="dFz-ye-FmF"/>
                                             <constraint firstItem="gMl-us-Myw" firstAttribute="centerX" secondItem="ZhX-1b-FTP" secondAttribute="centerX" id="u9L-O6-IB8"/>
                                             <constraint firstItem="gMl-us-Myw" firstAttribute="centerY" secondItem="ZhX-1b-FTP" secondAttribute="centerY" id="ubZ-WS-lvA"/>
                                         </constraints>
@@ -149,7 +151,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="446" y="90"/>
+            <point key="canvasLocation" x="444.92753623188412" y="89.732142857142847"/>
         </scene>
         <!--Image Select View Controller-->
         <scene sceneID="dbu-R9-bWh">
@@ -182,9 +184,9 @@
                                             <constraint firstAttribute="height" constant="22" id="VLg-IS-3TK"/>
                                             <constraint firstAttribute="width" constant="44" id="dxS-Ia-DYf"/>
                                         </constraints>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" systemColor="systemBlueColor"/>
                                         <state key="normal">
-                                            <imageReference key="image" image="arrowshape.turn.up.left.fill" catalog="system" symbolScale="large"/>
+                                            <imageReference key="image" image="arrow.backward" catalog="system" symbolScale="large"/>
                                         </state>
                                         <connections>
                                             <action selector="clickBtnBack:" destination="WPc-2c-xzg" eventType="touchUpInside" id="6sP-KA-wvZ"/>
@@ -192,16 +194,14 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnX-CJ-6rk">
-                                        <rect key="frame" x="376" y="15" width="30" height="22"/>
+                                        <rect key="frame" x="350" y="10" width="50" height="22"/>
                                         <accessibility key="accessibilityConfiguration" label="Send"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="30" id="MgW-8W-LdS"/>
+                                            <constraint firstAttribute="width" constant="50" id="MgW-8W-LdS"/>
                                             <constraint firstAttribute="height" constant="22" id="sj7-rq-I1L"/>
                                         </constraints>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal">
-                                            <imageReference key="image" image="square.and.arrow.up.fill" catalog="system" symbolScale="large"/>
-                                        </state>
+                                        <color key="tintColor" systemColor="systemBlueColor"/>
+                                        <state key="normal" title="Done"/>
                                         <connections>
                                             <action selector="selectImage:" destination="WPc-2c-xzg" eventType="touchUpInside" id="m34-TR-sfC"/>
                                         </connections>
@@ -212,8 +212,8 @@
                                     <constraint firstAttribute="height" constant="44" id="GGN-1c-e8c"/>
                                     <constraint firstItem="AuL-zD-nc4" firstAttribute="top" secondItem="03X-9P-awN" secondAttribute="top" constant="15" id="KLB-NL-dug"/>
                                     <constraint firstItem="AuL-zD-nc4" firstAttribute="leading" secondItem="03X-9P-awN" secondAttribute="leading" id="XyN-bQ-fsc"/>
-                                    <constraint firstAttribute="trailing" secondItem="cnX-CJ-6rk" secondAttribute="trailing" constant="8" id="hpg-fc-gzd"/>
-                                    <constraint firstItem="cnX-CJ-6rk" firstAttribute="top" secondItem="03X-9P-awN" secondAttribute="top" constant="15" id="p6H-gB-4xv"/>
+                                    <constraint firstAttribute="trailing" secondItem="cnX-CJ-6rk" secondAttribute="trailing" constant="14" id="hpg-fc-gzd"/>
+                                    <constraint firstItem="cnX-CJ-6rk" firstAttribute="top" secondItem="03X-9P-awN" secondAttribute="top" constant="10" id="p6H-gB-4xv"/>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.on.rectangle.angled" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="BHa-rh-aUb">
@@ -226,13 +226,13 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gra-B6-zsc" customClass="BTUView" customModule="IsilInsta" customModuleProvider="target">
-                                <rect key="frame" x="196" y="261" width="22" height="22"/>
+                                <rect key="frame" x="139" y="261" width="136" height="22"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="22" id="exA-gx-uqH"/>
+                                    <constraint firstAttribute="width" constant="136" id="exA-gx-uqH"/>
                                     <constraint firstAttribute="height" constant="22" id="moV-Ji-s5D"/>
                                 </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="pencil" catalog="system"/>
+                                <color key="tintColor" systemColor="systemBlueColor"/>
+                                <state key="normal" title="Select Image" image="pencil" catalog="system"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="conerRadius">
                                         <real key="value" value="11"/>
@@ -272,16 +272,15 @@
     </scenes>
     <designables>
         <designable name="Gra-B6-zsc">
-            <size key="intrinsicContentSize" width="21.5" height="19.5"/>
+            <size key="intrinsicContentSize" width="110.5" height="19.5"/>
         </designable>
     </designables>
     <resources>
-        <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
+        <image name="arrow.backward" catalog="system" width="128" height="98"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
-        <image name="photo" catalog="system" width="128" height="93"/>
         <image name="photo.on.rectangle.angled" catalog="system" width="128" height="101"/>
+        <image name="photo.on.rectangle.fill" catalog="system" width="128" height="96"/>
         <image name="plus.app.fill" catalog="system" width="128" height="114"/>
-        <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
