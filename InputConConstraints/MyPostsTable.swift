@@ -18,7 +18,7 @@ class MyPostsTable: UIViewController{
     @IBOutlet weak var myPostsTable: UITableView!
     
     @IBAction func viewComments(_ sender: Any) {
-    performSegue(withIdentifier: "viewCommentsOnMyPosts", sender: nil)
+    performSegue(withIdentifier: "showPostComments", sender: nil)
     }
     @IBAction func deletePost(_ sender: Any) {
         

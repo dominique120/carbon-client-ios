@@ -190,7 +190,7 @@
         <!--Main Comment-->
         <scene sceneID="bCS-eC-6v5">
             <objects>
-                <viewController storyboardIdentifier="CommentTable" modalPresentationStyle="fullScreen" id="Lum-IL-IOq" customClass="MainComment" customModule="IsilInsta" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainComment" modalPresentationStyle="fullScreen" id="Lum-IL-IOq" customClass="MainComment" customModule="IsilInsta" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V2F-p6-6OW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
