@@ -38,12 +38,12 @@ class MainProfile: UIViewController, editProfileDelegate{
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return.lightContent
     }
-    
+    /*
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.loadProfileData()
     }
-    
+    */
     override func viewDidLoad() {
         self.loadProfileData()
         super.viewDidLoad()

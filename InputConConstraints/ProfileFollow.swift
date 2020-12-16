@@ -43,7 +43,14 @@ class ProfileFollow: UIViewController{
             Util.showMessage(controller: self , message: "No te puedes seguir a ti mismo!", seconds: 1.5)
         } else {
             FollowerWS.followSomeone(followerId: g_activePersonId, followingId: thisPerson!.personId, success: { () in
+                
+                var fc = Int(self.followerCount.text!)
+                fc! += 1
+                self.followerCount.text = String(fc!)
+                self.followBtn.setTitle("Following!", for: .disabled)
+                
                 Util.showMessage(controller: self , message: "Followed!", seconds: 1.5)
+                
             }) { (errorMessage) in
                 print(errorMessage)
             }
